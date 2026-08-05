@@ -1,0 +1,80 @@
+@import url('https://api.fontshare.com/v2/css?f=boska@900,700,400,300,500,600,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Century Gothic", "CenturyGothic", "AppleGothic", sans-serif;
+  --font-mono: "Century Gothic", "CenturyGothic", "AppleGothic", sans-serif;
+  --font-display: "Century Gothic", "CenturyGothic", "AppleGothic", sans-serif;
+}
+
+body, html, input, select, button, textarea {
+  font-family: "Century Gothic", "CenturyGothic", "AppleGothic", sans-serif !important;
+}
+
+/* Accessibility & Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Global interaction micro-animation defaults */
+button, a, input, select, textarea {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform;
+  transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  transition-duration: 220ms;
+}
+
+/* Polished focus state ring */
+:focus-visible {
+  outline: 2px solid rgba(0, 255, 136, 0.45) !important;
+  outline-offset: 2px !important;
+  border-radius: 6px;
+}
+
+/* Tactile press response for buttons & clickable cards */
+button:active:not(:disabled), .btn-interactive:active:not(:disabled) {
+  transform: translateY(0px) scale(0.985) !important;
+}
+
+.font-brand {
+  font-family: 'Plus Jakarta Sans', sans-serif !important;
+}
+
+.font-bosko {
+  font-family: 'Boska', 'Bosko', serif !important;
+}
+
+.font-archer {
+  font-family: 'Arvo', 'Archer', serif !important;
+}
+
+.font-heavy-impact {
+  font-family: 'Anton', 'Impact', 'Arial Black', sans-serif !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.06em !important;
+  line-height: 0.9 !important;
+}
+
+/* Custom scrollbar support */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 255, 136, 0.2);
+  border-radius: 99px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 255, 136, 0.4);
+}
+
