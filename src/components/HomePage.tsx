@@ -370,7 +370,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                   playSynthBeep('click');
                   navigate('/kernel-id');
                 }}
-                className="w-full sm:w-auto flex items-center justify-center gap-2.5 py-3.5 px-6 font-brand font-bold text-xs sm:text-sm uppercase tracking-wider bg-[#00ff88] text-black hover:bg-[#00e67a] shadow-[0_0_20px_rgba(0,255,136,0.25)] hover:shadow-[0_0_30px_rgba(0,255,136,0.4)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.985] transition-all rounded-xl cursor-pointer whitespace-nowrap"
+                className="w-full sm:w-auto flex items-center justify-center gap-2.5 py-3.5 px-6 font-brand font-bold text-xs sm:text-sm uppercase tracking-wider bg-[#00ff88] text-black hover:bg-[#00e67a] shadow-[0_0_20px_rgba(0,255,136,0.25)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.985] transition-all rounded-xl cursor-pointer whitespace-nowrap"
               >
                 <span>Forge Your Badge</span>
                 <ArrowRight className="w-4 h-4 shrink-0" />

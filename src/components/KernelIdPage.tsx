@@ -92,14 +92,6 @@ export const KernelIdPage: React.FC = () => {
     setProfile(prev => ({ ...prev, [field]: value }));
   };
 
-  const handleRegenerateId = () => {
-    playSynthBeep('click');
-    setProfile(prev => ({
-      ...prev,
-      idNumber: generateRandomId()
-    }));
-  };
-
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
@@ -527,7 +519,7 @@ export const KernelIdPage: React.FC = () => {
               initial={{ scale: 0.98, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.3 }}
-              className={`relative w-full rounded-2xl sm:rounded-3xl border overflow-hidden p-5 sm:p-7 shadow-2xl transition-all duration-300 select-none ${
+              className={`relative w-full max-sm:aspect-[16/10] rounded-2xl sm:rounded-3xl border overflow-hidden p-5 max-sm:p-3 sm:p-7 shadow-2xl transition-all duration-300 select-none ${
                 profile.theme === 'emerald'
                   ? 'bg-[#030805] border-[#00ff88]/30 shadow-[#00ff88]/5 hover:border-[#00ff88]/50'
                   : profile.theme === 'cyan'
@@ -546,14 +538,14 @@ export const KernelIdPage: React.FC = () => {
               }`} />
 
               {/* CARD TOP HEADER: LOGO & CHIP */}
-              <div className="relative z-10 flex items-start justify-between gap-4 pb-5 border-b border-white/[0.08]">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-black/80 border border-white/10 p-1 flex items-center justify-center shrink-0 shadow-md">
+              <div className="relative z-10 flex items-start justify-between gap-4 max-sm:gap-2 pb-5 max-sm:pb-3 border-b border-white/[0.08]">
+                <div className="flex items-center gap-3 max-sm:gap-2">
+                  <div className="w-10 h-10 max-sm:w-8 max-sm:h-8 sm:w-12 sm:h-12 rounded-xl bg-black/80 border border-white/10 p-1 flex items-center justify-center shrink-0 shadow-md">
                     <KernelAxisLogo className="w-full h-full object-contain" />
                   </div>
                   <div>
                     <div className="flex items-center gap-2">
-                      <span className="font-brand font-bold text-sm sm:text-base text-white tracking-wider uppercase">
+                      <span className="font-brand font-bold text-sm max-sm:text-[11px] sm:text-base text-white tracking-wider uppercase">
                         Kernel Axis
                       </span>
                       <span className={`text-[8px] sm:text-[9px] font-mono px-1.5 py-0.5 rounded uppercase font-semibold border ${
@@ -568,7 +560,7 @@ export const KernelIdPage: React.FC = () => {
                         OPERATOR
                       </span>
                     </div>
-                    <span className="text-[10px] font-mono text-zinc-400 block tracking-tight">
+                    <span className="text-[10px] max-sm:text-[8px] font-mono text-zinc-400 block tracking-tight">
                       CYBERSECURITY INTELLIGENCE PASS
                     </span>
                   </div>
@@ -576,7 +568,7 @@ export const KernelIdPage: React.FC = () => {
 
                 {/* Cyber Smart Chip Icon */}
                 <div className="flex flex-col items-end">
-                  <div className="w-11 h-8 sm:w-14 sm:h-9 rounded-md bg-gradient-to-tr from-[#c89b3c] via-[#e5c158] to-[#9c782b] p-0.5 border border-amber-300/40 shadow-inner flex flex-col justify-between overflow-hidden">
+                  <div className="w-11 h-8 max-sm:w-9 max-sm:h-7 sm:w-14 sm:h-9 rounded-md bg-gradient-to-tr from-[#c89b3c] via-[#e5c158] to-[#9c782b] p-0.5 border border-amber-300/40 shadow-inner flex flex-col justify-between overflow-hidden">
                     <div className="w-full h-[1px] bg-amber-900/40 mt-1" />
                     <div className="flex justify-between px-1">
                       <div className="w-2 h-3 border-r border-amber-900/40" />
@@ -584,18 +576,18 @@ export const KernelIdPage: React.FC = () => {
                     </div>
                     <div className="w-full h-[1px] bg-amber-900/40 mb-1" />
                   </div>
-                  <span className="text-[8px] font-mono text-zinc-400 mt-1 tracking-widest uppercase">
+                  <span className="text-[8px] max-sm:text-[6px] font-mono text-zinc-400 mt-1 tracking-widest uppercase">
                     SECURE ENCLAVE
                   </span>
                 </div>
               </div>
 
               {/* CARD BODY: PHOTO & CREDENTIAL DATA */}
-              <div className="relative z-10 py-5 grid grid-cols-1 sm:grid-cols-12 gap-5 items-center">
+              <div className="relative z-10 py-5 max-sm:py-3 grid grid-cols-12 gap-5 max-sm:gap-2 items-center">
                 
                 {/* PHOTO FRAME */}
-                <div className="sm:col-span-4 flex flex-col items-center sm:items-start">
-                  <div className={`relative w-28 h-28 sm:w-36 sm:h-36 rounded-xl border-2 overflow-hidden bg-black/90 p-1 shadow-lg ${
+                <div className="col-span-4 flex flex-col items-center sm:items-start">
+                  <div className={`relative w-28 h-28 max-sm:w-20 max-sm:h-20 sm:w-36 sm:h-36 rounded-xl border-2 overflow-hidden bg-black/90 p-1 shadow-lg ${
                     profile.theme === 'emerald'
                       ? 'border-[#00ff88]/40'
                       : profile.theme === 'cyan'
@@ -623,12 +615,12 @@ export const KernelIdPage: React.FC = () => {
                 </div>
 
                 {/* DETAILS COLUMN */}
-                <div className="sm:col-span-8 space-y-3 text-center sm:text-left">
+                <div className="col-span-8 space-y-3 max-sm:space-y-2 text-center sm:text-left max-sm:text-left">
                   <div>
                     <span className="text-[9px] font-sans uppercase tracking-wide text-zinc-400 block">
                       OPERATOR IDENTITY
                     </span>
-                    <h3 className="text-xl sm:text-2xl font-sans font-semibold text-white tracking-normal uppercase truncate">
+                    <h3 className="text-xl max-sm:text-sm sm:text-2xl font-sans font-semibold text-white tracking-normal uppercase truncate">
                       {profile.name || 'OPERATOR NAME'}
                     </h3>
                   </div>
@@ -638,7 +630,7 @@ export const KernelIdPage: React.FC = () => {
                       <span className="text-[9px] font-sans text-zinc-400 uppercase tracking-wide block">
                         ROLE DESIGNATION
                       </span>
-                      <span className="text-xs sm:text-sm font-sans font-medium text-zinc-100 block truncate">
+                      <span className="text-xs max-sm:text-[10px] sm:text-sm font-sans font-medium text-zinc-100 block truncate">
                         {profile.role}
                       </span>
                     </div>
@@ -647,7 +639,7 @@ export const KernelIdPage: React.FC = () => {
                       <span className="text-[9px] font-sans text-zinc-400 uppercase tracking-wide block">
                         SECURITY CLEARANCE
                       </span>
-                      <span className={`text-[10px] sm:text-xs font-mono font-bold block truncate ${
+                      <span className={`text-[10px] max-sm:text-[9px] sm:text-xs font-mono font-bold block truncate ${
                         profile.theme === 'emerald' ? 'text-[#00ff88]' : profile.theme === 'cyan' ? 'text-[#00e5ff]' : profile.theme === 'matrix' ? 'text-[#39ff14]' : 'text-zinc-300'
                       }`}>
                         {profile.clearance.split(' - ')[0]}
@@ -659,7 +651,7 @@ export const KernelIdPage: React.FC = () => {
                     <span className="text-[9px] font-sans text-zinc-400 uppercase tracking-wide block">
                       TACTICAL FOCUS
                     </span>
-                    <p className="text-xs text-zinc-300 line-clamp-2 leading-relaxed font-sans tracking-normal">
+                    <p className="text-xs max-sm:text-[10px] text-zinc-300 line-clamp-2 leading-relaxed font-sans tracking-normal">
                       {profile.specialty}
                     </p>
                   </div>
@@ -668,7 +660,7 @@ export const KernelIdPage: React.FC = () => {
               </div>
 
               {/* CARD FOOTER: SERIAL, TIMESTAMP & SYNTHETIC BARCODE */}
-              <div className="relative z-10 pt-4 border-t border-white/[0.08] flex flex-wrap items-center justify-between gap-3">
+              <div className="relative z-10 pt-4 max-sm:pt-2 border-t border-white/[0.08] flex flex-wrap items-center justify-between gap-3 max-sm:gap-2">
                 <div className="flex items-center gap-3">
                   <div>
                     <span className="text-[8px] font-mono uppercase tracking-widest text-zinc-400 block">
@@ -716,7 +708,7 @@ export const KernelIdPage: React.FC = () => {
             <button
               onClick={handleDownloadVirtualCard}
               disabled={isDownloading}
-              className="w-full flex items-center justify-center gap-3 py-4 px-6 bg-[#00ff88] text-black font-display font-bold text-sm sm:text-base uppercase tracking-wider rounded-xl shadow-[0_0_25px_rgba(0,255,136,0.25)] hover:bg-[#00e67a] hover:shadow-[0_0_35px_rgba(0,255,136,0.4)] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] transition-all cursor-pointer disabled:opacity-50"
+              className="w-full flex items-center justify-center gap-3 py-4 px-6 bg-[#00ff88] text-black font-display font-bold text-sm sm:text-base uppercase tracking-wider rounded-xl shadow-[0_0_25px_rgba(0,255,136,0.25)] hover:bg-[#00e67a] hover:-translate-y-0.5 active:translate-y-0 active:scale-[0.99] transition-all cursor-pointer disabled:opacity-50"
             >
               {isDownloading ? (
                 <>
@@ -771,14 +763,6 @@ export const KernelIdPage: React.FC = () => {
                 Operator Configuration
               </h2>
             </div>
-            <button
-              onClick={handleRegenerateId}
-              className="inline-flex items-center gap-1.5 px-2.5 py-1 text-[11px] font-mono text-[#00ff88] bg-[#00ff88]/10 hover:bg-[#00ff88]/20 border border-[#00ff88]/20 rounded-md transition-all cursor-pointer"
-              title="Generate New Registry Token"
-            >
-              <RefreshCw className="w-3 h-3" />
-              <span>New ID</span>
-            </button>
           </div>
 
           <div className="space-y-4">
