@@ -1,0 +1,6 @@
+{
+  "name": "Kernel Axis",
+  "description": "Interactive multi-page cybersecurity education platform with simulated live global threats, clean digital guides, and digital safety tools.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,635 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Core Pages -->
+  <url>
+    <loc>https://kernel-axis.com/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://kernel-axis.com/learn</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://kernel-axis.com/tools</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kernel-axis.com/tools/password-strength-checker</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kernel-axis.com/tools/password-generator</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kernel-axis.com/map</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kernel-axis.com/questions</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kernel-axis.com/cyber-simulator</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kernel-axis.com/kernel-hacker-typer</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://kernel-axis.com/about</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://kernel-axis.com/contact</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://kernel-axis.com/privacy</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://kernel-axis.com/terms-and-conditions</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Category Hubs -->
+  <url>
+    <loc>https://kernel-axis.com/learn/category/cybersecurity-basics</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kernel-axis.com/learn/category/online-safety</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kernel-axis.com/learn/category/password-security</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kernel-axis.com/learn/category/phishing-and-scams</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kernel-axis.com/learn/category/malware-and-viruses</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kernel-axis.com/learn/category/network-security</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kernel-axis.com/learn/category/privacy-and-data-protection</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kernel-axis.com/learn/category/security-tools</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kernel-axis.com/learn/category/cybersecurity-explained</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kernel-axis.com/learn/category/device-security</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kernel-axis.com/learn/category/digital-footprint</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kernel-axis.com/learn/category/scam-awareness</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kernel-axis.com/learn/category/cybersecurity-threats</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://kernel-axis.com/learn/category/digital-forensics</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Educational Articles (Total: 82) -->
+  <!-- [ID 1] Password Security: The Basics of Password Managers -->
+  <url>
+    <loc>https://kernel-axis.com/learn/the-basics-of-password-managers</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 2] Phishing & Scams: How to Spot a Phishing Email -->
+  <url>
+    <loc>https://kernel-axis.com/learn/how-to-spot-a-phishing-email</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 3] Network Security: What is a DDoS Attack? -->
+  <url>
+    <loc>https://kernel-axis.com/learn/what-is-a-ddos-attack</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 4] Security Tools: Multi-Factor Authentication -->
+  <url>
+    <loc>https://kernel-axis.com/learn/multi-factor-authentication</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 5] Network Security: Understanding Firewalls -->
+  <url>
+    <loc>https://kernel-axis.com/learn/understanding-firewalls</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 6] Cybersecurity Basics: Introduction to Zero Trust Security -->
+  <url>
+    <loc>https://kernel-axis.com/learn/introduction-to-zero-trust-security</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 7] Malware & Viruses: What is Ransomware? -->
+  <url>
+    <loc>https://kernel-axis.com/learn/what-is-ransomware</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 8] Online Safety: Securing Your Digital Footprint -->
+  <url>
+    <loc>https://kernel-axis.com/learn/securing-your-digital-footprint</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 9] Privacy & Data Protection: Secure Website Connections -->
+  <url>
+    <loc>https://kernel-axis.com/learn/secure-website-connections</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 10] Online Safety: How to Stay Safe Online -->
+  <url>
+    <loc>https://kernel-axis.com/learn/how-to-stay-safe-online</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 11] Online Safety: How to Secure Your Google Account: A Complete Beginner's Guide -->
+  <url>
+    <loc>https://kernel-axis.com/learn/how-to-secure-your-google-account-a-complete-beginner-s-guide</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 12] Cybersecurity Explained: What Happens When a Website Gets Hacked? Understanding a Web Security Incident -->
+  <url>
+    <loc>https://kernel-axis.com/learn/what-happens-when-a-website-gets-hacked-understanding-a-web-security-incident</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 13] Device Security: How to Secure Your Phone: Essential Security Settings Everyone Should Know -->
+  <url>
+    <loc>https://kernel-axis.com/learn/how-to-secure-your-phone-essential-security-settings-everyone-should-know</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 14] Digital Footprint: What Is a Digital Footprint? How Your Online Activity Leaves a Trail -->
+  <url>
+    <loc>https://kernel-axis.com/learn/what-is-a-digital-footprint-how-your-online-activity-leaves-a-trail</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 15] Scam Awareness: How Online Scams Work: Common Tactics Used to Trick Internet Users -->
+  <url>
+    <loc>https://kernel-axis.com/learn/how-online-scams-work-common-tactics-used-to-trick-internet-users</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 16] Network Security: How HTTPS Actually Protects You: Understanding TLS, Encryption, and Digital Certificates -->
+  <url>
+    <loc>https://kernel-axis.com/learn/how-https-actually-protects-you-understanding-tls-encryption-and-digital-certificates</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 17] Cybersecurity Threats: Threat Intelligence: How Defenders Track Cyber Threats -->
+  <url>
+    <loc>https://kernel-axis.com/learn/threat-intelligence-how-defenders-track-cyber-threats</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 18] Cybersecurity Threats: The Anatomy of a Modern Cyberattack: From Initial Access to Impact -->
+  <url>
+    <loc>https://kernel-axis.com/learn/the-anatomy-of-a-modern-cyberattack-from-initial-access-to-impact</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 19] Digital Forensics: Digital Forensics Explained: How Investigators Reconstruct a Cyberattack -->
+  <url>
+    <loc>https://kernel-axis.com/learn/digital-forensics-explained-how-investigators-reconstruct-a-cyberattack</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 20] Digital Forensics: Digital Evidence: How Investigators Preserve, Analyze, and Validate Evidence -->
+  <url>
+    <loc>https://kernel-axis.com/learn/digital-evidence-how-investigators-preserve-analyze-and-validate-evidence</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 21] Privacy & Data Protection: How Modern Websites Protect User Data: Privacy, Encryption, Tracking, and Data Security -->
+  <url>
+    <loc>https://kernel-axis.com/learn/how-modern-websites-protect-user-data-privacy-encryption-tracking-and-data-security</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 22] Security Tools: How Security Tools Actually Work: Choosing, Using, and Validating Cybersecurity Tools -->
+  <url>
+    <loc>https://kernel-axis.com/learn/how-security-tools-actually-work-choosing-using-and-validating-cybersecurity-tools</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 23] Cybersecurity Basics: The CIA Triad Explained: The Cornerstone of Information Security -->
+  <url>
+    <loc>https://kernel-axis.com/learn/the-cia-triad-explained-the-cornerstone-of-information-security</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 24] Cybersecurity Basics: Understanding the Cyber Attack Lifecycle: From Reconnaissance to Exfiltration -->
+  <url>
+    <loc>https://kernel-axis.com/learn/understanding-the-cyber-attack-lifecycle-from-reconnaissance-to-exfiltration</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 25] Cybersecurity Basics: Defense-in-Depth: Architectural Strategies for Layered Resilience -->
+  <url>
+    <loc>https://kernel-axis.com/learn/defense-in-depth-architectural-strategies-for-layered-resilience</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 26] Online Safety: Public Wi-Fi Security: Deconstructing Evil Twins, Packet Sniffing, and Real-World Travel Defense -->
+  <url>
+    <loc>https://kernel-axis.com/learn/public-wi-fi-security-deconstructing-evil-twins-packet-sniffing-and-real-world-travel-defense</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 27] Online Safety: The Mechanics of Social Engineering: Psychological Exploitation, Pretexting, and Human Defense -->
+  <url>
+    <loc>https://kernel-axis.com/learn/the-mechanics-of-social-engineering-psychological-exploitation-pretexting-and-human-defense</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 28] Online Safety: Safe Online Shopping, Banking, and Financial Defense: Countering Card Skimmers, Clone Portals, and Payment Scams -->
+  <url>
+    <loc>https://kernel-axis.com/learn/safe-online-shopping-banking-and-financial-defense-countering-card-skimmers-clone-portals-and-payment-scams</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 29] Password Security: The Mathematics of Password Cracking: Entropy, Modern GPU Rigs, and Why Complexity Rules Fail -->
+  <url>
+    <loc>https://kernel-axis.com/learn/the-mathematics-of-password-cracking-entropy-modern-gpu-rigs-and-why-complexity-rules-fail</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 30] Password Security: Credential Stuffing and Password Spraying: How Stolen Databases Fuel Automated Account Takeover -->
+  <url>
+    <loc>https://kernel-axis.com/learn/credential-stuffing-and-password-spraying-how-stolen-databases-fuel-automated-account-takeover</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 31] Password Security: The Architecture of Password Managers: Zero-Knowledge Encryption, PBKDF2 vs. Argon2id, and Vault Security -->
+  <url>
+    <loc>https://kernel-axis.com/learn/the-architecture-of-password-managers-zero-knowledge-encryption-pbkdf2-vs-argon2id-and-vault-security</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 32] Phishing & Scams: Adversary-in-the-Middle (AiTM) Phishing: How Reverse Proxies Bypass MFA and Hijack Session Cookies -->
+  <url>
+    <loc>https://kernel-axis.com/learn/adversary-in-the-middle-aitm-phishing-how-reverse-proxies-bypass-mfa-and-hijack-session-cookies</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 33] Phishing & Scams: Business Email Compromise (BEC): Anatomy of Multi-Million Dollar Executive Impersonation and Wire Fraud -->
+  <url>
+    <loc>https://kernel-axis.com/learn/business-email-compromise-bec-anatomy-of-multi-million-dollar-executive-impersonation-and-wire-fraud</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 34] Phishing & Scams: Quishing, Smishing, and Deepfake Vishing: The New Frontiers of Multi-Vector Social Engineering -->
+  <url>
+    <loc>https://kernel-axis.com/learn/quishing-smishing-and-deepfake-vishing-the-new-frontiers-of-multi-vector-social-engineering</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 35] Malware & Viruses: The Anatomy of Infostealers: RedLine, Lumma, and the Underground Credential Harvesting Economy -->
+  <url>
+    <loc>https://kernel-axis.com/learn/the-anatomy-of-infostealers-redline-lumma-and-the-underground-credential-harvesting-economy</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 36] Malware & Viruses: Fileless Malware and Living-off-the-Land (LotL): Evading Antivirus with PowerShell, WMI, and Process Injection -->
+  <url>
+    <loc>https://kernel-axis.com/learn/fileless-malware-and-living-off-the-land-lotl-evading-antivirus-with-powershell-wmi-and-process-injection</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 37] Malware & Viruses: Worms, Polymorphic Viruses, and Stuxnet: The Evolution of Self-Replicating and Evasive Code -->
+  <url>
+    <loc>https://kernel-axis.com/learn/worms-polymorphic-viruses-and-stuxnet-the-evolution-of-self-replicating-and-evasive-code</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 38] Malware & Viruses: Rootkits and Bootkits: Deconstructing Ring 0 Kernel Hooks, UEFI Firmware Hijacking, and Deep Persistence -->
+  <url>
+    <loc>https://kernel-axis.com/learn/rootkits-and-bootkits-deconstructing-ring-0-kernel-hooks-uefi-firmware-hijacking-and-deep-persistence</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 39] Network Security: Zero Trust Network Architecture (ZTNA): Deconstructing BeyondCorp, Microsegmentation, and Identity-Aware Proxies -->
+  <url>
+    <loc>https://kernel-axis.com/learn/zero-trust-network-architecture-ztna-deconstructing-beyondcorp-microsegmentation-and-identity-aware-proxies</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 40] Network Security: BGP Hijacking and DNS Spoofing: Exploiting the Vulnerable Core Routing Protocols of the Internet -->
+  <url>
+    <loc>https://kernel-axis.com/learn/bgp-hijacking-and-dns-spoofing-exploiting-the-vulnerable-core-routing-protocols-of-the-internet</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 41] Network Security: The Mechanics of Modern Man-in-the-Middle (MitM) Attacks: ARP Poisoning, SSL Stripping, and Encrypted Traffic Analysis -->
+  <url>
+    <loc>https://kernel-axis.com/learn/the-mechanics-of-modern-man-in-the-middle-mitm-attacks-arp-poisoning-ssl-stripping-and-encrypted-traffic-analysis</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 42] Network Security: Next-Generation Intrusion Detection and Prevention Systems (IDS/IPS): Deep Packet Inspection, Snort Rules, and Behavioral Anomaly Engines -->
+  <url>
+    <loc>https://kernel-axis.com/learn/next-generation-intrusion-detection-and-prevention-systems-ids-ips-deep-packet-inspection-snort-rules-and-behavioral-anomaly-engines</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 43] Privacy & Data Protection: Browser Fingerprinting and Tracking Without Cookies: Canvas, WebGL, AudioContext, and the Death of Anonymity -->
+  <url>
+    <loc>https://kernel-axis.com/learn/browser-fingerprinting-and-tracking-without-cookies-canvas-webgl-audiocontext-and-the-death-of-anonymity</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 44] Privacy & Data Protection: The Architecture of Data Brokers: How People-Search Sites, Credit Bureaus, and Mobile SDKs Package Your Digital Life -->
+  <url>
+    <loc>https://kernel-axis.com/learn/the-architecture-of-data-brokers-how-people-search-sites-credit-bureaus-and-mobile-sdks-package-your-digital-life</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 45] Privacy & Data Protection: End-to-End Encryption (E2EE) vs. Cloud Key Custody: The Double Ratchet Algorithm, Signal Protocol, and the Client-Side Scanning Dilemma -->
+  <url>
+    <loc>https://kernel-axis.com/learn/end-to-end-encryption-e2ee-vs-cloud-key-custody-the-double-ratchet-algorithm-signal-protocol-and-the-client-side-scanning-dilemma</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 46] Privacy & Data Protection: GDPR, CCPA, and CPRA: The Architecture of Modern Privacy Engineering: Differential Privacy, Anonymization, and Zero-Knowledge Proofs -->
+  <url>
+    <loc>https://kernel-axis.com/learn/gdpr-ccpa-and-cpra-the-architecture-of-modern-privacy-engineering-differential-privacy-anonymization-and-zero-knowledge-proofs</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 47] Privacy & Data Protection: Surveillance Capitalism and Mobile Telemetry: Deconstructing iOS App Tracking Transparency vs. Android Privacy Sandbox -->
+  <url>
+    <loc>https://kernel-axis.com/learn/surveillance-capitalism-and-mobile-telemetry-deconstructing-ios-app-tracking-transparency-vs-android-privacy-sandbox</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 48] Security Tools: EDR vs. Traditional Antivirus: Kernel Hooks, ETW Telemetry, Behavioral Heuristics, and Evasion Mechanics -->
+  <url>
+    <loc>https://kernel-axis.com/learn/edr-vs-traditional-antivirus-kernel-hooks-etw-telemetry-behavioral-heuristics-and-evasion-mechanics</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 49] Security Tools: Network Traffic Analysis with Wireshark and Zeek: Deep Packet Inspection, JA3/JA4 TLS Fingerprinting, and Intrusion Forensics -->
+  <url>
+    <loc>https://kernel-axis.com/learn/network-traffic-analysis-with-wireshark-and-zeek-deep-packet-inspection-ja3-ja4-tls-fingerprinting-and-intrusion-forensics</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 50] Security Tools: Vulnerability Scanning and Attack Surface Management: Nmap NSE Internals, OpenVAS Scanning Mechanics, and CVSS v4.0 Quantification -->
+  <url>
+    <loc>https://kernel-axis.com/learn/vulnerability-scanning-and-attack-surface-management-nmap-nse-internals-openvas-scanning-mechanics-and-cvss-v4-0-quantification</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 51] Security Tools: Mastering Interception Proxies: Burp Suite, OWASP ZAP, Custom BApps, and Modern API Security Testing -->
+  <url>
+    <loc>https://kernel-axis.com/learn/mastering-interception-proxies-burp-suite-owasp-zap-custom-bapps-and-modern-api-security-testing</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 52] Security Tools: SIEM and SOAR Architecture: Elastic and Splunk Pipelines, Sigma Detection Rules, and Automated Incident Response -->
+  <url>
+    <loc>https://kernel-axis.com/learn/siem-and-soar-architecture-elastic-and-splunk-pipelines-sigma-detection-rules-and-automated-incident-response</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 53] Cybersecurity Explained: Zero Trust Architecture (ZTA) Deconstructed: Beyond the Buzzword to NIST SP 800-207, Micro-Segmentation, and Identity-Aware Proxies -->
+  <url>
+    <loc>https://kernel-axis.com/learn/zero-trust-architecture-zta-deconstructed-beyond-the-buzzword-to-nist-sp-800-207-micro-segmentation-and-identity-aware-proxies</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 54] Cybersecurity Explained: The Anatomy of a Nation-State Cyber Intrusion: The Cyber Kill Chain, MITRE ATT&amp;CK Framework, and the Lifecycle of an APT -->
+  <url>
+    <loc>https://kernel-axis.com/learn/the-anatomy-of-a-nation-state-cyber-intrusion-the-cyber-kill-chain-mitre-attandck-framework-and-the-lifecycle-of-an-apt</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 55] Cybersecurity Explained: Software Supply Chain Security and the Modern Build Pipeline: SolarWinds, Log4j, Codecov, and the Mechanics of SBOM, SLSA, and Sigstore -->
+  <url>
+    <loc>https://kernel-axis.com/learn/software-supply-chain-security-and-the-modern-build-pipeline-solarwinds-log4j-codecov-and-the-mechanics-of-sbom-slsa-and-sigstore</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 56] Cybersecurity Explained: Cryptographic Foundations of Modern Internet Security: Symmetric vs. Asymmetric Ciphers, Diffie-Hellman Key Exchange, and the Post-Quantum Transition -->
+  <url>
+    <loc>https://kernel-axis.com/learn/cryptographic-foundations-of-modern-internet-security-symmetric-vs-asymmetric-ciphers-diffie-hellman-key-exchange-and-the-post-quantum-transition</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 57] Cybersecurity Explained: Ransomware Operations and Modern Cyber Extortion: Double Extortion, Initial Access Brokers, RaaS Syndicates, and Crisis Recovery -->
+  <url>
+    <loc>https://kernel-axis.com/learn/ransomware-operations-and-modern-cyber-extortion-double-extortion-initial-access-brokers-raas-syndicates-and-crisis-recovery</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 58] Device Security: Hardware-Enforced Security and Secure Boot Architectures: TPM 2.0, Secure Enclaves, Apple Silicon SEP, and UEFI Bootkit Threat Vectors -->
+  <url>
+    <loc>https://kernel-axis.com/learn/hardware-enforced-security-and-secure-boot-architectures-tpm-2-0-secure-enclaves-apple-silicon-sep-and-uefi-bootkit-threat-vectors</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 59] Device Security: Mobile Operating System Sandboxing and Exploit Mitigations: iOS vs. Android Security Models, IPC Isolation, Memory Tagging Extensions (MTE), and Zero-Click N-Day Chains -->
+  <url>
+    <loc>https://kernel-axis.com/learn/mobile-operating-system-sandboxing-and-exploit-mitigations-ios-vs-android-security-models-ipc-isolation-memory-tagging-extensions-mte-and-zero-click-n-day-chains</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 60] Device Security: Full-Disk Encryption (FDE) and Cryptographic Storage Architecture: BitLocker, LUKS2, File-Based Encryption (FBE), Cold Boot Attacks, and DMA Interception -->
+  <url>
+    <loc>https://kernel-axis.com/learn/full-disk-encryption-fde-and-cryptographic-storage-architecture-bitlocker-luks2-file-based-encryption-fbe-cold-boot-attacks-and-dma-interception</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 61] Device Security: Endpoint Device Management (UEM/MDM) and Zero Trust Host Hardening: Microsoft Intune, Apple MDM Protocol, CIS Benchmarks, and BYOD Isolation -->
+  <url>
+    <loc>https://kernel-axis.com/learn/endpoint-device-management-uem-mdm-and-zero-trust-host-hardening-microsoft-intune-apple-mdm-protocol-cis-benchmarks-and-byod-isolation</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 62] Device Security: IoT and Embedded Systems Firmware Security: Flash Dumping, JTAG/UART Hardware Debugging, Reverse Engineering Binwalk, and Secure Firmware Over-The-Air (FOTA) -->
+  <url>
+    <loc>https://kernel-axis.com/learn/iot-and-embedded-systems-firmware-security-flash-dumping-jtag-uart-hardware-debugging-reverse-engineering-binwalk-and-secure-firmware-over-the-air-fota</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 63] Digital Footprint: Advanced Browser Fingerprinting Mechanics: Canvas 2D, WebGL Shader Rendering, AudioContext Oscillators, and Font Metrics Extraction -->
+  <url>
+    <loc>https://kernel-axis.com/learn/advanced-browser-fingerprinting-mechanics-canvas-2d-webgl-shader-rendering-audiocontext-oscillators-and-font-metrics-extraction</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 64] Digital Footprint: The Surveillance Capitalism Data Broker Ecosystem: Commercial Graph Databases, Cross-Device Identity Resolution (CDIR), and Shadow Profiling -->
+  <url>
+    <loc>https://kernel-axis.com/learn/the-surveillance-capitalism-data-broker-ecosystem-commercial-graph-databases-cross-device-identity-resolution-cdir-and-shadow-profiling</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 65] Digital Footprint: Open-Source Intelligence (OSINT) and Digital Footprint Reconnaissance: Attack Surface Discovery, People Search Engines, and Metadata Extraction -->
+  <url>
+    <loc>https://kernel-axis.com/learn/open-source-intelligence-osint-and-digital-footprint-reconnaissance-attack-surface-discovery-people-search-engines-and-metadata-extraction</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 66] Digital Footprint: De-Anonymization of Public &amp; Anonymized Datasets: K-Anonymity, Differential Privacy, Quasi-Identifiers, and Latanya Sweeney’s 87% Theorem -->
+  <url>
+    <loc>https://kernel-axis.com/learn/de-anonymization-of-public-and-anonymized-datasets-k-anonymity-differential-privacy-quasi-identifiers-and-latanya-sweeney-s-87-theorem</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 67] Digital Footprint: Digital Footprint Sanitization and Right to Be Forgotten: Account Deletion, Cache Purging, Alias Personas, and Operational Privacy (OPSEC) -->
+  <url>
+    <loc>https://kernel-axis.com/learn/digital-footprint-sanitization-and-right-to-be-forgotten-account-deletion-cache-purging-alias-personas-and-operational-privacy-opsec</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 68] Scam Awareness: The Psychology of Romance Scams: How Fake Online Relationships Steal Life Savings -->
+  <url>
+    <loc>https://kernel-axis.com/learn/the-psychology-of-romance-scams-how-fake-online-relationships-steal-life-savings</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 69] Scam Awareness: Job Offer and Work-From-Home Scams: Unmasking Fake Remote Positions and Task Fraud -->
+  <url>
+    <loc>https://kernel-axis.com/learn/job-offer-and-work-from-home-scams-unmasking-fake-remote-positions-and-task-fraud</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 70] Scam Awareness: Bank Impersonation and Urgency Fraud: Anatomy of the Fake Fraud Department Call -->
+  <url>
+    <loc>https://kernel-axis.com/learn/bank-impersonation-and-urgency-fraud-anatomy-of-the-fake-fraud-department-call</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 71] Scam Awareness: Investment and Cryptocurrency Schemes: The Mechanics Behind Fake Trading Desks and Ponzi Apps -->
+  <url>
+    <loc>https://kernel-axis.com/learn/investment-and-cryptocurrency-schemes-the-mechanics-behind-fake-trading-desks-and-ponzi-apps</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 72] Scam Awareness: Online Marketplace and Overpayment Scams: Protecting Yourself on Facebook, eBay, and Craigslist -->
+  <url>
+    <loc>https://kernel-axis.com/learn/online-marketplace-and-overpayment-scams-protecting-yourself-on-facebook-ebay-and-craigslist</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 73] Cybersecurity Threats: Ransomware Operations and Extortion Ecosystems: From Compromised Access to Multi-Stage Corporate Blackmail -->
+  <url>
+    <loc>https://kernel-axis.com/learn/ransomware-operations-and-extortion-ecosystems-from-compromised-access-to-multi-stage-corporate-blackmail</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 74] Cybersecurity Threats: Supply Chain Attacks and Trusted Partner Exploitation: How Attackers Breach Giant Companies Through Small Vendors -->
+  <url>
+    <loc>https://kernel-axis.com/learn/supply-chain-attacks-and-trusted-partner-exploitation-how-attackers-breach-giant-companies-through-small-vendors</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 75] Cybersecurity Threats: Advanced Persistent Threats (APTs) and Nation-State Cyber Operations: The Patient Art of Digital Espionage -->
+  <url>
+    <loc>https://kernel-axis.com/learn/advanced-persistent-threats-apts-and-nation-state-cyber-operations-the-patient-art-of-digital-espionage</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 76] Cybersecurity Threats: Distributed Denial of Service (DDoS) Weaponry and Botnet Armies: How Hijacked Smart Devices Knock Services Offline -->
+  <url>
+    <loc>https://kernel-axis.com/learn/distributed-denial-of-service-ddos-weaponry-and-botnet-armies-how-hijacked-smart-devices-knock-services-offline</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 77] Cybersecurity Threats: Insider Threats and Social Engineering at Scale: When the Danger Comes From Inside the Firewall -->
+  <url>
+    <loc>https://kernel-axis.com/learn/insider-threats-and-social-engineering-at-scale-when-the-danger-comes-from-inside-the-firewall</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 78] Digital Forensics: Volatile Memory Forensics and RAM Dumping: Catching Fileless Malware and In-Memory Attack Artifacts -->
+  <url>
+    <loc>https://kernel-axis.com/learn/volatile-memory-forensics-and-ram-dumping-catching-fileless-malware-and-in-memory-attack-artifacts</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 79] Digital Forensics: Disk Imaging and Dead-Box Forensics: Bit-Stream Copies, Write Blockers, and File System Carving -->
+  <url>
+    <loc>https://kernel-axis.com/learn/disk-imaging-and-dead-box-forensics-bit-stream-copies-write-blockers-and-file-system-carving</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 80] Digital Forensics: Chain of Custody and Courtroom Admissibility: How Digital Evidence Withstands Legal Scrutiny -->
+  <url>
+    <loc>https://kernel-axis.com/learn/chain-of-custody-and-courtroom-admissibility-how-digital-evidence-withstands-legal-scrutiny</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 81] Digital Forensics: Network Forensics and Packet Capture Analysis: Reconstructing Attacks Across the Wire -->
+  <url>
+    <loc>https://kernel-axis.com/learn/network-forensics-and-packet-capture-analysis-reconstructing-attacks-across-the-wire</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <!-- [ID 82] Digital Forensics: Mobile Device Forensics and Cloud Extractions: Unlocking Modern Smartphones and Ephemeral Evidence -->
+  <url>
+    <loc>https://kernel-axis.com/learn/mobile-device-forensics-and-cloud-extractions-unlocking-modern-smartphones-and-ephemeral-evidence</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>
