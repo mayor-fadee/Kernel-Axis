@@ -21,7 +21,6 @@ import { playSynthBeep } from '../lib/audio';
 
 interface OperatorProfile {
   name: string;
-  codename: string;
   role: string;
   clearance: string;
   idNumber: string;
@@ -49,7 +48,7 @@ const CLEARANCE_LEVELS = [
   'LEVEL 2 - DEFENSE OPERATOR',
   'LEVEL 3 - ADVANCED THREAT ANALYST',
   'LEVEL 4 - RED TEAM ROOT',
-  'LEVEL 5 - KERNEL ARCHITECT (TOP SECRET)'
+  'LEVEL 5 - TOP SECRET / SCI'
 ];
 
 const DEFAULT_AVATARS = [
@@ -72,7 +71,6 @@ function generateRandomId(): string {
 export const KernelIdPage: React.FC = () => {
   const [profile, setProfile] = useState<OperatorProfile>({
     name: 'Alex Mercer',
-    codename: 'PHANTOM_NODE',
     role: 'Security Researcher',
     clearance: 'LEVEL 3 - ADVANCED THREAT ANALYST',
     idNumber: generateRandomId(),
@@ -325,26 +323,13 @@ export const KernelIdPage: React.FC = () => {
         ctx.fillRect(avatarX, y, avatarSize, 1.5);
       }
 
-      // Live Tag under photo
-      ctx.fillStyle = themeColors.badgeBg;
-      ctx.fillRect(avatarX, avatarY + avatarSize + 16, avatarSize, 36);
-      ctx.strokeStyle = themeColors.accentBorder;
-      ctx.lineWidth = 1;
-      ctx.strokeRect(avatarX, avatarY + avatarSize + 16, avatarSize, 36);
-
-      ctx.fillStyle = themeColors.accent;
-      ctx.font = 'bold 12px "JetBrains Mono", monospace';
-      ctx.textAlign = 'center';
-      ctx.fillText('STATUS: VERIFIED ACTIVE', avatarX + avatarSize / 2, avatarY + avatarSize + 39);
-      ctx.textAlign = 'left';
-
       // Middle Column: Main Identification Data
       const dataX = 330;
       let curY = 180;
 
       // Operator Name
       ctx.fillStyle = 'rgba(255, 255, 255, 0.5)';
-      ctx.font = '12px "JetBrains Mono", monospace';
+      ctx.font = '12px "Space Grotesk", sans-serif';
       ctx.fillText('OPERATOR IDENTITY', dataX, curY);
 
       curY += 34;
@@ -352,14 +337,8 @@ export const KernelIdPage: React.FC = () => {
       ctx.font = 'bold 36px "Space Grotesk", sans-serif';
       ctx.fillText(profile.name.toUpperCase(), dataX, curY);
 
-      // Codename / Alias
-      curY += 28;
-      ctx.fillStyle = themeColors.accent;
-      ctx.font = 'bold 18px "JetBrains Mono", monospace';
-      ctx.fillText(`HANDLE: [${profile.codename || 'ANONYMOUS'}]`, dataX, curY);
-
       // Divider line
-      curY += 24;
+      curY += 20;
       ctx.strokeStyle = 'rgba(255, 255, 255, 0.1)';
       ctx.lineWidth = 1;
       ctx.beginPath();
@@ -370,18 +349,18 @@ export const KernelIdPage: React.FC = () => {
       // Specialization Role
       curY += 32;
       ctx.fillStyle = 'rgba(255, 255, 255, 0.5)';
-      ctx.font = '12px "JetBrains Mono", monospace';
+      ctx.font = '12px "Space Grotesk", sans-serif';
       ctx.fillText('ROLE DESIGNATION', dataX, curY);
 
       curY += 26;
       ctx.fillStyle = '#ffffff';
-      ctx.font = 'bold 22px "Space Grotesk", sans-serif';
+      ctx.font = '600 22px "Space Grotesk", sans-serif';
       ctx.fillText(profile.role, dataX, curY);
 
       // Clearance Pill
       curY += 36;
       ctx.fillStyle = 'rgba(255, 255, 255, 0.5)';
-      ctx.font = '12px "JetBrains Mono", monospace';
+      ctx.font = '12px "Space Grotesk", sans-serif';
       ctx.fillText('SECURITY CLEARANCE', dataX, curY);
 
       curY += 16;
@@ -397,8 +376,8 @@ export const KernelIdPage: React.FC = () => {
       // Specialty Note
       curY += 56;
       ctx.fillStyle = 'rgba(255, 255, 255, 0.5)';
-      ctx.font = '12px "JetBrains Mono", monospace';
-      ctx.fillText('TACTICAL DISCIPLINE', dataX, curY);
+      ctx.font = '12px "Space Grotesk", sans-serif';
+      ctx.fillText('TACTICAL FOCUS', dataX, curY);
 
       curY += 22;
       ctx.fillStyle = '#cccccc';
@@ -623,40 +602,31 @@ export const KernelIdPage: React.FC = () => {
                     <div className="absolute bottom-1 right-1 w-2 h-2 border-b border-r border-white" />
                   </div>
 
-                  <div className="mt-2.5 inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-white/[0.03] border border-white/10 text-[9px] font-mono text-zinc-300">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                    <span>STATUS: ACTIVE</span>
-                  </div>
                 </div>
 
                 {/* DETAILS COLUMN */}
                 <div className="sm:col-span-8 space-y-3 text-center sm:text-left">
                   <div>
-                    <span className="text-[9px] font-mono uppercase tracking-widest text-zinc-400 block">
+                    <span className="text-[9px] font-sans uppercase tracking-wide text-zinc-400 block">
                       OPERATOR IDENTITY
                     </span>
-                    <h3 className="text-xl sm:text-2xl font-display font-extrabold text-white tracking-wide uppercase truncate">
+                    <h3 className="text-xl sm:text-2xl font-sans font-semibold text-white tracking-normal uppercase truncate">
                       {profile.name || 'OPERATOR NAME'}
                     </h3>
-                    <p className={`text-xs font-mono font-bold tracking-wider ${
-                      profile.theme === 'emerald' ? 'text-[#00ff88]' : profile.theme === 'cyan' ? 'text-[#00e5ff]' : profile.theme === 'matrix' ? 'text-[#39ff14]' : 'text-zinc-300'
-                    }`}>
-                      HANDLE: [{profile.codename || 'ANON'}]
-                    </p>
                   </div>
 
                   <div className="grid grid-cols-2 gap-2 pt-1 border-t border-white/[0.06]">
                     <div>
-                      <span className="text-[9px] font-mono text-zinc-400 uppercase tracking-wider block">
+                      <span className="text-[9px] font-sans text-zinc-400 uppercase tracking-wide block">
                         ROLE DESIGNATION
                       </span>
-                      <span className="text-xs sm:text-sm font-semibold text-zinc-100 block truncate">
+                      <span className="text-xs sm:text-sm font-sans font-medium text-zinc-100 block truncate">
                         {profile.role}
                       </span>
                     </div>
 
                     <div>
-                      <span className="text-[9px] font-mono text-zinc-400 uppercase tracking-wider block">
+                      <span className="text-[9px] font-sans text-zinc-400 uppercase tracking-wide block">
                         SECURITY CLEARANCE
                       </span>
                       <span className={`text-[10px] sm:text-xs font-mono font-bold block truncate ${
@@ -668,10 +638,10 @@ export const KernelIdPage: React.FC = () => {
                   </div>
 
                   <div className="pt-1">
-                    <span className="text-[9px] font-mono text-zinc-400 uppercase tracking-wider block">
+                    <span className="text-[9px] font-sans text-zinc-400 uppercase tracking-wide block">
                       TACTICAL FOCUS
                     </span>
-                    <p className="text-xs text-zinc-300 line-clamp-2 leading-relaxed font-sans">
+                    <p className="text-xs text-zinc-300 line-clamp-2 leading-relaxed font-sans tracking-normal">
                       {profile.specialty}
                     </p>
                   </div>
@@ -810,21 +780,6 @@ export const KernelIdPage: React.FC = () => {
               />
             </div>
 
-            {/* FIELD: CODENAME / HANDLE */}
-            <div>
-              <label className="block text-xs font-mono text-zinc-300 uppercase tracking-wider mb-1.5">
-                Security Handle / Codename
-              </label>
-              <input
-                type="text"
-                value={profile.codename}
-                maxLength={20}
-                onChange={(e) => handleInputChange('codename', e.target.value)}
-                className="w-full px-3.5 py-2.5 bg-black/60 border border-white/10 rounded-xl text-white font-mono text-sm focus:outline-none focus:border-[#00ff88]/60 focus:ring-1 focus:ring-[#00ff88]/30 transition-all uppercase"
-                placeholder="e.g. PHANTOM_NODE"
-              />
-            </div>
-
             {/* FIELD: ROLE SELECTION */}
             <div>
               <label className="block text-xs font-mono text-zinc-300 uppercase tracking-wider mb-1.5">
@@ -861,7 +816,7 @@ export const KernelIdPage: React.FC = () => {
               </select>
             </div>
 
-            {/* FIELD: TACTICAL DISCIPLINE */}
+            {/* FIELD: TACTICAL FOCUS */}
             <div>
               <label className="block text-xs font-mono text-zinc-300 uppercase tracking-wider mb-1.5">
                 Tactical Focus Description
