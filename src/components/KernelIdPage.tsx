@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
+import { toPng } from 'html-to-image';
 import { 
   ShieldCheck, 
   Download, 
@@ -121,12 +122,29 @@ export const KernelIdPage: React.FC = () => {
     }
   };
 
-  // High-Resolution 2D Canvas-based Card Generator & Exporter
+  // Capture the rendered preview so the downloaded PNG matches the visible card.
   const handleDownloadVirtualCard = async () => {
     playSynthBeep('click');
     setIsDownloading(true);
 
     try {
+      const cardElement = cardRef.current;
+      if (!cardElement) throw new Error('Card preview unavailable');
+
+      await document.fonts.ready;
+      const previewDataUrl = await toPng(cardElement, {
+        cacheBust: true,
+        pixelRatio: 2
+      });
+      const previewDownloadLink = document.createElement('a');
+      previewDownloadLink.href = previewDataUrl;
+      const previewCleanName = profile.name.toLowerCase().replace(/[^a-z0-9]/g, '_') || 'operator';
+      previewDownloadLink.download = `kernel_axis_id_${previewCleanName}.png`;
+      document.body.appendChild(previewDownloadLink);
+      previewDownloadLink.click();
+      document.body.removeChild(previewDownloadLink);
+      return;
+
       // Dimensions: 1200 x 750 (High-res 16:10 standard ID landscape card)
       const canvas = document.createElement('canvas');
       const width = 1200;
