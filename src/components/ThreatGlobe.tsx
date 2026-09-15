@@ -9,18 +9,34 @@ interface ThreatGlobeProps {
 }
 
 const countries: Country[] = [
-  { name: 'Pakistan', lat: 30.3753, lng: 69.3451 },
   { name: 'USA', lat: 37.0902, lng: -95.7129 },
-  { name: 'India', lat: 20.5937, lng: 78.9629 },
-  { name: 'UK', lat: 55.3781, lng: -3.4360 },
-  { name: 'China', lat: 35.8617, lng: 104.1954 },
-  { name: 'Australia', lat: -25.2744, lng: 133.7751 },
   { name: 'Canada', lat: 56.1304, lng: -106.3468 },
-  { name: 'Germany', lat: 51.1657, lng: 10.4515 },
+  { name: 'Mexico', lat: 23.6345, lng: -102.5528 },
   { name: 'Brazil', lat: -14.2350, lng: -51.9253 },
+  { name: 'UK', lat: 55.3781, lng: -3.4360 },
+  { name: 'Germany', lat: 51.1657, lng: 10.4515 },
   { name: 'France', lat: 46.2276, lng: 2.2137 },
-  { name: 'Japan', lat: 35.6895, lng: 139.6917 }
+  { name: 'Netherlands', lat: 52.3676, lng: 4.9041 },
+  { name: 'Norway', lat: 60.4720, lng: 8.4689 },
+  { name: 'Russia', lat: 61.5240, lng: 105.3188 },
+  { name: 'Saudi Arabia', lat: 23.8859, lng: 45.0792 },
+  { name: 'UAE', lat: 23.4241, lng: 53.8478 },
+  { name: 'India', lat: 20.5937, lng: 78.9629 },
+  { name: 'Pakistan', lat: 30.3753, lng: 69.3451 },
+  { name: 'China', lat: 35.8617, lng: 104.1954 },
+  { name: 'Japan', lat: 35.6895, lng: 139.6917 },
+  { name: 'South Korea', lat: 35.9078, lng: 127.7669 },
+  { name: 'Indonesia', lat: -0.7893, lng: 113.9213 },
+  { name: 'Singapore', lat: 1.3521, lng: 103.8198 },
+  { name: 'Australia', lat: -25.2744, lng: 133.7751 },
+  { name: 'South Africa', lat: -30.5595, lng: 22.9375 },
+  { name: 'Nigeria', lat: 9.0820, lng: 8.6753 },
+  { name: 'Kenya', lat: -0.0236, lng: 37.9062 },
+  { name: 'Israel', lat: 31.0461, lng: 34.8516 },
+  { name: 'Turkey', lat: 38.9637, lng: 35.2433 }
 ];
+
+const threatArcPalette = ['#7dd3fc', '#22c55e', '#fbbf24', '#f87171', '#a78bfa'];
 
 export const ThreatGlobe: React.FC<ThreatGlobeProps> = ({ onAttackTriggered, active }) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
@@ -41,16 +57,17 @@ export const ThreatGlobe: React.FC<ThreatGlobeProps> = ({ onAttackTriggered, act
       .labelLat('lat')
       .labelLng('lng')
       .labelText('name')
-      .labelSize(1.3)
-      .labelColor(() => '#00ff88')
-      .labelAltitude(0.015)
-      .arcColor(() => ['#ff3333', '#ffaa00', '#00ff88'])
-      .arcStroke(0.5)
-      .arcAltitude(0.3)
-      .arcDashLength(0.25)
-      .arcDashGap(0.75)
-      .arcDashAnimateTime(2000)
-      .ringColor(() => (t: number) => `rgba(255, 80, 0, ${1 - t})`);
+      .labelSize(1.1)
+      .labelColor(() => '#eaf7ff')
+      .labelAltitude(0.02)
+      .arcColor((arc: AttackArc) => arc.color ?? ['#7dd3fc', '#fbbf24', '#f87171'])
+      .arcStroke(1)
+      .arcAltitude((arc: AttackArc) => 0.12 + Math.abs((arc.endLat - arc.startLat) / 90) * 0.18)
+      .arcDashLength(0.55)
+      .arcDashGap(0.25)
+      .arcDashAnimateTime(1800)
+      .ringsTransitionDuration(900)
+      .ringColor(() => (t: number) => `rgba(248, 113, 113, ${1 - t})`);
 
     // Basic control options safely guarded
     try {
@@ -109,7 +126,12 @@ export const ThreatGlobe: React.FC<ThreatGlobeProps> = ({ onAttackTriggered, act
           startLat: source.lat,
           startLng: source.lng,
           endLat: target.lat,
-          endLng: target.lng
+          endLng: target.lng,
+          color: [
+            threatArcPalette[Math.floor(Math.random() * threatArcPalette.length)],
+            threatArcPalette[Math.floor(Math.random() * threatArcPalette.length)],
+            '#fef3c7'
+          ]
         };
 
         // Add arc
