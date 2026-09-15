@@ -184,8 +184,8 @@ export const PasswordCheckerPage: React.FC = () => {
     const numberAndWordPattern = /^[_\-.\s!@#$%^&*]*[0-9]{1,6}[_\-.\s!@#$%^&*]*([a-zA-Z]{2,}[_\-.\s!@#$%^&*]*)+$/i.test(currentPass);
     const wordSeparatorPattern = /^[a-zA-Z]{3,}[_\-.!@#$%^&*]+[a-zA-Z0-9_\-.!@#$%^&*]*$/i.test(currentPass);
 
-    const letterBlocks = currentPass.match(/[a-zA-Z]+/g) || [];
-    const nonLetterBlocks = currentPass.match(/[^a-zA-Z]+/g) || [];
+    const letterBlocks: string[] = currentPass.match(/[a-zA-Z]+/g) ?? [];
+    const nonLetterBlocks: string[] = currentPass.match(/[^a-zA-Z]+/g) ?? [];
     const totalLetterChars = letterBlocks.reduce((acc, c) => acc + c.length, 0);
     const maxLetterChunkLen = letterBlocks.reduce((max, c) => Math.max(max, c.length), 0);
     const isCleanNonLetterStructure = nonLetterBlocks.length === 0 || nonLetterBlocks.every(block => /^[0-9_\-.\s!@#$%^&*]+$/.test(block));
