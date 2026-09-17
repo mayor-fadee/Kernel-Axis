@@ -104,7 +104,7 @@ export default function App() {
     }
 
     let title = 'Kernel Axis | Learn Cybersecurity';
-    let description = 'Learn how cyber threats work, understand online security risks, and explore interactive tools designed for students, developers, and curious learners.';
+    let description = 'Kernel Axis offers an interactive cybersecurity learning experience through immersive visuals, practical scenarios, and hands-on exploration, helping users understand modern threats, defensive strategies, and digital resilience in a clear, engaging way that makes cybersecurity easier to grasp.';
     const cleanPath = location.pathname.replace(/\/+$/, '') || '/';
     const canonicalUrl = `${window.location.origin}${cleanPath}`;
 

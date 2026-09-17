@@ -298,7 +298,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
             Making Cybersecurity Easier to Understand
           </h2>
           <p className="text-xs sm:text-base md:text-lg text-zinc-400 leading-relaxed font-sans max-w-2xl mx-auto px-1 sm:px-0 pt-0.5 sm:pt-1">
-            Kernel Axis is an independent cybersecurity education platform focused on practical knowledge, digital awareness, and interactive learning. We turn complex security concepts into clear, accessible resources that help people better understand and navigate the digital world.
+            Kernel Axis offers an interactive cybersecurity learning experience through immersive visuals, practical scenarios, and hands-on exploration, helping users understand modern threats, defensive strategies, and digital resilience in a clear, engaging way that makes cybersecurity easier to grasp.
           </p>
         </div>
       </section>
