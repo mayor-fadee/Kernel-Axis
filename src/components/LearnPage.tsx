@@ -3660,9 +3660,137 @@ However, software alone cannot secure an enterprise. True defensive capability d
     });
   };
 
+  const renderPasswordInline = (text: string) => {
+    const parts = text.split(/(`[^`]+`|\*\*[^*]+\*\*|\$[^$]+\$|\[[^\]]+\])/g);
+    return parts.map((part, pIdx) => {
+      if (part.startsWith('`') && part.endsWith('`')) {
+        return <code key={pIdx} className="rounded bg-black/40 px-1.5 py-0.5 font-mono text-[0.9em] text-[#8fffc0]">{part.slice(1, -1)}</code>;
+      }
+      if (part.startsWith('**') && part.endsWith('**')) {
+        return <strong key={pIdx} className="font-semibold text-white">{part.slice(2, -2)}</strong>;
+      }
+      if (part.startsWith('$') && part.endsWith('$')) {
+        return <span key={pIdx} className="font-mono text-[#8fffc0]">{part.slice(1, -1)}</span>;
+      }
+      if (part.startsWith('[') && part.endsWith(']')) {
+        return renderInline(part);
+      }
+      return part;
+    });
+  };
+
+  const renderPasswordFormattedContent = (content: string) => {
+    const lines = content.split('\n');
+    const blocks: React.ReactNode[] = [];
+    let idx = 0;
+
+    while (idx < lines.length) {
+      const trimmed = lines[idx].trim();
+      if (!trimmed) {
+        idx += 1;
+        continue;
+      }
+
+      if (trimmed === '---') {
+        blocks.push(<hr key={`password-rule-${idx}`} className="border-white/10" />);
+        idx += 1;
+        continue;
+      }
+
+      if (trimmed === '```' || trimmed.startsWith('```')) {
+        const codeLines: string[] = [];
+        idx += 1;
+        while (idx < lines.length && lines[idx].trim() !== '```') {
+          codeLines.push(lines[idx]);
+          idx += 1;
+        }
+        idx += 1;
+        blocks.push(
+          <pre key={`password-code-${idx}`} className="overflow-x-auto rounded-lg border border-white/10 bg-black/40 p-4 font-mono text-xs leading-relaxed text-[#b7ffd3]">
+            <code>{codeLines.join('\n')}</code>
+          </pre>
+        );
+        continue;
+      }
+
+      if (trimmed.startsWith('|')) {
+        const tableRows: string[][] = [];
+        while (idx < lines.length && lines[idx].trim().startsWith('|')) {
+          const row = lines[idx].trim().slice(1, -1).split('|').map((cell) => cell.trim());
+          if (!row.every((cell) => /^:?-+:?$/.test(cell))) {
+            tableRows.push(row);
+          }
+          idx += 1;
+        }
+        const [header, ...rows] = tableRows;
+        blocks.push(
+          <div key={`password-table-${idx}`} className="overflow-x-auto rounded-lg border border-white/10">
+            <table className="min-w-full text-left text-xs sm:text-sm">
+              <thead className="bg-white/[0.06] text-white">
+                <tr>{header.map((cell, cellIdx) => <th key={cellIdx} className="border-b border-white/10 px-3 py-2 font-semibold">{renderPasswordInline(cell)}</th>)}</tr>
+              </thead>
+              <tbody>
+                {rows.map((row, rowIdx) => (
+                  <tr key={rowIdx} className="border-b border-white/[0.06] last:border-0">
+                    {row.map((cell, cellIdx) => <td key={cellIdx} className="px-3 py-2 align-top text-zinc-400">{renderPasswordInline(cell)}</td>)}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        );
+        continue;
+      }
+
+      if (/^(\* |• |\d+\. )/.test(trimmed)) {
+        const listItems: { text: string }[] = [];
+        const ordered = /^\d+\. /.test(trimmed);
+        while (idx < lines.length) {
+          const item = lines[idx].trim();
+          if (ordered && !/^\d+\. /.test(item)) break;
+          if (!ordered && !/^(\* |• )/.test(item)) break;
+          listItems.push({ text: item.replace(ordered ? /^\d+\. / : /^(\* |• )/, '') });
+          idx += 1;
+        }
+        const ListTag = ordered ? 'ol' : 'ul';
+        blocks.push(
+          <ListTag key={`password-list-${idx}`} className={`${ordered ? 'list-decimal' : 'list-disc'} space-y-1.5 pl-6 text-xs text-zinc-400 sm:text-sm marker:text-[#00ff88]`}>
+            {listItems.map((item, itemIdx) => <li key={itemIdx}>{renderPasswordInline(item.text)}</li>)}
+          </ListTag>
+        );
+        continue;
+      }
+
+      if (trimmed.startsWith('### ')) {
+        blocks.push(<h4 key={`password-h4-${idx}`} className="flex items-center gap-2 pt-3 text-sm font-bold uppercase tracking-wider text-[#00ff88]"><span className="h-1.5 w-1.5 rounded-full bg-[#00ff88]" />{renderPasswordInline(trimmed.slice(4))}</h4>);
+        idx += 1;
+        continue;
+      }
+      if (trimmed.startsWith('## ')) {
+        const headingText = trimmed.slice(3);
+        blocks.push(<h3 key={`password-h3-${idx}`} className="border-b border-white/10 pb-1.5 pt-6 text-lg font-extrabold uppercase tracking-wide text-white">{renderPasswordInline(headingText)}</h3>);
+        idx += 1;
+        continue;
+      }
+
+      const paragraphLines = [trimmed];
+      idx += 1;
+      while (idx < lines.length) {
+        const next = lines[idx].trim();
+        if (!next || next === '---' || next.startsWith('#') || next.startsWith('|') || next === '```' || /^(\* |• |\d+\. )/.test(next)) break;
+        paragraphLines.push(next);
+        idx += 1;
+      }
+      blocks.push(<p key={`password-p-${idx}`} className="text-xs leading-relaxed text-zinc-400 sm:text-sm">{renderPasswordInline(paragraphLines.join(' '))}</p>);
+    }
+
+    return <div className="space-y-5 text-zinc-300 font-sans leading-relaxed">{blocks}</div>;
+  };
+
   // Plain-text parser and renderer for custom Markdown-style format
-  const renderFormattedContent = (content: string) => {
+  const renderFormattedContent = (content: string, category?: string) => {
     if (!content) return null;
+    if (category === 'Password Security') return renderPasswordFormattedContent(content);
     const lines = content.split('\n');
     return (
       <div className="space-y-5 text-zinc-300 font-sans leading-relaxed">
@@ -3943,7 +4071,7 @@ However, software alone cannot secure an enterprise. True defensive capability d
             {/* Main Article Content Stream */}
             <div className="space-y-8 max-w-full">
               <div className="select-text space-y-6" id="article-body-content">
-                {renderFormattedContent(selectedArticle.content)}
+                {renderFormattedContent(selectedArticle.content, selectedArticle.category)}
               </div>
 
               <div className="w-full h-px bg-white/[0.08] pt-4" />
