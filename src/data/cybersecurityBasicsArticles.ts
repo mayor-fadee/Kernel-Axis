@@ -16,8 +16,8 @@ export const cybersecurityBasicsArticles: ArticleData[] = [
     category: "Cybersecurity Basics",
     difficulty: "Beginner",
     date: "August 24, 2026",
-    readTime: "18 min read",
-    excerpt: "A practical guide to Confidentiality, Integrity, and Availability, with everyday examples, engineering trade-offs, and a security audit you can actually use.",
+    readTime: "20 min read",
+    excerpt: "A clear, practical guide to Confidentiality, Integrity, and Availability, with everyday examples, trade-offs, and an audit you can actually use.",
     content: `## Start Here: What the CIA Triad Actually Means
 
 The CIA Triad is not a secret hacking formula. It is a simple way to ask three questions about any account, device, application, or file:
@@ -128,7 +128,33 @@ The answer is not to maximize one goal blindly. Classify the asset, understand t
 
 For a public blog, availability and integrity may be the highest priorities. Use version-controlled content, signed deployments, monitoring, and backups. For a payroll database, confidentiality and integrity are critical. Use least privilege, MFA, encryption, approval workflows, immutable audit logs, and carefully tested recovery.
 
-## 5. A Practical CIA Audit
+## 5. Turn the CIA Triad into Everyday Decisions
+
+The CIA Triad becomes useful when it changes a decision, not when it is only remembered for an exam. Before adding a new app, sharing a file, or changing a system, pause for three minutes and ask what could go wrong in each area.
+
+### Worked Example: A School's Online Results Portal
+
+Imagine a school publishes student results through a web portal. The school wants parents to access results quickly, but the portal also contains personal information.
+
+* **Confidentiality:** Each parent should only see their own child's result. The portal needs individual accounts, strong recovery controls, and checks on the server for every request. Hiding a button in the browser is not enough.
+* **Integrity:** A teacher's grade change must be intentional, attributable, and reviewable. The portal should record who changed a grade, when it happened, and the old and new value. A simple approval rule may be appropriate for final results.
+* **Availability:** Results day creates unusually high traffic. The school needs capacity planning, monitoring, a support contact, and a fallback process if the portal is unavailable.
+
+Notice that one control can support more than one goal. MFA mainly protects confidentiality, but it also protects integrity because an attacker who cannot take over a teacher's account cannot alter grades. Versioned backups help availability, and they also help integrity because the school can compare or restore a known-good record.
+
+### A Sensible Order for Small Teams
+
+Small organizations do not need to buy every security product at once. Start with the controls that address the largest and most likely harm:
+
+1. List the accounts, data, and services that would hurt most to lose, expose, or change.
+2. Turn on MFA for email, administrator accounts, finance, and cloud storage.
+3. Remove old accounts and public sharing links; give people only the access they need.
+4. Patch internet-facing systems and keep a tested backup that is separate from daily administration.
+5. Enable enough logging to answer who signed in, what changed, and when recovery started.
+
+This order mirrors a useful modern risk-management mindset: know what matters, protect it, notice problems, respond, and recover. The NIST Cybersecurity Framework 2.0 describes these activities as connected functions rather than a one-time checklist. [NIST CSF 2.0](https://www.nist.gov/cyberframework) is a good vendor-neutral reference when you want to turn this article into a team plan.
+
+## 6. A Practical CIA Audit
 
 Use this checklist on one important account, device, or application instead of trying to audit everything at once.
 
@@ -165,7 +191,7 @@ Good cybersecurity is not about making every system impossible to use. It is abo
     category: "Cybersecurity Basics",
     difficulty: "Beginner",
     date: "August 25, 2026",
-    readTime: "22 min read",
+    readTime: "24 min read",
     excerpt: "A practical, defender-focused walkthrough of how intrusions develop, what attackers need at each stage, and where ordinary teams can interrupt the chain.",
     content: `## Start Here: An Attack Is Usually a Process, Not a Single Moment
 
@@ -276,7 +302,23 @@ Monitor for unusual archive creation, large transfers, access to data outside a 
 
 Backups are useful only when attackers cannot delete or encrypt every copy. Keep at least one isolated or immutable copy, protect backup administration separately, and test restoration. A written recovery exercise should answer who isolates systems, who contacts leadership, how evidence is preserved, and which service is restored first.
 
-## 8. The Defender's Advantage: Stop the Chain Early
+## 8. What a Good Response Looks Like in the First Hour
+
+When a possible intrusion is reported, speed matters, but random action can destroy useful evidence or spread the problem. The first hour should focus on reducing harm while preserving enough information to understand what happened.
+
+### Scenario: A Staff Member Approves an Unexpected MFA Prompt
+
+Suppose a staff member reports that they approved a login prompt they did not initiate. Treat it as a possible account compromise, not as an embarrassment or proof that malware is already everywhere.
+
+1. **Record the facts.** Note the user's account, device, approximate time, location, and what they saw. Keep the original report and suspicious messages.
+2. **Contain the identity.** Reset or secure the account using a trusted process, revoke active sessions and refresh tokens, and check recent sign-ins and mailbox rules. Do not rely on a password change alone if session cookies may have been stolen.
+3. **Check the blast radius.** Review whether the account accessed shared files, created forwarding rules, registered new MFA methods, changed payment details, or used administrator roles.
+4. **Protect related systems.** If the account was privileged, temporarily restrict high-risk access and review other privileged accounts. If the device shows suspicious activity, isolate it from the network according to the organization's procedure.
+5. **Communicate clearly.** Tell the user what to do next, alert the people who need to act, and avoid sharing sensitive investigation details in broad chat channels.
+
+This is not a substitute for an incident-response team, but it gives a small organization a safe starting point. NIST's incident-response guidance treats preparation, detection and analysis, containment and recovery, and lessons learned as a cycle. The final step matters: after the immediate risk is controlled, identify the smallest practical change that would have made the incident harder or easier to detect.
+
+## 9. The Defender's Advantage: Stop the Chain Early
 
 Every stage creates opportunities to interrupt the intrusion:
 
@@ -316,7 +358,7 @@ Security improves when an attacker has fewer hidden steps, fewer privileges, and
     category: "Cybersecurity Basics",
     difficulty: "Beginner",
     date: "August 26, 2026",
-    readTime: "20 min read",
+    readTime: "22 min read",
     excerpt: "A practical guide to layered security, showing how physical, identity, endpoint, network, application, data, and recovery controls work together when one layer fails.",
     content: `## Start Here: One Control Will Eventually Fail
 
@@ -454,7 +496,36 @@ An employee receives a realistic invoice spreadsheet and opens it. A layered des
 
 No single layer had to be perfect. Together, they changed a serious event into a contained incident.
 
-## 10. Check Whether Your Layers Are Real
+## 10. Choose Controls That Fail Differently
+
+Layering only works when the layers are genuinely independent enough to catch different mistakes. Installing two tools that both depend on the same administrator account, the same cloud tenant, or the same untested backup is not much resilience.
+
+### Example: Protecting a Small Online Store
+
+An online store holds customer contact details, orders, and payment-provider access. A sensible layered plan might look like this:
+
+| Risk | Primary control | Independent fallback or detection |
+| --- | --- | --- |
+| Admin password is phished | Passkey or hardware-key MFA | Sign-in alerts, short sessions, and a separate recovery account |
+| Vulnerable plugin is exploited | Prompt patching and removal of unused plugins | Web application firewall rules, server logs, and restricted database access |
+| Ransomware reaches a workstation | Standard-user accounts and endpoint protection | Segmented network, immutable backups, and a tested restore procedure |
+| An employee sends data to the wrong person | Access limits and clear sharing settings | Audit logs, recall/containment process, and classification labels |
+
+The table is not a shopping list. It is a way to expose weak assumptions. For example, a backup is not independent if the attacker who compromises the production administrator can delete it. A monitoring tool is not useful if nobody receives or understands its alerts.
+
+### Measure the Outcome, Not the Product Count
+
+Ask practical questions that can be tested:
+
+* Can a former contractor still log in after offboarding?
+* Can a guest Wi-Fi device reach an internal server?
+* Does a fake phishing report reach the right person quickly?
+* Can the team restore a representative file and service without using production credentials?
+* Can an administrator explain why a sensitive account has its current permissions?
+
+The answers produce evidence. They also prevent a common mistake: treating a policy, dashboard, or purchased license as proof of security. NIST CSF 2.0 is useful here because it frames cybersecurity as outcomes across governance, identification, protection, detection, response, and recovery—not as a list of brands to buy.
+
+## 11. Check Whether Your Layers Are Real
 
 For each important service, write down:
 
