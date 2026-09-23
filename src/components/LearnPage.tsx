@@ -776,9 +776,13 @@ export const LearnPage: React.FC = () => {
       category: "Online Safety",
       difficulty: "Beginner",
       date: "July 18, 2026",
-      readTime: "20 min read",
-      excerpt: "A comprehensive foundational guide to personal cybersecurity, operational threat modeling, core defensive habits, device hygiene, and practical digital protection strategies.",
-      content: `## Introduction
+      readTime: "24 min read",
+      excerpt: "A clear, practical guide to everyday online safety, showing how to protect accounts, devices, privacy, and personal information without needing technical expertise.",
+      content: `## What Is Everyday Online Safety?
+
+Everyday online safety is the set of simple habits that protect your accounts, devices, money, and private information while you use the internet. It is not only for security experts or businesses; anyone who uses email, social media, online shopping, cloud storage, or a smartphone needs it. The aim is not to become scared of technology, but to make unsafe actions harder and to know what to do when something feels wrong. This guide starts with the most useful protections and explains why they matter.
+
+## Introduction
 In our modern hyper-connected world, digital technology permeates almost every facet of daily life. From managing financial transactions and communicating with family to accessing educational resources, operating remote careers, and interacting with healthcare providers, our daily routines depend on the internet. However, just as we lock our physical doors, install security lighting, and exercise awareness when navigating physical environments, we must build proactive security practices to protect our digital spaces.
 
 Cybersecurity is not an esoteric technical discipline reserved exclusively for computer scientists or software engineers. At its core, personal cybersecurity is a foundational life skill—a collection of deliberate daily habits, informed choices, and simple software configurations designed to keep your private messages, accounts, identity, and personal hardware safe from unauthorized access. Building a resilient online defense posture requires neither advanced technical expertise nor expensive software; it simply requires adopting practical habits and understanding fundamental security principles.
@@ -848,6 +852,24 @@ Complete this simple checklist to establish a baseline of security today:
 * **Secure Home Network:** Log in to your home Wi-Fi router, change default administrative passwords, and ensure Wi-Fi encryption uses WPA2-AES or WPA3.
 * **Review App Permissions:** Inspect mobile app permissions on iOS or Android, revoking unnecessary location, microphone, and camera access for unused applications.
 * **Create Offline Data Backups:** Back up important personal photos and documents to an encrypted external drive or secure cloud storage service to protect against hardware failure or ransomware.
+
+## 5. Build a Small Routine You Will Actually Keep
+
+Security works best when it fits normal life. Trying to check every setting every day is unrealistic, so use a short routine instead. Once a week, glance at bank and email alerts. Once a month, install outstanding updates and remove an app or browser extension you no longer use. Every few months, review your most important account recovery details and active devices.
+
+### A Simple Example
+
+Imagine that your email provider warns you about a sign-in from a device you do not recognize. Do not click the link in the alert first. Open the official app or type the provider's address yourself, review recent sign-ins, sign out of unfamiliar sessions, and change the password if needed. Then check recovery options and any forwarding rules. This calm sequence is safer than reacting quickly to a message that could itself be a phishing email.
+
+## 6. Know the Difference Between a Warning and a Crisis
+
+Not every strange pop-up means your device has been hacked. Browser notifications, advertisements, and scam pages often use frightening language to make you install software or call a fake support number. A real security issue deserves attention, but the right response is usually to close the page, avoid calling the number shown, and check the device using trusted settings or support channels.
+
+If you clicked a suspicious link, do not hide it. Disconnect from the site, update the device, change a password only through the official service if you entered it, and review active sessions. If money, work access, or personal identity details are involved, contact the bank, employer, or relevant provider using a saved official number. Early reporting protects you and may protect other people too.
+
+## 7. Start With What Matters Most
+
+You do not need to fix everything today. Begin with your primary email account because it can reset many other accounts. Then protect your bank or payment account, password manager, cloud storage, and the social accounts that could be used to impersonate you. Use unique passwords, MFA, recovery codes, updates, and backups in that order. These basics prevent or limit a large share of common online harm.
 
 ## Conclusion
 Staying safe online is an ongoing, empowering practice built on conscious habits and proactive choices. By understanding core security objectives, maintaining healthy skepticism toward unsolicited communications, and adopting password managers, MFA, and automated updates, you establish an exceptionally strong defense.
@@ -922,9 +944,13 @@ Zero Trust represents a necessary paradigm shift in modern cybersecurity. By aba
       category: "Online Safety",
       difficulty: "Beginner",
       date: "July 11, 2026",
-      readTime: "18 min read",
-      excerpt: "A detailed technical exploration of digital footprints, active vs. passive data tracking, browser fingerprinting mechanics, data broker ecosystems, and privacy-preservation controls.",
-      content: `## Introduction
+      readTime: "23 min read",
+      excerpt: "A clear guide to the information you leave online, how it is collected, and practical ways to share less and protect your privacy.",
+      content: `## What Is a Digital Footprint?
+
+A digital footprint is the information trail created when you use websites, apps, phones, online accounts, and connected devices. Some of it is shared by choice, such as a social-media post or a review; some is collected quietly in the background, such as device details, location signals, or browsing activity. A footprint is not automatically bad, but too much public or poorly managed information can make scams, profiling, and identity theft easier. This guide explains what you can realistically control and how to make safer privacy choices.
+
+## Introduction
 Every time you interact with an internet-connected device—whether searching for information, visiting a website, making an online purchase, posting on social media, or navigating with GPS—you leave behind a trail of data. In cybersecurity and digital privacy, this accumulated trail of electronic records, behavioral logs, and personal identifiers is known as your **digital footprint**.
 
 In our modern data-driven economy, your digital footprint is continuously collected, analyzed, aggregated, and monetized by commercial entities, advertising networks, data brokers, search engines, and potential threat actors. While a digital footprint enables personalized online services and seamless user experiences, an unmanaged footprint exposes individuals to invasive profiling, targeted social engineering, identity theft, and corporate surveillance. Managing and securing your digital footprint is an essential modern life skill.
@@ -984,6 +1010,30 @@ To reduce, sanitize, and secure your digital footprint:
 * **Opt Out of Data Broker Registries:** Exercise your legal privacy rights under GDPR/CCPA to submit formal opt-out and data deletion requests to major data broker directories.
 * **Use Alias Email Addresses:** Utilize email masking services (such as Firefox Relay or Apple Hide My Email) when signing up for secondary online services, preventing data networks from linking your accounts to your primary email address.
 
+## 5. Share With Purpose, Not by Default
+
+The easiest way to reduce a digital footprint is to pause before publishing. Ask whether a photo, comment, location tag, or profile detail needs to be public at all. A birthday post can reveal a full date of birth; a holiday post can show that a home is empty; a workplace update can help a scammer create a believable message. You do not need to disappear from the internet. You simply need to choose the audience and amount of detail carefully.
+
+### A Practical Social-Media Review
+
+Open one social account and check what a stranger can see without being accepted as a contact. Look for your full birth date, phone number, personal email address, exact address, school, employer, relatives, travel plans, and public friend list. Remove information that is unnecessary, make older posts visible only to the audience you trust, and turn off automatic location tagging. Repeat this process for a second account later rather than trying to change everything in one sitting.
+
+## 6. Privacy Tools Help, but They Are Not Magic
+
+Private browsing mainly prevents the browser from saving history and cookies on that particular device after the session ends. It does not make you invisible to websites, employers, schools, internet providers, or the services you sign in to. A VPN can help protect traffic on an untrusted network and can hide your home IP address from a website, but it does not stop a site from recognizing you when you sign in or hand over personal information.
+
+Use privacy tools alongside sensible choices: keep browsers updated, block unnecessary trackers, review app permissions, use separate email aliases for low-risk sign-ups, and avoid entering personal details into quizzes or unknown forms. The goal is to reduce unnecessary collection, not to chase perfect anonymity.
+
+## 7. If Your Information Is Already Public
+
+Finding old information about yourself online can feel overwhelming. Start with the highest-risk items: identity documents, account credentials, financial details, home address, phone number, and sensitive family information. Request removal from the website or platform where possible, change exposed passwords, enable MFA, and watch accounts for suspicious activity. Be cautious of companies that promise to erase every trace of you for a large upfront fee; no legitimate service can guarantee complete removal from the internet.
+
+For people covered by privacy laws, official privacy portals may allow requests to access, correct, delete, or opt out of certain data sharing. The exact rights depend on where you live and which organization holds the data. Keep a record of requests you make and focus first on the information that could enable impersonation or financial fraud.
+
+## 8. A Five-Minute Footprint Check
+
+Search your own name, common usernames, and primary email address in a search engine. Review the visible results as if you were a stranger. Then check one app's permissions and one social account's privacy settings. This small, repeatable habit is more useful than a one-time privacy cleanup because online services and settings change over time.
+
 ## Conclusion
 Your digital footprint is an enduring electronic record of your online life. Leaving an unmanaged trail of personal data exposes you to invasive commercial profiling, targeted social engineering, and identity theft.
 
@@ -995,9 +1045,13 @@ By understanding the technical mechanics of passive tracking, browser fingerprin
       category: "Password Security",
       difficulty: "Beginner",
       date: "July 10, 2026",
-      readTime: "18 min read",
-      excerpt: "An authoritative guide on how password managers work, zero-knowledge vault architecture, cryptographic key derivation, credential stuffing defense, and practical vault management.",
-      content: `## Introduction
+      readTime: "23 min read",
+      excerpt: "A beginner-friendly guide to password managers, unique passwords, encrypted vaults, safe autofill, account recovery, and everyday setup.",
+      content: `## What Is a Password Manager?
+
+A password manager is a secure app that remembers strong, different passwords so you do not have to reuse one password everywhere. It stores those passwords in an encrypted vault and can fill them only on the correct website, which also helps protect against phishing. You protect the vault with one long master passphrase and multi-factor authentication. This guide explains how to choose and use one without getting lost in technical terms.
+
+## Introduction
 In the modern digital environment, credentials serve as the primary gateways to our financial records, personal communications, professional documents, and sensitive identity data. As the average individual manages over one hundred online accounts across various platforms, human memory quickly becomes overwhelmed. For decades, standard user behavior gravitated toward dangerous shortcuts—reusing a single familiar password across dozens of websites or creating slight variations of simple words appended with predictable numbers or exclamation marks.
 
 These habits create severe vulnerabilities across the entire digital ecosystem. When a secondary website suffers a database breach, threat actors harvest plaintext credentials or cracked password hashes and immediately feed them into automated botnets. Through automated attack vectors known as credential stuffing, attackers test stolen username and password pairs across banking portals, email providers, and social networks within minutes.
@@ -1063,6 +1117,14 @@ To establish a hardened password vault, follow these essential operational steps
 * **Perform a Credential Audit:** Use your password manager built-in vault health scanner to identify reused, weak, or breached passwords, systematically updating them to high-entropy generated strings.
 * **Configure Automatic Locking:** Set strict vault auto-lock timers (e.g., locking after 15 minutes of inactivity or upon screen sleep) to protect credentials if your hardware is left unattended.
 
+## Everyday Use: Keep the Vault Helpful and Safe
+
+Start by adding your most important accounts: primary email, bank, cloud storage, social accounts, shopping accounts, and work tools. Use the manager to create a new unique password for each account. You do not need to change every old password in one day; replace reused passwords gradually, beginning with the accounts that could reset or control other accounts.
+
+When the manager does not offer to fill a password, stop and look at the website address. It may be a harmless new sign-in page, but it may also be a lookalike phishing site. Do not force-fill a password just because a page looks familiar. Open the real service through a trusted bookmark or app instead.
+
+Plan for recovery too. Save the manager's recovery code or emergency kit in a secure offline location, and make sure a trusted person can follow your instructions if you become unavailable. Do not share your master password in chat, email, or a screenshot. A little setup work turns a password manager into one of the most useful safety tools you can own.
+
 ## Conclusion
 Adopting a password manager is the single most impactful step an individual or organization can take to enhance digital security. By replacing human guesswork and dangerous password reuse with cryptographic zero-knowledge vaults, high-entropy random generation, and domain-aware autofill mechanics, you eliminate entire classes of cyber threats.
 
@@ -1074,9 +1136,13 @@ Taking an hour to select a reputable manager, establish a memorable master passp
       category: "Phishing & Scams",
       difficulty: "Beginner",
       date: "July 12, 2026",
-      readTime: "20 min read",
-      excerpt: "A comprehensive guide to identifying email phishing attacks, social engineering tactics, header anomalies, domain spoofing techniques, and technical verification frameworks.",
-      content: `## Introduction
+      readTime: "25 min read",
+      excerpt: "A practical, beginner-friendly guide to spotting phishing emails, verifying unexpected messages, and responding safely if you click or share information.",
+      content: `## What Is a Phishing Email?
+
+A phishing email is a fake or manipulated message designed to make you trust the wrong sender. It may copy a bank, delivery company, workplace, government service, or a person you know, then ask you to click, sign in, open a file, pay, or share a code. Good phishing can look professional, so the goal is not to judge the writing style alone. This guide shows how to slow down, verify safely, and respond without panic.
+
+## Introduction
 In the field of modern cybersecurity, technological defenses such as firewalls, intrusion prevention systems, and endpoint detection software have reached unprecedented levels of sophistication. Consequently, threat actors increasingly focus their efforts on the weakest link in any security architecture: the human element. Phishing is a form of social engineering where attackers manipulate psychological trust, professional routines, and emotional triggers to deceive individuals into revealing credentials, transferring funds, or executing malicious code.
 
 Email remains the primary delivery vehicle for phishing campaigns. Millions of fraudulent emails traverse global networks daily, ranging from mass-distributed automated spam to highly targeted, meticulously researched spear-phishing campaigns aimed at corporate executives. Understanding how phishing emails operate, recognizing technical and psychological indicators of fraud, and knowing how to verify suspicious communications are essential skills for maintaining individual and organizational security.
@@ -1140,6 +1206,24 @@ When receiving a suspicious email, follow these structured verification steps:
 * **Inspect Technical Headers:** Check the actual sender address, examine hover link destinations, and review email authentication results.
 * **Report to Security Teams:** Use built-in email platform reporting tools ("Report Phishing") or forward the email to your internal Security Operations Center (SOC) for investigation.
 * **Maintain Software Patching:** Ensure web browsers, email clients, and operating systems are updated to prevent drive-by exploit execution if a link is accidentally clicked.
+
+## A Simple Check Before You Click
+
+Use the same questions for every unexpected email. Did I expect this message? Does it ask for a password, code, payment, attachment, or urgent action? Can I reach the organization through an app, a saved bookmark, or a phone number I already trust? If you are unsure, do not reply to the email to verify it. Start a new contact path instead.
+
+### Example: The Fake Delivery Notice
+
+An email says a parcel cannot be delivered unless you pay a small fee today. The logo looks familiar and the fee seems harmless. Rather than clicking, open the delivery company's official app or type its address yourself. If there is no matching delivery there, report and delete the email. Small fees are often used to collect card details or convince a person to enter an account password.
+
+## If You Clicked or Entered Details
+
+Clicking a link does not automatically mean a device is infected. Close the page and think about what happened. If you entered a password, change it immediately from the official service using a trusted device, then revoke active sessions and enable MFA. If you downloaded a file, do not open it; delete it and follow your workplace's support procedure if it involved a work device. If you gave bank details or sent money, contact the bank through its official number right away.
+
+Keep the suspicious email if you can do so safely. Report it using the mail service's phishing button or send it to the appropriate security contact. Reporting helps filters block similar messages and can protect someone else who receives the same campaign.
+
+## A Helpful Rule for Teams and Families
+
+No one should be embarrassed for asking whether a message is real. The safest organizations and families make verification normal. A manager can say, “Thank you for checking,” instead of treating a callback as a delay. The scammer wants people to act alone and quickly; a short conversation with a trusted person often breaks the whole attack.
 
 ## Conclusion
 Phishing attacks succeed by exploiting human trust and emotional urgency rather than breaking through cryptographic firewalls. By combining technical vigilance—such as inspecting sender headers, verifying destination URLs, and understanding SPF/DKIM authentication—with a healthy culture of verification, individuals and organizations build an exceptionally strong defense against social engineering.
@@ -1543,9 +1627,13 @@ As threat actors adapt with real-time phishing proxies and MFA prompt spamming, 
       category: "Online Safety",
       difficulty: "Beginner",
       date: "July 20, 2026",
-      readTime: "20 min read",
-      excerpt: "A comprehensive step-by-step guide to securing your Google Account, implementing 2-Step Verification, managing OAuth app permissions, registering passkeys, and auditing connected devices.",
-      content: `## Introduction
+      readTime: "24 min read",
+      excerpt: "A practical beginner guide to protecting your Google Account, including passwords, passkeys, 2-Step Verification, recovery settings, devices, and app access.",
+      content: `## What Does It Mean to Secure a Google Account?
+
+Securing a Google Account means protecting the email address and identity that may unlock Gmail, Drive, Photos, Android devices, YouTube, saved passwords, and other connected services. Because this account can reset passwords elsewhere, it deserves stronger protection than an ordinary website login. You do not need advanced technical skills: a unique password, good two-step verification, safe recovery options, and regular checks make a major difference. This guide walks through those protections in simple steps.
+
+## Introduction
 A Google Account serves as the central identity anchor for millions of internet users worldwide. Beyond providing access to Gmail, a single Google login unlocks an entire ecosystem of personal services—including Google Drive document storage, Google Photos, Android smartphone management, YouTube channels, Google Pay financial tools, and third-party web application logins via OAuth Single Sign-On ("Sign in with Google").
 
 Because a Google Account holds central access to private communications, personal documents, financial records, and secondary account recovery channels, it represents a high-value target for threat actors. Compromising a primary Google Account allows an attacker to reset passwords across dozens of secondary websites, read confidential emails, access personal photos, and track device locations.
@@ -1602,6 +1690,26 @@ Complete these essential security configurations to harden your account:
 * **Audit Connected Devices:** Sign out of inactive or old hardware sessions in the Google Security dashboard.
 * **Revoke Unused Third-Party Apps:** Remove third-party app permissions for services you no longer actively use.
 * **Run Google Security Checkup:** Visit **g.co/securitycheckup** to complete Google's automated security review scanner.
+
+## 5. Use Safe Sign-In Habits Every Time
+
+Strong account settings are most effective when daily sign-in habits support them. Open Google from a trusted bookmark, a browser address you type yourself, or the official app. Be especially careful with messages saying that a mailbox is full, a package is waiting, or an account will be closed. These are common ways to send people to fake sign-in pages.
+
+Before entering a password or approving a prompt, check what you started. If you did not attempt to sign in, do not approve a Google Prompt and do not share a verification code with anyone. A real support employee does not need your password, backup code, or one-time code. If a message worries you, open the Google Account security page yourself instead of using its link.
+
+### Example: An Unexpected Verification Prompt
+
+Suppose a phone shows a prompt asking whether you are trying to sign in, but you are simply watching a video. Tap "No" or deny the request. Then use the official account settings to review recent security activity, devices, recovery methods, and third-party app access. Change the password if there are signs of an unknown sign-in, and sign out of devices you do not recognize. This is safer than repeatedly approving prompts to make them disappear.
+
+## 6. Prepare for a Lost Phone Before It Happens
+
+A lost phone can be stressful because it may contain your authenticator app, prompts, and account sessions. Prepare while you still have access: save backup codes in a secure place, keep recovery information current, and make sure the recovery email is a real account you control and protect with MFA. If you use passkeys or a hardware security key, understand how you will sign in from a replacement device.
+
+If a phone is lost, use Google's official device-finding and account-security pages from another trusted device. Lock or locate the phone where appropriate, remove its account session if necessary, and contact your mobile carrier if the phone number could be abused. Do not rush to remove every recovery option before you have confirmed an alternative route back into the account.
+
+## 7. A Monthly Google Account Check
+
+Once a month, spend five minutes on the security page. Review recent security activity, signed-in devices, recovery contact details, third-party access, and the status of two-step verification. Remove old devices after an upgrade or sale, and revoke apps you have stopped using. Small reviews are much easier than trying to recover an account after somebody else has changed its settings.
 
 ## Conclusion
 Securing your Google Account is an indispensable pillar of personal cybersecurity. By establishing a unique passphrase, enforcing phish-resistant 2-Step Verification, configuring passkeys, and conducting periodic audits of active devices and third-party app permissions, you protect your digital communications, files, and connected services against unauthorized access.

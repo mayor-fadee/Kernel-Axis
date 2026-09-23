@@ -9,7 +9,11 @@ export const phishingScamsArticles: ArticleData[] = [
     date: "September 4, 2026",
     readTime: "24 min read",
     excerpt: "A practical explanation of modern phishing proxies, session-cookie theft, why copy-and-paste MFA can be phished, and how passkeys reduce the risk.",
-    content: `## Start Here: MFA Is Strong, but the Method Matters
+    content: `## What Is AiTM Phishing?
+
+AiTM phishing is a more convincing kind of fake login scam. Instead of simply collecting a password, the attacker places a fake website between you and the real service, then relays the sign-in in real time. That can let them capture an already authenticated session even when you enter an MFA code or approve a prompt. The good news is that a few habits—especially passkeys, careful sign-in routes, and fast reporting—make this attack much harder to succeed.
+
+## Start Here: MFA Is Strong, but the Method Matters
 
 Multi-factor authentication is still one of the best protections for an account. The problem is that some MFA methods use a code or approval that a person can be tricked into entering on a fake site.
 
@@ -73,6 +77,59 @@ Before entering credentials:
 5. Use a password manager: it usually refuses to fill on the wrong domain.
 6. Report suspicious messages instead of simply deleting them.
 
+## 6. Signs That an Account May Already Be Misused
+
+Many people expect a compromised account to show a dramatic warning. In reality, the first clue may be small: a colleague receives an odd message from you, a password-reset email arrives after you did nothing, or a rule appears in your mailbox. Check account activity from the official security page if anything feels unusual.
+
+Look for new forwarding addresses, deleted security emails, unfamiliar recovery methods, connected apps, unknown devices, or sent messages you did not write. In a work account, also check shared-file activity, new permissions, and changes to payment or vendor conversations. Do not simply change the password and assume the problem is over; active sessions and app permissions may remain valid until they are revoked.
+
+### A Safe Response Sequence
+
+1. Use a known clean device and open the real service yourself.
+2. Change the password if you entered it on a suspicious page.
+3. Revoke all active sessions, refresh tokens, and unknown app connections.
+4. Remove forwarding rules and unfamiliar MFA or recovery settings.
+5. Tell your employer or security contact if a work account is involved.
+6. Warn close contacts only after securing the account, so they do not trust a message sent by an attacker.
+
+## 7. Why Passkeys Make a Real Difference
+
+Passkeys use public-key cryptography and are tied to the real website address. A fake site can copy a logo, a form, and even the timing of an MFA prompt, but it cannot make your passkey sign in to the wrong domain. This is why CISA recommends phishing-resistant authentication such as FIDO/WebAuthn, especially for email, remote access, administrator accounts, and people who handle sensitive data.
+
+If a service offers passkeys, try them first on an important personal account. Keep a recovery method and, for high-value accounts, a second security key in a separate safe place. If passkeys are not available, MFA is still much better than a password alone. Use number matching for push prompts when available, and never approve a prompt that you did not initiate.
+
+## 8. A Short Workplace Drill
+
+Teams can practise this safely without sending real credentials anywhere. Share a harmless example of a fake document request and ask staff to identify the independent action they would take: open the real work portal from a bookmark, report the message, and check the full domain. Then make sure the reporting route is easy and that the first response is supportive. Training only works when people feel safe reporting a near miss.
+
+## 9. The Principle to Remember
+
+An MFA prompt proves only that somebody is trying to use an account. It does not prove that the person approving it started the login on the right website. Treat every unexpected prompt as a warning. Open services yourself, use a password manager to recognize the correct domain, and choose phishing-resistant MFA where you can.
+
+## 10. Reduce the Value of a Stolen Session
+
+No control is perfect, so important accounts should limit what a newly signed-in session can do. A bank may ask for fresh authentication before adding a payee; a workplace can require it before exporting data, changing a password, or registering a new MFA device. These extra checks can stop a stolen session from immediately becoming a full account takeover.
+
+For personal accounts, review recovery email addresses, phone numbers, and connected apps a few times a year. For work accounts, use separate administrator accounts for administration and avoid checking sensitive email or dashboards from an everyday browsing session. These habits limit the damage if a session is ever captured.
+
+### Questions Worth Asking After a Suspicious Sign-In
+
+* Was a new device or location added to the account?
+* Did the account create forwarding rules, app passwords, or OAuth access?
+* Were passwords, recovery details, or MFA methods changed?
+* Did the account access documents or conversations outside normal work?
+* Have all active sessions been revoked, not just the password changed?
+
+Writing down the answers makes it easier to see whether the event was a failed phishing attempt or a real compromise that needs further support.
+
+### Keep the Browser on Your Side
+
+Use a password manager that matches credentials to the exact website address, keep browser security updates automatic, and do not disable warnings just to reach a page. If a work service supports single sign-on, use the normal company portal instead of signing in through a document link. These choices reduce the number of places where a fake login page can appear.
+
+When in doubt, take a screenshot of the warning and ask a trusted support person before continuing. A few minutes of verification is cheaper than explaining an account takeover later.
+
+Also remember that a real service will not punish you for opening its app yourself. If an email says you must use its button immediately, that urgency belongs to the sender—not to you. Close the message, find the official route, and continue only after the account page confirms that action is needed.
+
 ## Conclusion: Upgrade the Authentication Path
 
 MFA remains valuable, but phishing-resistant MFA is the better target for important accounts. Combine passkeys, domain awareness, password-manager protection, session monitoring, and fast token revocation. The goal is to make a stolen password and a fake login page insufficient for account takeover.`
@@ -85,7 +142,11 @@ MFA remains valuable, but phishing-resistant MFA is the better target for import
     date: "September 5, 2026",
     readTime: "23 min read",
     excerpt: "A practical guide to executive impersonation, vendor invoice fraud, mailbox rules, and payment verification controls that stop expensive mistakes.",
-    content: `## Start Here: BEC Attacks Business Processes
+    content: `## What Is Business Email Compromise?
+
+Business Email Compromise, often called BEC, is a payment scam that abuses trust in ordinary business communication. The criminal may impersonate an executive, supplier, lawyer, or employee, or take over a real email inbox and wait for the right moment. Their aim is usually to redirect a payment, change salary details, or obtain valuable information. It is prevented less by clever email reading and more by a reliable verification process that nobody is allowed to bypass.
+
+## Start Here: BEC Attacks Business Processes
 
 Business Email Compromise does not need malware. The attacker may impersonate an executive, compromise a vendor mailbox, or quietly join an existing invoice conversation. The goal is to make a normal payment process send money to the wrong account.
 
@@ -154,6 +215,52 @@ Even a small company can use clear controls:
 * External forwarding is blocked unless formally approved.
 * Staff practise one harmless invoice-verification exercise each year.
 
+## 7. A Payment Process That Is Hard to Trick
+
+The safest payment process separates a request from approval. An email can tell finance that a supplier wants a change, but it must not be the evidence used to approve the change. Keep verified supplier contact details in a controlled internal record. When details change, a finance worker calls a known contact from that record, documents the answer, and a second authorized person reviews the change before the next payment.
+
+This may feel slow for a small company, but it is usually quicker than recovering a fraudulent transfer. The process should apply to every vendor, even long-standing ones. A real supplier's inbox can be compromised, which means a familiar email thread is not proof that new bank details are genuine.
+
+### Practical Example
+
+An accounts-payable employee receives an invoice from a regular supplier. The thread looks genuine and the attachment contains the expected project number, but the payment account has changed. The employee does not reply to the email. They open the supplier record, call the saved number, and ask for the finance contact by name. The supplier confirms that no change was requested. The employee alerts the team, and the fraudulent payment never starts.
+
+## 8. Protect More Than Wire Transfers
+
+BEC can also target payroll, gift cards, invoices, customer data, shipping addresses, and purchase orders. A request to change an employee's salary account should be verified through the employee portal or a known HR process. A request for gift cards, cryptocurrency, or secrecy should be treated as suspicious even if it appears to come from the chief executive. The same principle applies: use an independent channel and a second person for anything that moves money or sensitive data.
+
+## 9. What to Do in the First Hour
+
+If a payment was sent, call the sending bank's official fraud number immediately. Ask whether the transfer can be recalled, frozen, or traced, and follow the bank's instructions. Preserve the original messages, payment records, recipient details, and timestamps. Secure any email account involved by changing its password from a trusted device, revoking sessions, removing mailbox rules, and reviewing delegated access.
+
+Notify internal leaders early. Do not worry about embarrassment or blame in the first hour; quick, accurate information gives the organization its best chance to limit loss. In the United States, the FBI's IC3 specifically advises organizations to contact the originating financial institution as soon as fraud is recognized. Similar urgent-reporting channels exist in many countries.
+
+## 10. Make Verification Normal
+
+The best BEC control is cultural. Finance staff must be allowed to challenge an executive, pause an urgent request, and follow the same process every time. Leaders should actively say that a delayed payment is acceptable when verification is needed. A scammer relies on authority and secrecy; a calm, documented callback removes both advantages.
+
+## 11. Keep Supplier Records Clean
+
+Many payment scams become easier because supplier information is scattered across old emails, spreadsheets, and personal contacts. Keep one maintained source of verified vendor names, addresses, bank details, and callback numbers. Limit who can edit it, record when a change was verified, and make sure the person approving a payment can see that history.
+
+When a legitimate supplier updates details, use the same careful process every time. Confirm the request with a contact you already know, then have another authorized person review the update. Never copy a phone number from an invoice or email into the verification process. This sounds basic, but independent contact details are what break the scammer's control of the conversation.
+
+### A Good Question for Every Unusual Request
+
+Ask: “What evidence would I need if this request had arrived from a stranger?” Then apply that same standard even when it appears to come from a senior executive or trusted supplier. A real colleague may be busy, but they will understand why financial controls exist. A criminal will often become more urgent, secretive, or hostile when asked to wait.
+
+## 12. Practise Before a Real Payment Is at Risk
+
+Once or twice a year, run a short tabletop exercise. Give the team a harmless sample invoice that contains changed bank details, then walk through the callback and approval steps. Note where people are unsure, where contact records are missing, and how long it takes to reach the bank if a payment is suspected to be fraudulent. Practising the process makes it much easier to use calmly under pressure.
+
+### Do Not Let a Scam Become a Second Scam
+
+After a BEC incident, someone may contact the organization claiming they can recover the money for an upfront fee. Treat unexpected recovery offers with the same caution as the original request. Use the bank, police, insurer, legal counsel, or an established incident-response provider found through a trusted source. Preserve evidence before deleting accounts or messages, and keep a clear timeline of what was requested, approved, and paid.
+
+Keep the incident facts private while the response is underway, but do not keep the incident secret from the people responsible for banking, security, and legal reporting. Clear internal communication prevents duplicate payments and helps everyone challenge related requests.
+
+Keep a written record of the callback name, time, number used, approver, and final decision. That record improves follow-up and makes the next verification faster without weakening the control.
+
 ## Conclusion: Verify the Money Path
 
 BEC succeeds when a believable message is treated as authorization. Email can start a payment conversation, but it should never be the only proof. Independent callbacks, dual approval, mailbox monitoring, and fast bank contact turn a convincing scam into a blocked request.`
@@ -166,7 +273,11 @@ BEC succeeds when a believable message is treated as authorization. Email can st
     date: "September 6, 2026",
     readTime: "25 min read",
     excerpt: "An easy, practical guide to QR scams, fake text messages, AI voice impersonation, and verification habits for phones, families, and workplaces.",
-    content: `## Start Here: Phishing Has Moved Beyond Email
+    content: `## What Are Quishing, Smishing, and Vishing?
+
+Quishing, smishing, and vishing are phishing scams delivered through QR codes, text messages, and phone or video calls. They work because phones feel personal and quick: people scan a code, tap a message, or trust a familiar voice before they have time to inspect it. The scammer still wants the same things—a password, a code, a payment, or remote access. This guide gives you simple checks that work even when the message, QR code, voice, or video looks convincing.
+
+## Start Here: Phishing Has Moved Beyond Email
 
 Scammers now use QR codes, text messages, phone calls, and fake video meetings because people trust familiar mobile channels. The channel is different, but the goal is the same: make you click, pay, reveal a code, or install something before you verify.
 
@@ -232,6 +343,48 @@ If a work account is involved, tell the security team immediately. Early reporti
 * QR destinations are inspected before opening.
 * Unexpected texts and calls are verified independently.
 * Family and workplace payment rules are written down.
+
+## 7. QR Codes: Useful, but Not Self-Authenticating
+
+A QR code is only a shortcut to a destination. It does not prove that the destination is safe. A scammer can place a sticker over a genuine parking-meter code, send a QR code in a fake account-warning email, or print a code on a poster that promises a prize. Before opening a scanned link, read the address your phone shows. Look for misspellings, unexpected extra words, and domains that do not belong to the organization.
+
+If you need to pay for parking, manage a delivery, or sign in to an account, prefer the official app or a web address you type yourself. The U.S. Federal Trade Commission gives the same practical advice: do not scan unexpected QR codes that create urgency, and inspect the destination before opening it. A QR code is never a reason to enter a password quickly.
+
+## 8. Text Messages Need Independent Verification
+
+Text messages are effective because they interrupt people while they are busy. A message might say that a package is delayed, a toll is unpaid, a bank card is blocked, or an account will close today. The safest response is not to reply or tap the link. Open the delivery, bank, or government service through its official app or a trusted bookmark and check there.
+
+Do not assume a familiar message thread is authentic. Sender names and threads can be manipulated, and a scammer may copy the style of a real alert. If a text asks for a code, card number, identity document, payment, or remote-access app, treat it as a stop sign.
+
+## 9. Deepfakes Change the Evidence, Not the Rule
+
+AI voice and video tools can make impersonation more believable, but they do not defeat a good process. A voice that sounds like a family member is not proof of identity. A video call that looks like an executive is not approval for a payment. Hang up or leave the call, use a saved number or established workplace channel, and verify the request with another trusted person.
+
+Families can agree that urgent money requests always require a second call. Workplaces can require two people to approve payments and use a known callback for vendor changes. A family phrase may be a useful extra check, but it should not replace a separate verification channel.
+
+## 10. If You Shared Information or Installed an App
+
+Act quickly but calmly. If you entered a password, change it through the official service and revoke active sessions. If you gave a bank card detail or made a payment, call the provider using the number on the card or official app. If you installed remote-access software, disconnect the device from the internet and contact trusted support; do not let the original caller "fix" the problem.
+
+Save the message, screenshot, QR code, URL, phone number, and payment receipt. These details help a bank, platform, employer, or fraud-reporting service understand what happened. Reporting early can also protect people who receive the same campaign.
+
+## 11. One Habit for Every Channel
+
+When a message, code, call, or video demands urgency, pause. Leave the channel that brought the request, open the official service yourself, and verify through a contact detail you already trust. This habit is more reliable than trying to recognize every new scam.
+
+## 12. Make Mobile Checks Part of Daily Life
+
+Mobile scams work when a small screen and a busy moment hide the warning signs. Turn on automatic updates, use a screen lock, and keep account alerts enabled. When a link arrives in a text, read it slowly rather than tapping from the notification. When a QR code appears in public, check whether it looks like a sticker placed over another code and read the destination before opening it.
+
+You can also reduce risk by limiting what a phone displays when locked. Hide message previews and one-time codes on the lock screen, especially if other people can see the device. Do not use an unexpected QR code to install an app, configuration profile, certificate, or browser extension. Official services can be reached through their normal app stores and websites.
+
+### A Safe Family Conversation
+
+Talk through one simple rule with family members: no urgent money, code, or remote-access request is handled during the first call or message. Everyone gets permission to hang up and call back. This is especially useful for children, older relatives, and anyone who might feel pressured by an apparent emergency. The rule is not distrust; it is a way of protecting each other.
+
+## 13. Report, Block, and Move On
+
+After verifying that a message is fraudulent, report it in the messaging or email app, block the sender, and delete it. If it involved a workplace, send the report to the security contact rather than forwarding the active link to colleagues. If it involved money or identity details, contact the relevant provider first and then use your local fraud-reporting channel. Reporting can help providers recognize a campaign and warn other people.
 
 ## Conclusion: A Familiar Voice Is Not Authentication
 

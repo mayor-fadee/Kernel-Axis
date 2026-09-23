@@ -18,7 +18,11 @@ export const cybersecurityBasicsArticles: ArticleData[] = [
     date: "August 24, 2026",
     readTime: "20 min read",
     excerpt: "A clear, practical guide to Confidentiality, Integrity, and Availability, with everyday examples, trade-offs, and an audit you can actually use.",
-    content: `## Start Here: What the CIA Triad Actually Means
+    content: `## What Is the CIA Triad?
+
+The CIA Triad is a simple cybersecurity model that explains what "secure" really means for information and systems. CIA here does not refer to an intelligence agency; it stands for **Confidentiality, Integrity, and Availability**. Whether you are protecting a personal email account, a school portal, or a company's customer database, these three ideas help you see what needs protection and why. This article explains each one in plain language and shows how to use them in real decisions.
+
+## Start Here: What the CIA Triad Actually Means
 
 The CIA Triad is not a secret hacking formula. It is a simple way to ask three questions about any account, device, application, or file:
 
@@ -193,7 +197,11 @@ Good cybersecurity is not about making every system impossible to use. It is abo
     date: "August 25, 2026",
     readTime: "24 min read",
     excerpt: "A practical, defender-focused walkthrough of how intrusions develop, what attackers need at each stage, and where ordinary teams can interrupt the chain.",
-    content: `## Start Here: An Attack Is Usually a Process, Not a Single Moment
+    content: `## What Is a Cyber Attack Lifecycle?
+
+A cyber attack lifecycle is a simple map of the steps an attacker may take from first noticing a target to stealing data, demanding money, or disrupting a service. It does not mean every attack follows the exact same order, but it helps defenders understand what may happen before and after a suspicious event. By learning the stages, you can place better controls at each point and stop an incident earlier. This article looks at the lifecycle from a safe, defensive point of view.
+
+## Start Here: An Attack Is Usually a Process, Not a Single Moment
 
 Movies show a hacker breaking through a firewall in one dramatic scene. Real intrusions are usually quieter. An attacker may spend days collecting information, test one stolen password, establish a small foothold, and only later attempt to reach valuable systems.
 
@@ -360,7 +368,11 @@ Security improves when an attacker has fewer hidden steps, fewer privileges, and
     date: "August 26, 2026",
     readTime: "22 min read",
     excerpt: "A practical guide to layered security, showing how physical, identity, endpoint, network, application, data, and recovery controls work together when one layer fails.",
-    content: `## Start Here: One Control Will Eventually Fail
+    content: `## What Is Defense-in-Depth?
+
+Defense-in-Depth is a way of protecting systems with several sensible layers instead of trusting one password, one firewall, or one security tool to stop everything. If one layer fails, another layer should still prevent, detect, limit, or help recover from the problem. It is useful for individuals, small businesses, and large organizations because attacks and human mistakes are never completely avoidable. This article shows how those layers work together in everyday situations.
+
+## Start Here: One Control Will Eventually Fail
 
 Defense-in-Depth means designing security so that one mistake or failed tool does not become a full compromise. It is not about buying every product. It is about combining different controls that fail differently.
 
