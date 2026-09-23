@@ -72,7 +72,7 @@ export const PrivacyPage: React.FC = () => {
             </h3>
           </div>
           <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed font-sans">
-            To support future growth, hosting, analytics, or advertising features (such as Google AdSense), this website may integrate trusted third-party services in the future. These third-party services often use cookies or other identifiers and have their own independent privacy policies governing how they handle your interaction with their features.
+            This website uses Google AdSense to serve ads. Google and its advertising partners may use cookies or similar technologies to show ads based on your visits to this site or other sites. You can manage personalized advertising in <a href="https://adssettings.google.com/" target="_blank" rel="noopener noreferrer" className="text-[#00ff88] underline">Google Ads Settings</a>. Learn more about <a href="https://support.google.com/adsense/answer/1348695" target="_blank" rel="noopener noreferrer" className="text-[#00ff88] underline">Google’s advertising cookies and privacy policy requirements</a>.
           </p>
         </div>
 
@@ -122,4 +122,3 @@ export const PrivacyPage: React.FC = () => {
     </div>
   );
 };
-
