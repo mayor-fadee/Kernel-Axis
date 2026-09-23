@@ -170,470 +170,6 @@ export const slugify = (text: string) => {
 
   The result is not a magically invulnerable network. It is a system where a stolen password, compromised laptop, or careless permission change has fewer opportunities to become a major incident.`;
 
-  const onlineSafetyBasicsContent = `## Start Here: Build Safer Daily Habits
-
-  Online safety is not one setting. It is the habit of protecting your accounts, devices, messages, payments, and personal information before something goes wrong. Start with the accounts that can reset everything else: your primary email, phone account, bank, and password manager.
-
-  ## 1. Protect Your Core Accounts First
-
-  Use a unique password for every important service and store it in a reputable password manager. Turn on MFA, preferably with a security key or authenticator app. Save recovery codes offline and review active sessions every few months.
-
-  ### A Realistic Recovery Scenario
-
-  If someone gets into your email, they may reset your shopping, social, and banking passwords. Protecting email first gives you a secure base for recovering other accounts. Do not use the same recovery email and password everywhere.
-
-  ## 2. Handle Unexpected Messages Safely
-
-  Unexpected messages create pressure: a parcel is waiting, an account will close, or a payment is suspicious. Do not use the link or phone number in the message. Open the official app, type the website yourself, or call a saved number.
-
-  Use this five-second pause:
-
-  1. Was I expecting this message?
-  2. Is it asking for money, a password, an MFA code, or a download?
-  3. Can I verify it through a separate channel?
-  4. What happens if I wait ten minutes?
-
-  ## 3. Keep Devices and Home Networks Healthy
-
-  Enable automatic updates, use a screen lock, and remove applications you no longer need. Keep the firewall enabled and use a standard user account for daily work when possible.
-
-  At home, change the router administrator password, use WPA2 or WPA3, update router firmware, disable remote administration unless required, and create a guest network for visitors and smart devices.
-
-  ## 4. Share Less Than You Think You Need To
-
-  Review app permissions for location, camera, microphone, contacts, and photos. Do not publish real-time travel plans, identity documents, home addresses, or recovery details. Delete old accounts and revoke access for apps you no longer use.
-
-  Remember that incognito mode only limits local browser history. It does not make you anonymous, hide your IP address, or stop websites from tracking a logged-in account.
-
-  ## 5. Make Backups and Practice Recovery
-
-  Back up photos, documents, and important contacts automatically. Keep a copy that is not permanently connected to the computer, and test restoring a file. A backup that cannot be opened is not a reliable backup.
-
-  For a lost phone, you should already know how to lock it remotely, revoke sessions, contact the carrier, and access recovery codes from another device.
-
-  ## 6. Personal Safety Checklist
-
-  * Primary email and password manager have unique passwords and MFA.
-  * Automatic updates and device locks are enabled.
-  * Sensitive app permissions are reviewed.
-  * Bank and card transaction alerts are active.
-  * Important files have a tested backup.
-  * Suspicious messages are verified independently.
-
-  ## Conclusion: Small Habits Compound
-
-  Online safety improves when ordinary actions become repeatable: pause before clicking, use unique credentials, update devices, limit permissions, protect payments, and keep a recovery path. You do not need to understand every attack to make your digital life much harder to compromise.`;
-
-  const digitalFootprintSafetyContent = `## Start Here: Your Online Activity Leaves Records
-
-  Your digital footprint is the information created when you search, shop, post, use an app, visit a website, or carry a connected phone. Some records are intentional, such as a social post. Others are passive, such as IP logs, cookies, location data, and device details.
-
-  The goal is not to disappear from the internet. The goal is to understand what is collected, remove unnecessary exposure, and prevent public details from becoming an attacker’s research material.
-
-  ## 1. Active and Passive Footprints
-
-  Active data includes posts, comments, forms, reviews, purchases, and messages. Passive data includes browser identifiers, location history, device telemetry, cookies, and tracking pixels.
-
-  ### Real-World Scenario
-
-  Someone posts a photo from a vacation while away from home. The image may reveal the location, time, family names, and that the house is empty. Waiting until returning home and removing location metadata reduces unnecessary exposure.
-
-  ## 2. How Websites Recognize You
-
-  Cookies can remember logins and preferences. Third-party trackers can link activity across different sites. Browser fingerprinting combines details such as screen size, fonts, operating system, and graphics behavior to create a probable device profile.
-
-  Use privacy-focused browser settings, block unnecessary trackers, limit third-party cookies, and keep separate browser profiles for work, personal accounts, and sensitive research. A VPN hides your network address from some observers, but it does not erase activity tied to a logged-in account.
-
-  ## 3. Reduce Your Public Attack Surface
-
-  Review social profiles as if you were preparing a phishing message about yourself. Remove public phone numbers, birthdays, home addresses, family details, travel plans, and screenshots containing account information.
-
-  Search your name and old usernames. Close unused accounts, remove old posts, and request deletion from services that no longer need your information. Use alias email addresses for low-trust newsletters and one-time signups.
-
-  ## 4. Control Apps and Location
-
-  An app that needs a flashlight usually does not need contacts, microphone, or constant location. Set location to While Using where possible, deny permissions that are not needed, and uninstall apps that demand excessive access.
-
-  Check location-sharing settings in social, photo, map, and family applications. Review connected devices and tokens after changing a password or losing a phone.
-
-  ## 5. Data Brokers and Targeted Scams
-
-  Data brokers combine public records, purchases, browsing signals, and app data into profiles. Attackers can use the same information to make a scam feel personal. A message that mentions your employer, recent purchase, or family member may use public or leaked data; it is not proof of authenticity.
-
-  ## 6. Monthly Privacy Check
-
-  1. Review social profile visibility and old posts.
-  2. Check browser privacy and tracker-blocking settings.
-  3. Audit app permissions and location access.
-  4. Remove unused accounts and third-party connections.
-  5. Search for exposed personal information and request removal where practical.
-  6. Check whether important accounts still use unique passwords and MFA.
-
-  ## Conclusion: Manage the Trail
-
-  Every online action does not need to be secret, but it should be intentional. Share less sensitive information publicly, limit passive collection, separate identities where useful, and assume that public details can be copied. A smaller, cleaner footprint gives scammers less material to work with.`;
-
-  const googleAccountSafetyContent = `## Start Here: Your Google Account Is a Recovery Key
-
-  Your Google account may contain email, photos, contacts, documents, location history, saved passwords, and recovery links for other services. Securing it protects much more than one inbox.
-
-  ## 1. Use Strong Sign-In Protection
-
-  Use a unique password stored in a password manager and enable two-step verification. A passkey or hardware security key provides strong phishing resistance. If you use an authenticator app, keep backup codes offline and do not store the only copy inside the account itself.
-
-  Never share a verification code with someone who calls or messages you. Google support will not need you to read a code aloud to prove ownership.
-
-  ## 2. Review the Security Dashboard
-
-  Open your account security page directly, not from an unexpected email. Review recent security activity, signed-in devices, recovery phone numbers, recovery email, and third-party applications.
-
-  Remove devices you no longer own and revoke apps you do not recognize. An old tablet or a forgotten browser session can remain useful to an attacker even after you change a password.
-
-  ## 3. Check Gmail for Hidden Access
-
-  Attackers who enter an email account may create forwarding rules, filters, delegated access, or app passwords so they can continue reading messages after a password change.
-
-  Review forwarding settings, filters, delegation, POP/IMAP access, and app passwords. Delete anything you did not create. Search mail for password resets, invoices, and security alerts that may have been hidden or opened by someone else.
-
-  ## 4. Protect Recovery Paths
-
-  Recovery information is powerful. Use a private recovery email, protect your phone account with a carrier PIN, and keep backup codes in a secure offline location. Do not use a public social-media email or a shared family inbox as your only recovery method.
-
-  If your phone is lost, use a trusted device to lock it, sign out the lost device, revoke sessions, and contact the carrier. Then check bank, social, and password-manager accounts for suspicious activity.
-
-  ## 5. Limit Connected Apps and Data Sharing
-
-  Third-party apps may read mail, contacts, files, or profile information. Remove integrations that you no longer use and choose the smallest permission set available. Be careful with browser extensions: an extension with access to every webpage may read sensitive information.
-
-  Review location history, ad personalization, photo sharing, and public profile visibility. Privacy settings do not replace account security, but they reduce the damage from unnecessary exposure.
-
-  ## 6. If You Suspect Compromise
-
-  1. Open the official account security page from a trusted device.
-  2. Change the password and revoke unknown sessions.
-  3. Remove unfamiliar recovery methods, forwarding rules, filters, and apps.
-  4. Re-register MFA and generate new backup codes.
-  5. Secure the email accounts that can reset your Google account.
-  6. Check financial, work, and social accounts for password-reset activity.
-
-  ## Conclusion: Review Before There Is a Crisis
-
-  Account security is strongest when recovery, sessions, connected apps, and forwarding rules are reviewed before an incident. Spend a few minutes each month on the security dashboard and treat unexpected account messages as prompts to open the official site yourself.`;
-
-  const phishingEmailSafetyContent = `## Start Here: Phishing Wants a Fast Reaction
-
-  Phishing is a message designed to make you click, sign in, pay, download, or share information before you verify the request. It can arrive by email, text, social media, phone, or a fake support chat.
-
-  The strongest warning is not bad spelling. It is a combination of an unexpected request, emotional pressure, an unusual link, a new payment instruction, or a request for a password or MFA code.
-
-  ## 1. Read the Request, Not the Branding
-
-  Attackers copy logos, colours, signatures, and real notification templates. Look at the action being requested:
-
-  * Is the sender asking you to sign in through a link?
-  * Is a payment, refund, delivery, or account closure being used to create urgency?
-  * Does the sender request a password, MFA code, gift card, or remote-access session?
-  * Can you complete the same task by opening the official app yourself?
-
-  ### Example: The Fake Delivery Message
-
-  The message says your parcel is delayed and asks for a small address fee. Instead of tapping the link, open the courier's official app or type its website manually. If no parcel appears there, report and delete the message.
-
-  ## 2. Check the Sender and Destination
-
-  Expand the sender details and inspect the real address, not only the display name. Hover over links on a computer or press and hold carefully on a phone to preview the destination without opening it.
-
-  Watch for misspellings, extra words, shortened links, unrelated domains, and subdomains that place the brand name before an attacker-owned domain. A secure padlock only means the connection is encrypted; it does not prove the site is legitimate.
-
-  ## 3. Understand SPF, DKIM, and DMARC
-
-  These email controls help receiving systems check whether a message was sent through an authorized service and whether it was altered. They reduce direct domain spoofing, but they do not stop a compromised legitimate mailbox or a convincing lookalike domain.
-
-  That is why a message can pass technical checks and still be dangerous. Verify sensitive requests through a separate channel.
-
-  ## 4. Common Phishing Formats
-
-  * **Credential phishing:** A fake login page steals a password or MFA response.
-  * **Attachment phishing:** An invoice or document asks you to enable unsafe content.
-  * **Business impersonation:** A manager or supplier requests payment or data.
-  * **Smishing:** A text claims that a parcel, bank account, or toll needs attention.
-  * **Vishing:** A caller pressures you to share codes or install remote-access software.
-
-  ## 5. The Safe Decision Process
-
-  1. Stop and do not click, reply, pay, or download.
-  2. Capture enough evidence to report the message.
-  3. Open the official service independently.
-  4. Verify through a saved phone number or known colleague.
-  5. Report it to your email provider, workplace, bank, or platform.
-  6. If you already acted, change the password, revoke sessions, and contact the bank or security team immediately.
-
-  ## 6. Make Phishing Harder to Succeed
-
-  Use a password manager because it normally refuses to fill credentials on the wrong domain. Use passkeys or security keys for high-value accounts. Keep browsers, phones, and operating systems updated. Turn on transaction alerts and teach family members that asking for verification is normal, not rude.
-
-  ## Conclusion: Slow Down the Request
-
-  Phishing succeeds when the victim is forced to decide quickly. Take the decision out of the message, open the official service yourself, and verify sensitive requests independently. A short pause can protect an account, a payment, and everyone connected to it.`;
-
-const ransomwareSafetyContent = `## Start Here: Ransomware Is an Availability and Recovery Crisis
-
-Ransomware is malware that blocks access to files or systems, usually by encrypting data and demanding payment. Modern groups may also steal data before encryption and threaten to publish it. The most important defense is not a perfect antivirus result; it is reducing the chance of spread and keeping a recovery path that attackers cannot erase.
-
-## 1. How a Ransomware Incident Develops
-
-An incident often begins with a stolen password, exposed remote service, phishing attachment, or vulnerable internet-facing application. Attackers may spend days inside the network before encryption, looking for administrator accounts, backups, file servers, and sensitive data.
-
-### Real-World Scenario
-
-An employee opens a fake invoice. The first laptop is compromised, but the damage stays limited because MFA protects remote access, workstation traffic is segmented, and backup administration uses separate credentials. The organization isolates the laptop and restores a test server instead of negotiating under pressure.
-
-## 2. Why Backups Are the Main Recovery Control
-
-A backup is useful only if it is complete, protected, and restorable. Keep multiple copies, including at least one offline or immutable copy. Do not let ordinary domain administrators delete every backup.
-
-Test restoration of an individual file, a database, and a complete service. Record the recovery time and what dependencies are needed. A backup that has never been restored is only an assumption.
-
-## 3. Reduce the Attack Surface
-
-* Disable direct internet exposure for RDP and remote administration.
-* Require strong MFA for VPN, remote access, and administrator accounts.
-* Patch edge devices, VPN appliances, file-transfer tools, and operating systems quickly.
-* Remove local administrator rights from daily accounts.
-* Segment workstations, servers, backups, and management networks.
-* Keep endpoint detection and tamper protection enabled.
-* Block macros and risky scripts from untrusted documents where possible.
-
-## 4. Detect the Warning Signs
-
-Investigate unusual password spraying, new administrator accounts, remote tools used outside change windows, mass file renames, shadow-copy deletion attempts, and large archive creation. A quiet period followed by sudden backup access or broad authentication activity can indicate preparation for impact.
-
-Centralize identity, endpoint, file, backup, and network logs so investigators can connect events across systems.
-
-## 5. What To Do During a Suspected Attack
-
-1. Activate the incident-response plan and record times.
-2. Isolate affected devices and network segments without destroying evidence.
-3. Protect backup systems and disconnect them from compromised credentials.
-4. Disable known attacker accounts and rotate exposed secrets from clean devices.
-5. Preserve ransom notes, logs, memory, and affected samples for investigation.
-6. Notify leadership, legal, insurers, regulators, and law enforcement as required.
-7. Restore a small, known-good service first and monitor for renewed activity.
-
-Do not blindly wipe every device before identifying the entry path. Cleaning without containment can allow the attacker to return.
-
-## 6. Should You Pay?
-
-Payment does not guarantee recovery, deletion of stolen data, or a safe system. The decision involves legal, regulatory, operational, and insurance considerations. Preserve evidence and involve qualified incident responders before making commitments.
-
-## 7. A Monthly Ransomware Readiness Check
-
-* Restore one file and one service from backup.
-* Review who can delete or change backups.
-* Confirm remote administration is restricted and monitored.
-* Check that endpoint and identity alerts reach a real person.
-* Review stale accounts, privileged access, and exposed services.
-* Rehearse who isolates systems and who contacts outside support.
-
-## Conclusion: Resilience Is the Goal
-
-Ransomware prevention matters, but resilient organizations assume that a control can fail. Strong identity, patching, segmentation, monitoring, protected backups, and practiced recovery turn a potentially destructive event into a contained and recoverable incident.`;
-
-const ddosSafetyContent = `## Start Here: DDoS Attacks Exhaust Capacity
-
-A Distributed Denial of Service attack tries to make a service unavailable by overwhelming bandwidth, connection state, application workers, or a backend dependency. The goal is usually disruption, not stealing data.
-
-## 1. Three Common Attack Shapes
-
-* **Volumetric:** Too much traffic fills the network link.
-* **Protocol:** Packets consume firewall, load-balancer, or connection-table resources.
-* **Application layer:** Requests look like normal web traffic but trigger expensive work.
-
-### Real-World Scenario
-
-An online store receives a normal-looking search request thousands of times per second. The network link is not full, but database connections and CPU are exhausted. A simple bandwidth upgrade does not solve the problem; rate limits, caching, and application protection are needed.
-
-## 2. Plan Before the Attack
-
-Identify public IPs, DNS providers, origin servers, critical APIs, upstream providers, and emergency contacts. Keep the origin IP hidden behind the approved edge or CDN. Make sure the provider can absorb the expected attack size and has a 24-hour escalation path.
-
-## 3. Layered Mitigation
-
-* Use Anycast or a managed DDoS service for large traffic floods.
-* Apply API and endpoint rate limits.
-* Cache static content and protect expensive operations.
-* Use SYN cookies and sensible connection timeouts.
-* Restrict direct access to origin servers.
-* Challenge suspicious automation while preserving access for legitimate users.
-* Separate public services from internal management systems.
-
-Auto-scaling alone can create a large cloud bill. Filter unwanted traffic before adding capacity.
-
-## 4. What To Monitor
-
-Track bandwidth, packets per second, requests per second, error rates, connection counts, geographic distribution, cache hits, and backend saturation. Compare current traffic with a normal baseline and check whether a DDoS is hiding login attacks or data theft.
-
-## 5. Response Workflow
-
-1. Confirm the affected service and start the incident timeline.
-2. Contact the ISP, CDN, or DDoS provider immediately.
-3. Apply prepared rate limits, caching, and challenge policies.
-4. Protect origin IPs and restrict emergency firewall rules carefully.
-5. Preserve traffic samples and monitor backend systems for a second attack.
-6. Communicate service impact and recovery status clearly.
-7. Review what worked and update capacity and escalation plans.
-
-## Conclusion: Availability Needs an External Plan
-
-DDoS resilience depends on preparation outside the server itself. Use upstream filtering, application limits, hidden origins, monitoring, and a practiced response plan so an attack becomes a managed availability event rather than an improvised emergency.`;
-
-const firewallSafetyContent = `## Start Here: A Firewall Enforces Communication Rules
-
-A firewall decides which network connections are allowed, blocked, or logged. It is not a complete security program, but it creates boundaries between trusted and untrusted systems.
-
-## 1. Read a Firewall Rule Clearly
-
-Every rule should answer:
-
-* Who is connecting?
-* Which destination is being reached?
-* Which protocol and port are required?
-* Is the connection inbound or outbound?
-* Who approved it and when should it expire?
-
-### Practical Example
-
-If a web server needs to reach a database, allow that server to reach the database's required port. Do not allow every workstation to reach every database port just because the application works that way today.
-
-## 2. Default Deny and Least Privilege
-
-Use a default-deny rule at the end of each policy and add narrow exceptions for required services. Avoid broad rules such as any source to any destination on any port. Temporary access should have an owner, an expiry date, and a review record.
-
-## 3. Firewall Types
-
-* **Host firewall:** Protects one laptop, server, or workstation.
-* **Network firewall:** Controls traffic between networks or sites.
-* **WAF:** Inspects web requests and API behavior.
-* **Cloud security group:** Applies virtual network rules to cloud interfaces.
-
-These controls complement one another. A perimeter firewall cannot stop a compromised server from attacking another server if internal boundaries do not exist.
-
-## 4. Rule Review Checklist
-
-1. Remove rules for retired systems and old vendors.
-2. Replace broad subnets with specific hosts or service groups.
-3. Check inbound and outbound rules, not only internet traffic.
-4. Confirm management ports are limited to approved admin networks.
-5. Review rules created during emergencies.
-6. Send logs to a central system and alert on unexpected denies and scans.
-7. Test that the rule does what the documentation claims.
-
-## 5. Logging and Troubleshooting
-
-When a service fails, check whether the firewall denied the connection, whether DNS returned the expected address, whether the server is listening, and whether a return route exists. Do not solve every outage by opening a wider rule. Identify the exact flow and permit only that flow.
-
-## 6. Common Mistakes
-
-* Leaving temporary allow rules indefinitely.
-* Allowing administration from the whole internet.
-* Forgetting IPv6 rules while securing IPv4.
-* Logging nothing, so investigations have no history.
-* Treating a cloud security group as a replacement for host controls.
-* Decrypting sensitive traffic without protecting inspection keys and privacy.
-
-## Conclusion: Rules Need Owners and Evidence
-
-A firewall is effective when rules are narrow, documented, logged, reviewed, and tested. Default deny, internal segmentation, protected management access, and fast removal of stale exceptions create boundaries that remain useful after the perimeter is breached.`;
-
-const secureWebsiteConnectionsContent = `## Start Here: HTTPS Protects the Connection, Not Every Decision
-
-HTTPS wraps web traffic in TLS encryption. It helps prevent people on the network from reading or changing the connection and lets the browser check the website's certificate and hostname.
-
-HTTPS does not prove that a website is honest, protect a compromised device, or stop a logged-in service from tracking activity.
-
-## 1. HTTP Versus HTTPS
-
-Plain HTTP can expose page contents, passwords, cookies, and form data to a network observer. An attacker on unsafe Wi-Fi may also modify the page before it reaches the browser.
-
-HTTPS protects the connection between your browser and the server. If the address bar shows a certificate or hostname warning, stop. Do not enter a password or card number to "test" the page.
-
-## 2. What Happens During a TLS Connection
-
-The browser checks the server certificate, negotiates secure encryption, and verifies that messages were not modified. Certificate authorities help browsers decide whether a certificate was issued for the domain.
-
-The important user-facing checks are simple:
-
-* The address uses \`https\`.
-* The domain is spelled correctly.
-* The certificate warning is absent.
-* The page does not ask you to install an unexpected certificate.
-
-HTTPS on \`bank-example-attacker.com\` is still the wrong website.
-
-## 3. HSTS and Secure Application Settings
-
-HSTS tells browsers to use HTTPS for a domain and helps prevent downgrade attempts. Secure cookies, HttpOnly cookies, SameSite settings, short sessions, and careful redirect handling reduce the chance that a valid connection is misused.
-
-Website owners should redirect HTTP to HTTPS, renew certificates safely, remove mixed content, and monitor certificate changes.
-
-## 4. What Users Should Do
-
-1. Type important domains yourself or use a trusted bookmark.
-2. Never bypass certificate warnings.
-3. Avoid sensitive work on untrusted networks or use cellular data.
-4. Keep browsers and operating systems updated.
-5. Use MFA and unique passwords even on HTTPS sites.
-6. Report suspicious domains and phishing pages.
-
-## Conclusion: Check Identity, Not Just the Padlock
-
-HTTPS is essential transport security, but safe browsing also requires checking the exact domain, protecting the device, using strong authentication, and responding to browser warnings instead of bypassing them.`;
-
-const modernWebsitePrivacyContent = `## Start Here: Websites Protect Data Through Several Layers
-
-Modern websites combine encryption, access control, secure sessions, backups, logging, privacy settings, and careful data retention. A padlock is only one part of that design.
-
-## 1. What Happens When You Use a Website
-
-Your browser sends a request, the service authenticates you, the application checks permissions, and the server stores or processes data. Analytics scripts, cookies, logs, support tools, and cloud vendors may also receive information.
-
-### Practical Example
-
-A shopping site may need your address to deliver an order, a payment processor may need card authorization, and an analytics tool may only need an anonymous event. Good design keeps those purposes separate instead of sending the full customer profile to every vendor.
-
-## 2. Encryption and Access Control
-
-TLS protects data while it travels. Encryption at rest protects stored data if storage media or backups are exposed. Access control decides whether a user, employee, service, or support tool can read or change the data.
-
-Strong systems also use least privilege, MFA for administrators, secure session cookies, rate limiting, and audit logs. Encryption cannot fix an application that allows one customer to view another customer's record.
-
-## 3. Cookies and Tracking Choices
-
-First-party cookies can support login and preferences. Third-party trackers may follow activity across sites. Review consent banners carefully, disable optional advertising cookies where possible, and use privacy-focused browser settings.
-
-Deleting cookies may sign you out, but it does not remove data already stored by the service or connected to a logged-in account.
-
-## 4. How to Judge a Website's Privacy Practice
-
-Ask:
-
-* What data does the service collect and why?
-* Which information is required versus optional?
-* Who receives it, including analytics and advertising vendors?
-* How long is it retained?
-* Can you export, correct, or delete it?
-* What happens after an account is closed?
-
-Avoid sharing identity documents or sensitive details unless the service has a clear, legitimate need and a secure submission process.
-
-## 5. What To Do After a Website Breach
-
-Change reused passwords, enable MFA, review active sessions, monitor payment activity, and follow the service's official breach guidance. If the breach exposed identity data, be alert for targeted phishing and account-recovery attempts.
-
-## Conclusion: Privacy Is a Product Feature
-
-A trustworthy website minimizes collection, protects data in transit and storage, restricts internal access, explains tracking, and provides useful controls. As a user, choose services that make these practices visible and share only what the task requires.`;
-
 export const LearnPage: React.FC = () => {
   const { catSlug, articleSlug } = useParams();
   const navigate = useNavigate();
@@ -1537,12 +1073,16 @@ Firewalls help control who and what can communicate across a network boundary. T
       date: "July 17, 2026",
       readTime: "18 min read",
       excerpt: "A technical guide to secure website connections, HTTP vs. HTTPS, TLS encryption, Public Key Infrastructure (PKI), Certificate Authorities, and HSTS security headers.",
-      content: `## Introduction
-When you browse the web—whether checking online bank statements, entering credit card details on an e-commerce platform, submitting login credentials, or reading news articles—your device continuously exchanges data with remote web servers across the global internet. In the early era of the World Wide Web, these data exchanges occurred in unencrypted plain text over the Hypertext Transfer Protocol (HTTP).
+      content: `## What Is a Secure Website Connection?
+A secure website connection uses HTTPS: ordinary web requests carried inside a Transport Layer Security (TLS) connection. TLS encrypts application data in transit, checks its integrity, and lets a browser validate a certificate for the domain in the address bar.
 
-Transmitting unencrypted data over public networks exposes every communication to interception, eavesdropping, and tampering by malicious actors, rogue Wi-Fi operators, internet service providers, and network-level adversaries. To establish a secure web ecosystem, the cybersecurity community developed **HTTPS (Hypertext Transfer Protocol Secure)**. HTTPS combines standard HTTP application communications with cryptographic security provided by the Transport Layer Security (TLS) protocol.
+For example, when you sign in to a bank over HTTPS on café Wi-Fi, another person on that Wi-Fi should not be able to read your password or quietly alter the page in transit. The browser checks the certificate before accepting the connection.
 
-Understanding how HTTPS works, how digital certificates establish trust, and how modern browser security mechanisms validate encrypted connections is essential for web developers, system administrators, and everyday internet users.
+HTTPS does not prove that the site is honest. A phishing site can use a valid certificate for its own lookalike domain, and encryption does not protect a device already compromised by malware. People should still check the address and heed certificate warnings.
+
+The connection also does not hide every detail. A network observer may see destination IP addresses, timing, and in some configurations the domain name, even though page contents and URL paths are protected by TLS.
+
+This guide explains the HTTPS handshake, certificates, common browser protections, and the limits users and site operators should understand. It follows current IETF protocol standards and NIST implementation guidance.
 
 ## 1. The Vulnerabilities of Unencrypted HTTP Connections
 To appreciate why HTTPS is mandatory for modern web browsing, one must analyze the inherent security risks of unencrypted HTTP:
@@ -1603,14 +1143,22 @@ After a browser receives this header, it remembers the HTTPS requirement for the
 To ensure your website connections are fully secured:
 * **Enforce TLS 1.3:** Configure web servers to support TLS 1.3 and TLS 1.2, completely disabling outdated, vulnerable protocols (SSL v2/v3, TLS 1.0, TLS 1.1).
 * **Automate Certificate Renewal:** Utilize automated protocol utilities (such as Certbot via ACME) to issue and renew free certificates seamlessly before expiration.
-* **Deploy HSTS Headers:** Publish HSTS response headers with long duration values and submit core domains to the global HSTS preload directory.
+* **Deploy HSTS Carefully:** Publish a tested HSTS policy and consider preload only after confirming that every affected hostname supports HTTPS and the operational requirements are met.
 * **Eliminate Mixed Content:** Ensure all internal website assets—including images, scripts, stylesheets, and API endpoints—are served exclusively over secure HTTPS URLs.
 * **Inspect Browser Warning Indicators:** Never bypass or ignore browser security warnings (such as "Your Connection Is Not Private" or invalid certificate alerts) when accessing online services.
 
-## Conclusion
-HTTPS is the indispensable cryptographic foundation of modern web privacy and security. By encapsulating web traffic inside authenticated, encrypted TLS tunnels, HTTPS guarantees data confidentiality, prevents in-transit tampering, and validates web server authenticity.
+For a site owner, test certificate renewal before expiration, check that redirects lead to HTTPS, and scan for mixed-content requests after each major release. Keep administrative access to the certificate provider protected with multifactor authentication. A valid certificate confirms a domain relationship under browser rules; it is not an endorsement of the business or its content.
 
-Through Public Key Infrastructure, automated Certificate Authorities, and advanced enforcement mechanisms like HSTS preloading, the global web ecosystem continues to raise the bar for digital security, ensuring that sensitive user communications remain protected against eavesdropping and attack.`
+If a certificate warning appears, check the address and device clock, then return through the service's official homepage directly. Do not install a certificate from an unexpected message or public Wi-Fi splash page to make the warning disappear.
+
+## Conclusion
+HTTPS protects data while it travels to the domain a browser reached. TLS encryption and integrity checks make it harder for someone on the route to read or change the exchange, and certificate validation helps confirm the domain name. These controls do not show that a site is trustworthy or conceal all traffic metadata.
+
+Site owners should configure supported TLS versions, renew certificates reliably, remove mixed content, and deploy HSTS only after testing. NIST SP 800-52 Rev. 2 is under review; TLS 1.3 is specified in IETF RFC 8446.
+
+## Further Reading
+* NIST SP 800-52 Rev. 2, Guidelines for TLS Implementations: https://csrc.nist.gov/pubs/sp/800/52/r2/final
+* IETF RFC 8446, TLS 1.3: https://www.rfc-editor.org/rfc/rfc8446.html`
     },
     {
       id: 4,
@@ -1620,10 +1168,9 @@ Through Public Key Infrastructure, automated Certificate Authorities, and advanc
       date: "July 16, 2026",
       readTime: "18 min read",
       excerpt: "A technical exploration of Multi-Factor Authentication (MFA), authentication factors, TOTP algorithms, FIDO2/WebAuthn hardware keys, passkeys, and MFA fatigue defense.",
-      content: `## Introduction
-In the early era of computing, securing access to digital systems relied almost exclusively on single-factor authentication: a username combined with a secret password. As network connectivity expanded globally, reliance on passwords alone became a critical vulnerability. Passwords are easily compromised through credential harvesting phishing campaigns, database breaches, brute-force dictionary guessing, keyloggers, and accidental reuse across multiple websites.
+      content: `## What Is Multi-Factor Authentication?
 
-Multi-Factor Authentication (MFA) was developed to eliminate single-point-of-failure authentication. MFA is a security mechanism that requires a user to present two or more independent credentials ("factors") before gaining access to an application, system, or network resource. Today, enforcing MFA is considered a baseline security requirement for both individual accounts and enterprise networks.
+Multi-factor authentication (MFA) asks a user to prove identity with at least two different factor types, such as a password plus a device-generated code or a security key. It makes a stolen password less likely to be enough for an attacker to sign in, though the strength depends on the method and how account recovery is protected. For example, a bank login with a password and phishing-resistant passkey offers stronger protection than a password alone, while an SMS code can still be exposed to phone-number takeover. This guide compares common factors and explains how to choose, enroll, and recover MFA safely.
 
 ## 1. The Three Classical Authentication Factors
 To understand MFA, one must understand how authentication factors are categorized. True multi-factor authentication requires combining credentials from at least two *different* factor categories. Providing two passwords or answering two secret security questions constitutes single-factor authentication executed twice, as both rely on the same operational mechanism.
@@ -1690,7 +1237,26 @@ To maximize your account protection using MFA:
 ## Conclusion
 Multi-Factor Authentication is a foundational defense against modern identity attacks. By combining something you know with something you have or are, MFA creates a resilient multi-layered barrier that neutralizes automated credential stuffing, dictionary attacks, and password leaks.
 
-As threat actors adapt with real-time phishing proxies and MFA prompt spamming, adopting phish-resistant standards such as FIDO2 hardware keys and passkeys ensures your digital identity remains fully protected against evolving threats.`
+As attackers adapt with real-time phishing pages and approval fatigue, phishing-resistant methods such as FIDO2 security keys and passkeys offer stronger protection when supported. No single method prevents every account takeover, so protect recovery options, review enrolled devices, and keep a secure backup method.
+
+## Practical Enrollment and Recovery Plan
+
+Start with the accounts that can reset other accounts: primary email, password manager, cloud identity, banking, and administrator access. Enroll a passkey or hardware security key where the service supports it, then add a second key or store recovery codes in a separate secure location. A backup should not be the same phone or email account that is at risk if the primary device is lost.
+
+For a small organization, require MFA first for remote access and privileged accounts, then extend it to email and cloud consoles. Keep at least two administrators able to manage enrollment, but give each a separate account and strong authentication. Test account recovery with a noncritical account before making a new policy mandatory. Document a lost-device process that verifies identity without asking a help desk to bypass MFA based only on a phone call.
+
+## Handling Push Prompts and Recovery Codes
+
+If an authentication app sends an approval prompt you did not initiate, deny it and change your password from the service's official site. Repeated unexpected prompts can mean someone already knows the password; do not approve one just to stop the notifications. Check active sessions, remove unknown devices, and contact the provider through a known support channel if you cannot regain control.
+
+Recovery codes are usually single-use credentials. Store them in a password manager or a physically protected location separate from the device used to sign in. Do not leave a photo of the codes in the same cloud photo account that backs up your phone. When you generate a new set, old codes may stop working, so update the stored copy and test access carefully.
+
+For administrators, keep emergency access accounts tightly limited, monitored, and tested. They should not become a routine MFA bypass. Alert on their use, require a documented reason, and rotate credentials after an emergency. This balances recovery needs with accountability.
+
+## Further Reading
+* CISA, Require Multifactor Authentication: https://www.cisa.gov/audiences/small-and-medium-businesses/secure-your-business/require-multifactor-authentication
+* NIST SP 800-63B, Digital Identity Guidelines: https://pages.nist.gov/800-63-4/sp800-63b.html
+* FIDO Alliance, Passkeys: https://fidoalliance.org/passkeys/`
     },
     {
       id: 11,
@@ -3546,11 +3112,17 @@ By adhering to established forensic lifecycles, maintaining unbroken chains of c
       date: "August 12, 2026",
       readTime: "18 min read",
       excerpt: "A comprehensive, deep-dive guide examining how web applications collect, encrypt, store, isolate, and retain user data—demystifying HTTPS, password hashing, cookies, fingerprinting, and privacy boundaries.",
-      content: `## How Modern Websites Protect User Data: Privacy, Encryption, Tracking, and Data Security
+      content: `## What Does It Mean to Protect User Data?
 
-In the modern digital landscape, every interaction with a web application—whether creating an account, browsing an e-commerce catalog, or completing a financial transaction—generates a stream of digital information. Web applications process millions of data points every second, ranging from explicit user inputs to subtle environmental telemetry. As web technologies have evolved, the responsibility placed on software engineers, security architects, and platform operators to handle this information safely has grown exponentially.
+Protecting user data means controlling what a website collects, who can access it, how it is secured, and when it is deleted. Security controls reduce unauthorized access or alteration; privacy practices govern whether collection and use are appropriate in the first place.
 
-Protecting user data requires a comprehensive understanding of both technical data security and systemic user privacy. While technical security ensures that unauthorized actors cannot unlawfully access or tamper with infrastructure, privacy focuses on how information is collected, processed, shared, and retained. A truly resilient web application must bridge these two domains, implementing defense-in-depth engineering practices alongside privacy-preserving architecture. This guide explores the multi-layered mechanics of modern web data protection, examining everything from cryptographic transport security and slow password hashing to browser fingerprinting, access control boundaries, and distributed data deletion.
+For example, an online shop needs an address to deliver an order, but it usually does not need to keep precise location history from a shopping session. A careful design collects the delivery details needed for the transaction, limits staff access, protects the connection and stored records, and applies a clear retention schedule.
+
+HTTPS protects data in transit, while password hashing, access controls, secure session handling, and database safeguards protect other parts of the system. None of these controls makes unnecessary collection harmless, and no single encryption feature secures an application by itself.
+
+This distinction matters when a company adds analytics, advertising scripts, support tools, or cloud vendors. Each new data flow can create another copy, recipient, or account that needs a purpose, protection, and retention decision.
+
+This guide follows a user's data through a typical website and explains practical safeguards for developers and operators. It draws on standards and guidance from NIST, the IETF, and data protection authorities, while noting where implementation and legal requirements depend on context.
 
 ---
 
@@ -3889,7 +3461,13 @@ Building web applications is complex, and development teams frequently make crit
 
 Protecting user data on the modern web is an ongoing process, not a static achievement or a single software package you can install. It requires a holistic security and privacy posture integrated into every phase of the software development lifecycle—from initial data model design and frontend API engineering to cloud infrastructure deployment and automated data deletion.
 
-By embracing data minimization, enforcing HTTPS and slow password hashing, hard-coding cookie security attributes, implementing least-privilege access controls, and respecting user privacy rights, web developers can build platforms that are both technically resilient and ethically trustworthy. In an era defined by ubiquitous digital connectivity, treating user data with respect and rigorous technical defense is the hallmark of true software craftsmanship.`
+By collecting less, restricting access, using current cryptographic guidance, and honoring applicable user rights, teams can make systems safer and easier to operate. Revisit the controls when a feature, vendor, or data flow changes.
+
+### Official References
+* NIST Privacy Framework: https://www.nist.gov/privacy-framework
+* NIST Secure Software Development Framework (SP 800-218): https://csrc.nist.gov/pubs/sp/800/218/final
+* IETF RFC 8446, The Transport Layer Security (TLS) Protocol Version 1.3: https://www.rfc-editor.org/rfc/rfc8446.html
+* European Data Protection Board, Data Protection by Design and by Default: https://www.edpb.europa.eu/topics/ai-and-technology/privacy-by-design-and-by-default_en`
     },
     {
       id: 22,
@@ -3899,11 +3477,11 @@ By embracing data minimization, enforcing HTTPS and slow password hashing, hard-
       date: "August 12, 2026",
       readTime: "20 min read",
       excerpt: "A comprehensive educational guide exploring how cybersecurity tools operate in real-world defensive workflows, why tool output requires human validation, and how to build, test, and evaluate an effective security toolkit.",
-      content: `## How Security Tools Actually Work: Choosing, Using, and Validating Cybersecurity Tools
+      content: `## What Is a Cybersecurity Tool?
 
-In the field of cybersecurity, software tools are often presented as silver bullets—automated solutions capable of detecting every threat, eliminating every vulnerability, and guaranteeing absolute protection. Marketing brochures frequently advertise proprietary algorithms and real-time dashboards that promise to secure complex infrastructure with minimal human intervention. However, practitioners quickly learn that no single tool can comprehend the full operational state of an enterprise network or anticipate every creative attack vector.
+A cybersecurity tool is software or a service that helps people protect, monitor, or test computers, accounts, networks, and applications. Each tool has a defined job: antivirus looks for malicious files and behavior, a scanner checks known weaknesses, and a SIEM correlates security events. None can see everything or guarantee that a system is safe. For example, a vulnerability scanner may report an outdated service, but an engineer must confirm the asset, exposure, and available fix before prioritizing it. This guide explains how to choose a tool for a real security goal, interpret its output, and verify that it works in your environment.
 
-In reality, cybersecurity tools are specialized instruments designed to collect, parse, filter, and correlate specific categories of digital telemetry. A tool does not possess human intuition or contextual business understanding; it simply executes predefined rules, evaluates signatures, measures behavioral deviations, or parses system artifacts. Effective defensive security relies not on accumulating an impressive array of expensive software packages, but on understanding how individual tools function, where their operational boundaries lie, and how their output must be interpreted by skilled analysts. This guide provides a deep, technical exploration into the mechanics of defensive security tools, examining how different categories operate, how evidence is gathered and validated, and how to build a cohesive, objective-driven security program.
+Official references: [NIST Cybersecurity Framework](https://www.nist.gov/cyberframework), [CISA Known Exploited Vulnerabilities Catalog](https://www.cisa.gov/known-exploited-vulnerabilities-catalog), and [NIST incident response guidance](https://csrc.nist.gov/pubs/sp/800/61/r3/final).
 
 ---
 
@@ -4255,21 +3833,6 @@ However, software alone cannot secure an enterprise. True defensive capability d
 `
     }
   ];
-
-  const onlineSafetyOverrides: Record<string, string> = {
-    'How to Stay Safe Online': onlineSafetyBasicsContent,
-    'Securing Your Digital Footprint': digitalFootprintSafetyContent,
-    "How to Secure Your Google Account: A Complete Beginner's Guide": googleAccountSafetyContent,
-    'How to Spot a Phishing Email': phishingEmailSafetyContent,
-    'What is Ransomware?': ransomwareSafetyContent,
-    'Understanding Firewalls': firewallSafetyContent,
-    'Secure Website Connections': secureWebsiteConnectionsContent,
-    'How Modern Websites Protect User Data: Privacy, Encryption, Tracking, and Data Security': modernWebsitePrivacyContent
-  };
-  articles.forEach((article) => {
-    const replacement = onlineSafetyOverrides[article.title];
-    if (replacement) article.content = replacement;
-  });
 
   const zeroTrustArticle = articles.find(
     (article) => article.title === 'Introduction to Zero Trust Security'

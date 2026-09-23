@@ -9,15 +9,9 @@ export const securityToolsArticles: ArticleData[] = [
     date: "September 20, 2026",
     readTime: "28 min read",
     excerpt: "A deep technical dissection of host defense architectures—contrasting legacy signature-based antivirus with modern Endpoint Detection and Response (EDR), kernel-mode callbacks, ETW-Ti telemetry, and red-team evasion techniques.",
-    content: `## Introduction: The Fall of the Perimeter and the Evolution of Endpoint Defense
+    content: `## What Is Endpoint Detection and Response?
 
-For the first three decades of commercial information technology, enterprise security operated under the "Castle-and-Moat" paradigm. Organizations placed heavy firewalls, intrusion prevention systems, and web proxies at network perimeters, operating under the implicit assumption that internal network devices were inherently trustworthy. On the individual hosts themselves, defense relied almost exclusively on **Traditional Antivirus (AV)** software.
-
-Legacy antivirus operated as a reactive, signature-matching gatekeeper. It periodically scanned local storage drives, computed cryptographic hashes (such as MD5, SHA-1, or CRC32) of executable binaries, and compared those hashes against a centralized database of known malicious files. If a file matched a known signature, the AV engine quarantined it; if it did not match, the operating system executed it without impediment.
-
-However, the modern threat environment rendered static signature-based detection obsolete. Adversaries adopted polymorphic malware engines, in-memory payloads, dynamic packers, and **Living-off-the-Land Binaries (LOLBins)**—abusing legitimate built-in administrative tools like PowerShell, WMI, and MSBuild to achieve their objectives without ever dropping an unsigned executable binary to disk.
-
-To survive in an era of fileless malware and nation-state intrusions, the cybersecurity industry transitioned from reactive file scanning to continuous behavioral monitoring: **Endpoint Detection and Response (EDR)**.
+Endpoint Detection and Response (EDR) is software that collects security signals from computers and servers, helps analysts investigate suspicious activity, and may provide actions such as isolating a device. Antivirus focuses heavily on preventing and detecting malicious files, while modern products may combine file scanning with behavior monitoring. Neither tool catches every attack, and EDR is not a complete activity log. For example, an alert may show an office document launching an unexpected script; an analyst checks the process chain, user, and network activity before containing the machine. This guide explains what endpoint tools observe, how detections work, and how to validate them against your environment.
 
 ---
 
@@ -154,6 +148,22 @@ Within 48 hours of detection, security teams globally used EDR query consoles (e
    * Block all Office applications from creating child processes.
    * Block Win32 API calls from Office macros.
    * Block executable content from running from email clients and webmail.
+## Operational Limits and a Safe Rollout
+
+An endpoint product sees only the events its sensor collects and retains. Microsoft documents that Defender for Endpoint telemetry is behavioral, but also says it is not intended to record every operation. A quiet dashboard therefore does not prove that nothing happened. Check sensor health, policy status, supported operating-system versions, and retention before using the product for an investigation.
+
+Start with a small pilot group that represents ordinary workflows: office users, developers, servers, and remote devices. Review detections with the people who own the applications, then tune exclusions narrowly. A broad exclusion for a developer directory may hide both legitimate builds and malicious files. Record who approved each exclusion, why it exists, and when it should be reviewed.
+
+### Example: An Alert on a Build Server
+
+An EDR alerts when a build agent runs a new executable from a temporary folder. The response analyst checks the parent process, build job, file signature and hash, deployment record, and outbound connections. If the job belongs to a scheduled release, preserve the event and tune only the narrow path or signer needed. If the process is unexpected, isolate the host under the incident plan and preserve logs before rebuilding. The tool provides leads; context makes the decision.
+
+Keep a response path for devices that lose connectivity or cannot accept isolation without operational harm. Define who can approve containment, how to reach that person, and how to restore a host safely. Run a tabletop using a simulated alert before relying on automatic remediation.
+
+## Further Reading
+* Microsoft Learn, Overview of endpoint detection and response: https://learn.microsoft.com/en-us/defender-endpoint/overview-endpoint-detection-response
+* Microsoft Learn, Defender for Endpoint documentation: https://learn.microsoft.com/en-us/defender-endpoint/
+* CISA, Known Exploited Vulnerabilities Catalog: https://www.cisa.gov/known-exploited-vulnerabilities-catalog
 `
   },
   {
@@ -164,16 +174,9 @@ Within 48 hours of detection, security teams globally used EDR query consoles (e
     date: "September 22, 2026",
     readTime: "30 min read",
     excerpt: "An exhaustive technical guide to network security monitoring: packet capture ring buffers, Wireshark BPF/display filters, Zeek event-driven protocol engines, and tracking encrypted malware command-and-control using JA3/JA4 TLS fingerprinting.",
-    content: `## Introduction: The Ground Truth of Network Packets
+    content: `## What Are Wireshark and Zeek?
 
-In digital forensics and incident response (DFIR), security professionals operate under a universal adage coined by packet analysis pioneer Richard Bejtlich: **"Packets never lie; people and endpoints do."**
-
-While attackers can compromise operating system kernels, tamper with Event Tracing for Windows, overwrite audit logs, and hide processes from memory inspection tools, they cannot alter the fundamental physics of network communication. To exfiltrate stolen database records, transmit keystrokes, receive remote commands, or propagate laterally to adjacent subnets, an adversary must transmit bytes across physical and virtual network mediums.
-
-However, modern enterprise networks transmit billions of packets per second across multi-gigabit fiber backbones, and over 95% of that traffic is encapsulated inside TLS/HTTPS encryption tunnels. Navigating this ocean of high-velocity, encrypted data requires two fundamentally distinct but complementary network analysis tools:
-
-1. **Wireshark:** An interactive, micro-level packet dissection engine designed for surgical inspection, protocol debugging, and deep packet inspection (DPI) of captured trace files (\`.pcap\` / \`.pcapng\`).
-2. **Zeek (formerly Bro):** A high-performance, macro-level network security monitoring framework designed for continuous line-rate capture, structured behavioral metadata extraction, and policy-driven anomaly detection.
+Wireshark is a packet analyzer for inspecting network traffic, while Zeek is a network security monitoring platform that turns observed traffic into structured event logs. A packet capture can show details of a connection; Zeek can summarize connections and application activity over time. Neither tool sees traffic that misses its sensor, and encryption limits what payload content can be read. For example, an analyst may use a capture to troubleshoot repeated DNS timeouts and Zeek logs to compare which hosts made the queries. Use these tools only on networks you own or are authorized to monitor, and protect captures because they can contain sensitive data.
 
 ---
 
@@ -321,6 +324,19 @@ The attacker exfiltrated the organization's Active Directory database (\`ntds.di
 2. **Ingest JA3/JA4 Hashes into SIEM:** Enrich all incoming TLS connection events with threat intelligence feeds containing known malicious JA3/JA4 hashes from Mandiant, Abuse.ch, and CISA.
 3. **Monitor Beaconing Cadence (Jitter Analysis):** Malware command-and-control beacons poll servers on periodic timers (e.g., every 60 seconds). Compute the delta between connection timestamps in Zeek's \`conn.log\`. Low standard deviation in inter-arrival times across persistent connections indicates automated beaconing.
 4. **Implement Internal DNS Inspection:** Prohibit internal endpoints from sending direct UDP/TCP port 53 traffic to external public DNS resolvers (8.8.8.8, 1.1.1.1). Force all hosts to resolve through monitored internal Active Directory DNS servers with query logging enabled.
+5. **Check Sensor Coverage:** Confirm that the capture point receives the VLANs and directions needed for the question. A switch mirror port can omit traffic when oversubscribed, and a laptop capture normally sees only traffic delivered to that interface. Record known blind spots before interpreting an absence of packets as evidence.
+6. **Protect Evidence:** Store capture files in access-controlled locations, use an approved retention period, and document the capture time, interface, filter, and clock source. Captures can contain usernames, internal hostnames, tokens, or unencrypted application data. Share the smallest relevant slice and redact sensitive values before attaching it to a ticket.
+
+### Example: Investigating DNS Failures
+
+During a service outage, capture DNS traffic from a test workstation while it requests the internal application name. In Wireshark, first use a display filter such as \`dns\` to review the visible exchanges; then inspect response codes, query timing, and whether the resolver address is expected. Compare with Zeek DNS logs for other hosts and the resolver's own logs. A timeout in one capture may reflect a local packet loss, a capture-point gap, or a real DNS problem, so corroborate before changing firewall rules.
+
+Encrypted DNS or TLS means analysts may not see the full query or payload at a network sensor. Use endpoint, resolver, and application logs where authorized, and do not attempt to defeat encryption on user devices simply to fill a visibility gap. Document which conclusions are direct observations and which are inferences.
+
+## Further Reading
+* Wireshark User's Guide: https://www.wireshark.org/docs/wsug_html/
+* Wireshark display filter reference: https://www.wireshark.org/docs/dfref/
+* The Book of Zeek: https://docs.zeek.org/en/lts/
 `
   },
   {
@@ -331,13 +347,9 @@ The attacker exfiltrated the organization's Active Directory database (\`ntds.di
     date: "September 24, 2026",
     readTime: "29 min read",
     excerpt: "A comprehensive guide to vulnerability assessment and external attack surface management—exploring raw socket scanning in Nmap, custom Lua scripting with NSE, OpenVAS/Nessus architecture, and mathematical risk scoring with CVSS v4.0 and EPSS.",
-    content: `## Introduction: The Asymmetry of Modern Attack Surfaces
+    content: `## What Is Vulnerability Scanning?
 
-In military doctrine and information security alike, defenders must protect every possible ingress point, while an adversary needs to discover only a single unpatched, misconfigured, or forgotten service to achieve initial network access. This structural reality is known as **Defensive Asymmetry**.
-
-Over the last decade, corporate attack surfaces expanded exponentially due to rapid cloud migration, remote workforce infrastructure, shadow IT, microservice architectures, and unmanaged supply-chain dependencies. Consequently, modern security programs cannot manage risk through manual inspection alone. They rely on automated **Vulnerability Assessment (VA)** and **External Attack Surface Management (EASM)** tools to continuously discover, audit, and prioritize weaknesses across enterprise infrastructure.
-
-However, running a vulnerability scanner is not simply a matter of clicking "Scan" and exporting a 500-page PDF report. Effective security engineers must understand the low-level network mechanics of port probing, how scan scripts evaluate services without crashing production databases, and how to mathematically prioritize vulnerabilities using modern scoring frameworks like **CVSS v4.0** and **EPSS**.
+Vulnerability scanning uses software to identify known weaknesses, exposed services, and configuration issues across systems an organization owns or is authorized to assess. Attack surface management adds the ongoing work of discovering which internet-facing assets belong to the organization and checking that they remain inventoried. A scan might find an old web server version on a test host; the team confirms ownership and exposure, checks whether a fix exists, then schedules remediation based on real risk. Scanner findings can be incomplete or false positives, and a CVSS score alone is not a business risk decision. This guide covers safe scanning, validation, and prioritization.
 
 ---
 
@@ -456,6 +468,17 @@ A mature vulnerability management program enforces binding Remediation Service L
 1. **Automate Continuous Discovery:** Do not rely on monthly scans. Deploy agent-based vulnerability sensors (e.g., Qualys Cloud Agent or Rapid7 InsightVM) directly onto endpoints and cloud containers to receive instant visibility when a new zero-day CVE is announced.
 2. **Scan Your External Perimeter Daily:** Utilize lightweight asset discovery tools like ProjectDiscovery's \`nuclei\` and \`subfinder\` to monitor externally exposed company domains, detecting shadow IT before automated threat scanners find it.
 3. **Verify Vulnerability Scanner Reports:** When an automated scanner reports a high-severity finding, train junior analysts to manually validate the finding using targeted \`curl\` headers or Nmap scripts before opening an emergency ticket for infrastructure teams.
+4. **Prioritize With Context:** FIRST explains that a CVSS Base score measures vulnerability severity, not the complete risk to a specific organization. Add whether the asset is internet-facing, whether exploitation is known or likely, what data it holds, and what compensating controls exist. CISA's Known Exploited Vulnerabilities catalog is one useful input for patch priority, especially for exposed systems.
+5. **Track Remediation to Closure:** Assign each confirmed issue an owner, due date, mitigation, and evidence of the fix. After patching, rescan or verify the software version and service configuration. Close a finding only when the affected asset is identified and the remediation is visible; a ticket marked “done” does not prove the vulnerable service is gone.
+
+### Example: A Critical CVE on a Test Host
+
+A scanner reports a critical vulnerability on a host named \`app-test-04\`. Before paging a team, confirm that the address maps to an active asset, identify its owner and software, and check whether the vulnerable component is exposed or disabled. Then compare the finding with vendor advisories and exploitation information. If the host is an internet-facing staging system with real customer data, its environment may justify urgent treatment; if the banner is stale and the component is not installed, document a false positive and update the inventory. In both cases, preserve the evidence and adjust the scanner only after understanding why it reported the issue.
+
+## Further Reading
+* Nmap Network Scanning, Port Scanning Overview: https://nmap.org/book/port-scanning.html
+* FIRST, CVSS v4.0 User Guide: https://www.first.org/cvss/v4.0/user-guide
+* CISA, Known Exploited Vulnerabilities Catalog: https://www.cisa.gov/known-exploited-vulnerabilities-catalog
 `
   },
   {
@@ -466,15 +489,9 @@ A mature vulnerability management program enforces binding Remediation Service L
     date: "September 26, 2026",
     readTime: "27 min read",
     excerpt: "A deep architectural masterclass on web application interception proxies—TLS termination mechanics, Burp Suite core workflows, OWASP ZAP headless CI/CD integration, out-of-band vulnerability testing with Collaborator, and modern REST/GraphQL API fuzzing.",
-    content: `## Introduction: The Web Application Security Frontier
+    content: `## What Is an Interception Proxy?
 
-Modern enterprise applications have largely abandoned the monolithic desktop architecture. Banking services, healthcare portals, cloud infrastructure management consoles, and internal HR systems are delivered as complex web applications and microservice-driven APIs. 
-
-While network firewalls and endpoint security tools inspect packets and OS processes, they possess zero contextual understanding of application-layer business logic. A Web Application Firewall (WAF) can inspect inbound HTTP requests for common SQL injection strings, but it cannot know that changing \`user_id=1042\` to \`user_id=1043\` in a JSON request allows an attacker to download another customer's mortgage documents.
-
-To discover, test, and validate vulnerabilities in web applications and APIs, penetration testers and application security (AppSec) engineers rely on an essential category of software: **The Interception Proxy**.
-
-An interception proxy sits directly between the penetration tester's browser (or mobile device) and the target application server. It acts as an intentional, local **Man-in-the-Middle (MitM)**, giving the analyst absolute control to intercept, inspect, tamper with, and replay every HTTP, WebSocket, and GraphQL packet in real time before it reaches the backend server.
+An interception proxy sits between a test browser or client and a web application so an authorized tester can inspect and replay HTTP requests and responses. Burp Suite and OWASP ZAP help teams find issues that a network scanner may miss, including access-control mistakes and unsafe input handling. For example, a tester can compare how an account page responds for two test users to check whether one can see the other's records. Automated alerts still need manual validation, and active tests can change or damage data. Use a local test system or written-authorized scope, with test accounts and backups, before sending scans to production.
 
 ---
 
@@ -584,6 +601,19 @@ Once the schema is dumped, tools like the **InQL** Burp extension automatically 
 2. **Disable GraphQL Introspection in Production:** Ensure GraphQL development tools and introspection queries are disabled in production environments to prevent automated attack surface mapping.
 3. **Deploy Web Application Firewalls with Rate Limiting:** Configure WAFs to detect and throttle anomalous Burp Intruder scans by tracking rapid sequences of 404/403 status codes from individual IP addresses.
 4. **Enforce Server-Side Object Ownership Checks:** Never trust client-side identifiers. Derive authorization strictly from the cryptographically verified claims inside the server's session token or JWT.
+5. **Validate the Business Action, Not Just the Input:** An API request can be syntactically valid and still perform an action the account should not be allowed to take. Use two test accounts in a staging system and compare their allowed operations. For instance, changing an object identifier should not let account A read or modify account B's invoice. Record the expected role and ownership rule before testing, then verify both the allowed and denied cases.
+6. **Use a Controlled Test Scope:** Create a written list of hosts, paths, accounts, rate limits, and testing times. Exclude payment, email, and third-party integrations unless their owners explicitly approve them. Use test data and a restore point. If a test sends unexpected traffic or modifies real data, stop, notify the owner, and preserve the request and response for review.
+
+### Example: Testing an Invoice API
+
+In staging, create two test customers and one invoice for each. Authenticate as the first customer, fetch their invoice, then make a single controlled request for the second customer's test invoice. A correct response should deny access without disclosing the record. Repeat with the normal application workflow to confirm the test did not rely on a malformed request. This focused check can reveal an authorization flaw that a generic scanner would not understand, while minimizing risk to real customer data.
+
+Use tool-generated severity as a starting point. Confirm exploitability and impact, check whether the issue affects other roles or API versions, and communicate a reproduction that the development team can verify. Retest the fix with the same test accounts and keep the evidence in the approved security report.
+
+## Further Reading
+* PortSwigger, Burp Suite documentation: https://portswigger.net/burp/documentation/desktop
+* OWASP ZAP Desktop User Guide: https://www.zaproxy.org/docs/desktop/
+* OWASP Web Security Testing Guide, Authorization Testing: https://owasp.org/www-project-web-security-testing-guide/
 `
   },
   {
@@ -594,17 +624,9 @@ Once the schema is dumped, tools like the **InQL** Burp extension automatically 
     date: "September 28, 2026",
     readTime: "31 min read",
     excerpt: "An architectural deep-dive into centralized security monitoring: log ingestion pipelines with Logstash and Vector, detection engineering with vendor-neutral Sigma rules, alert fatigue mitigation, and automated SOC playbook orchestration with SOAR.",
-    content: `## Introduction: The Data Dilemma in the Modern SOC
+    content: `## What Are SIEM and SOAR?
 
-In enterprise information security, the primary challenge facing defenders is no longer a lack of visibility; it is **information overload**. 
-
-A mid-sized enterprise with 5,000 workstations, 500 cloud workloads, and multi-gigabit network firewalls generates between 50,000 and 200,000 log events per second. These logs originate from hundreds of disparate sources: Windows Active Directory domain controllers, Linux kernel syslogs, AWS CloudTrail records, endpoint EDR sensors, Okta single sign-on authentications, and network proxies.
-
-If a security team had to manually inspect raw logs across individual servers during an active breach, containment would take weeks. The enterprise would be completely paralyzed.
-
-To survive this deluge of streaming telemetry, the Security Operations Center (SOC) relies on two foundational technologies:
-1. **Security Information and Event Management (SIEM):** The central nervous system of security analytics—responsible for continuous log ingestion, parsing, normalization, indexing, correlation, and historical retention.
-2. **Security Orchestration, Automation, and Response (SOAR):** The automation engine that connects the SIEM to firewall APIs, identity providers, and endpoint isolation tools—executing programmatic response playbooks within seconds of an alert.
+A Security Information and Event Management (SIEM) system collects and correlates security-relevant events so analysts can investigate activity across devices, accounts, and services. Security Orchestration, Automation, and Response (SOAR) connects alerts to repeatable response workflows, sometimes with automated actions. For example, a SIEM may correlate repeated sign-in failures with a successful login from an unfamiliar location; a SOAR playbook can enrich the alert and ask an analyst to confirm before disabling an account. Poorly tuned detections create noise, and an unsafe playbook can interrupt real work. This guide explains useful pipelines, detection rules, and safeguards for automation.
 
 ---
 
@@ -739,6 +761,26 @@ A SOAR platform automates this response using **Playbooks**—declarative workfl
 2. **Standardize on Vendor-Neutral Detection (Sigma):** Author and maintain internal detection logic in a centralized Git repository using Sigma YAML format. Use automated CI/CD pipelines to validate syntax and compile queries directly into your production SIEM.
 3. **Implement Risk-Based Alerting (RBA):** Eliminate single-event alert paging. Transition SOC alerts to entity-based risk thresholds that aggregate multi-stage threat behaviors over 24-hour sliding windows.
 4. **Automate the First Five Minutes with SOAR:** Identify the five most common recurring alerts in your SOC (e.g., Phishing email submissions, Brute-force lockouts, Compromised AWS API keys) and build automated playbooks to handle initial containment without requiring human intervention.
+5. **Measure Data Quality Before Buying More Volume:** Track missing fields, duplicate events, clock drift, parsing failures, and the time between an event and its arrival. A SIEM cannot correlate two systems reliably if one reports local time and another reports UTC without normalization. Fix high-value sources—identity, endpoint, DNS, cloud audit, and firewall logs—before ingesting every verbose debug record.
+6. **Put Guardrails Around Automation:** Begin playbooks in recommendation or approval mode. Require a human confirmation before disabling a privileged account, blocking a shared gateway, or isolating a production server. Use narrowly scoped service credentials, log each action, set timeouts, and provide a tested rollback. Automate low-risk enrichment first, such as looking up an IP's asset owner or attaching recent sign-in events.
+
+### Example: A Suspected Compromised Account
+
+A detection finds a successful login after repeated failures. The SIEM adds context: MFA result, device registration, source network, and recent mailbox rules. A SOAR workflow opens a case, checks whether the user is on call, and asks the analyst to validate the evidence. If confirmed, the approved playbook revokes active sessions and requests a password reset, then verifies that the user can safely regain access. The analyst records why containment occurred and checks for persistence such as forwarding rules. This avoids treating an unfamiliar IP by itself as proof of compromise.
+
+Review every high-impact playbook after a test incident. Confirm the API permissions still match the action, the owner can be reached, and the rollback works. NIST's current incident response guidance treats response as part of broader cybersecurity risk management; automation should support preparation, detection, response, and recovery rather than replace them.
+
+## A Small SOC Pilot
+
+Before expanding ingestion to every system, select a few important detections and measure whether the required events arrive, parse correctly, and generate useful cases. Ask analysts to record true positives, false positives, missed events, and the time spent investigating each one. Tune based on evidence, and keep a test dataset so rule changes can be checked before deployment. This gives a team a defensible way to improve alert quality without turning “more logs” into the only success measure.
+
+Set a review owner and date for each production rule. When the underlying application or identity provider changes, replay representative events and confirm that the alert still fires for the intended behavior.
+
+## Further Reading
+* NIST SP 800-61 Rev. 3, Incident Response Recommendations: https://csrc.nist.gov/pubs/sp/800/61/r3/final
+* Sigma rule specification: https://sigmahq.io/docs/
+* Splunk Enterprise Security documentation: https://docs.splunk.com/Documentation/ES
+* Elastic Security documentation: https://www.elastic.co/guide/en/security/current/index.html
 `
   }
 ];
