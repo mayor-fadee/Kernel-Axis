@@ -1561,16 +1561,14 @@ If you find something you do not recognize, do not panic or install a “cleaner
       title: "What Is a Digital Footprint? How Your Online Activity Leaves a Trail",
       category: "Digital Footprint",
       difficulty: "Beginner",
-      date: "August 1, 2026",
+      date: "September 23, 2026",
       readTime: "10 min read",
       excerpt: "Understand active and passive digital footprints, how websites collect your activity data, and practical steps to minimize unnecessary online exposure.",
-      content: `## Introduction
-Every time you open a web browser, perform an online search, log into a social media platform, or make a digital purchase, you interact with an interconnected network of servers, services, and analytics systems. Each of these interactions leaves behind small records of information. Over months and years, these accumulated records form a comprehensive archive of your online presence known as your digital footprint.
+      content: `## What Is a Digital Footprint?
+A digital footprint is the information trail connected to your use of websites, apps, and online services. Some parts are things you choose to share, such as a public post or product review. Other parts are created as services record visits, account activity, or device settings to make their systems work. The amount and kind of information varies from one service to another. Knowing what you share and reviewing a few settings can help you keep more control over that trail.
 
-Just as physical footprints in the mud reveal where you have walked and how far you have traveled, your digital footprint maps your online habits, interests, communications, and digital behavior. Understanding how this trail is generated, stored, and analyzed is an essential foundation for maintaining online privacy and managing your personal security in a connected world.
-
-## What Is a Digital Footprint?
-A digital footprint is the unique, traceable record of data created when an individual interacts with digital environments, applications, and networks. It encompasses a broad range of information, including public posts on social networks, private account registration details, web browsing records, IP addresses, online purchase histories, and location logs from mobile devices.
+## Your Footprint in Everyday Use
+A digital footprint can include public posts, account details, browsing records, online purchases, and location information. Which details are collected depends on the service, your settings, and how you use it.
 
 Whenever you navigate the web, servers record your requests to process pages, complete transactions, or stream media. While some of this data is necessary for internet services to function properly, much of it is continuously aggregated by platforms, advertisers, data brokers, and network administrators to construct detailed profiles of user behavior.
 
@@ -1695,7 +1693,12 @@ Use this straightforward checklist to conduct a periodic privacy review of your 
 * **Email Hygiene:** Use alias email addresses or temporary forwarding services when signing up for one-time services or newsletters.
 
 ## Conclusion
-Your digital footprint is an inevitable reflection of life in an interconnected world. Every digital action contributes to a growing trail of data that shapes how platforms, advertisers, and potential employers perceive your digital identity. By understanding the distinction between active and passive data collection, recognizing the technical mechanisms that track online activity, and adopting practical defensive habits, you can take control of your digital presence. Protecting your privacy does not require disconnecting from the digital world—it simply requires intentional, informed, and proactive management of the trail you leave behind.`
+Your online activity can leave records with services you use, and the amount of information varies from one service to another. Understanding the difference between information you choose to share and information a service records can help you make better privacy choices. Review your settings, remove details you no longer need to share, and ask a service how it handles information when you have questions. You may not be able to remove every copy of an old post, but you can still reduce what is publicly visible and take care with what you share next.
+
+## Official reading
+* [FTC: Heads Up, Stop. Think. Connect.](https://consumer.ftc.gov/system/files/consumer_ftc_gov/pdf/792a_heads_up_stop_think_connect_august_2023_508.pdf)
+* [Google: Find and remove personal information from Search](https://support.google.com/websearch/answer/12719076?hl=en)
+* [Mozilla: Firefox privacy and security features](https://support.mozilla.org/en-US/kb/firefox-privacy-and-security-features)`
     },
     {
       id: 15,
@@ -4150,7 +4153,7 @@ However, software alone cannot secure an enterprise. True defensive capability d
   // Plain-text parser and renderer for custom Markdown-style format
   const renderFormattedContent = (content: string, category?: string) => {
     if (!content) return null;
-    if (category === 'Password Security' || category === 'Cybersecurity Basics' || category === 'Online Safety' || category === 'Phishing & Scams' || category === 'Malware & Viruses' || category === 'Network Security' || category === 'Privacy & Data Protection' || category === 'Security Tools' || category === 'Cybersecurity Explained' || category === 'Device Security') {
+    if (category === 'Password Security' || category === 'Cybersecurity Basics' || category === 'Online Safety' || category === 'Phishing & Scams' || category === 'Malware & Viruses' || category === 'Network Security' || category === 'Privacy & Data Protection' || category === 'Security Tools' || category === 'Cybersecurity Explained' || category === 'Device Security' || category === 'Digital Footprint') {
       return renderPasswordFormattedContent(content, category);
     }
     const lines = content.split('\n');
