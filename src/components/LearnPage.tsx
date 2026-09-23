@@ -4262,7 +4262,6 @@ However, software alone cannot secure an enterprise. True defensive capability d
     "How to Secure Your Google Account: A Complete Beginner's Guide": googleAccountSafetyContent,
     'How to Spot a Phishing Email': phishingEmailSafetyContent,
     'What is Ransomware?': ransomwareSafetyContent,
-    'What is a DDoS Attack?': ddosSafetyContent,
     'Understanding Firewalls': firewallSafetyContent,
     'Secure Website Connections': secureWebsiteConnectionsContent,
     'How Modern Websites Protect User Data: Privacy, Encryption, Tracking, and Data Security': modernWebsitePrivacyContent
