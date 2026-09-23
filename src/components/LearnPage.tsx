@@ -4271,10 +4271,13 @@ However, software alone cannot secure an enterprise. True defensive capability d
   };
 
   const renderPasswordInline = (text: string) => {
-    const parts = text.split(/(`[^`]+`|\*\*[^*]+\*\*|\$[^$]+\$|\[[^\]]+\])/g);
+    const parts = text.split(/(`[^`]+`|https?:\/\/[^\s)]+|\*\*[^*]+\*\*|\$[^$]+\$|\[[^\]]+\])/g);
     return parts.map((part, pIdx) => {
       if (part.startsWith('`') && part.endsWith('`')) {
         return <code key={pIdx} className="rounded bg-black/40 px-1.5 py-0.5 font-mono text-[0.9em] text-[#8fffc0]">{part.slice(1, -1)}</code>;
+      }
+      if (part.startsWith('https://') || part.startsWith('http://')) {
+        return <a key={pIdx} href={part} target="_blank" rel="noopener noreferrer" className="text-[#00ff88] underline underline-offset-2 break-all hover:text-white">{part}</a>;
       }
       if (part.startsWith('**') && part.endsWith('**')) {
         return <strong key={pIdx} className="font-semibold text-white">{part.slice(2, -2)}</strong>;
