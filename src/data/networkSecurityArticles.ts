@@ -458,9 +458,9 @@ Run a small tabletop exercise in which analysts receive a realistic alert and ha
 
 Snort rules are most useful when they answer a specific monitoring question. In an isolated lab that you own, a simple alert can look for a harmless training path sent to a test web service:
 
-`alert tcp $HOME_NET any -> $HOME_NET 8080 ( msg:"LAB training path observed"; flow:to_server,established; http_uri; content:"/training-check"; sid:1000001; rev:1; )`
+\`alert tcp $HOME_NET any -> $HOME_NET 8080 ( msg:"LAB training path observed"; flow:to_server,established; http_uri; content:"/training-check"; sid:1000001; rev:1; )\`
 
-Here, `$HOME_NET` is the protected network variable, TCP port 8080 is the test service, `http_uri` selects the HTTP request path, and `content` looks for the marker. The rule generates an alert; it does not block traffic. Test it only with a local service and a benign request you create yourself. Confirm the expected alert appears, then send a normal request and confirm it does not. A production rule needs review for local network definitions, encrypted traffic visibility, false matches, and the exact Snort version and configuration. Never copy an unreviewed rule into inline blocking mode on a critical network.
+Here, \`$HOME_NET\` is the protected network variable, TCP port 8080 is the test service, \`http_uri\` selects the HTTP request path, and \`content\` looks for the marker. The rule generates an alert; it does not block traffic. Test it only with a local service and a benign request you create yourself. Confirm the expected alert appears, then send a normal request and confirm it does not. A production rule needs review for local network definitions, encrypted traffic visibility, false matches, and the exact Snort version and configuration. Never copy an unreviewed rule into inline blocking mode on a critical network.
 
 ## Further Reading
 
@@ -569,7 +569,6 @@ Use firewalls as one part of a layered design. Patch exposed services, use MFA f
 
 * NIST SP 800-41 Rev. 1, Guidelines on Firewalls and Firewall Policy: https://csrc.nist.gov/pubs/sp/800/41/r1/final
 * CISA, Layering Network Security Through Segmentation: https://www.cisa.gov/sites/default/files/publications/layering-network-security-segmentation_infographic_508_0.pdf`
-  }
   },
   {
     id: 84,
