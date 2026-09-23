@@ -1357,16 +1357,15 @@ Taking twenty minutes to review and harden your Google Account settings provides
     },
     {
       id: 12,
-      title: "What Happens When a Website Gets Hacked? Understanding a Web Security Incident",
+      title: "Responding to a Hacked Website: Containment, Investigation, and Recovery",
       category: "Cybersecurity Explained",
       difficulty: "Beginner",
-      date: "August 2026",
-      readTime: "20 min read",
-      excerpt: "A detailed breakdown of web security incidents, attack vectors, web application compromise mechanics, incident containment, forensic investigation, and web server recovery.",
-      content: `## Introduction
-Websites serve as digital storefronts, communication channels, cloud application interfaces, and customer data repositories for millions of businesses, organizations, and individuals globally. When a website experiences a security compromise—commonly referred to as being "hacked"—the consequences extend far beyond visual web page alterations. A security incident can lead to customer data theft, credit card skimming, search engine blacklisting, server resource hijacking for malware distribution, and severe reputational damage.
+      date: "September 23, 2026",
+      readTime: "10 min read",
+      excerpt: "A practical guide to recognizing a website compromise, limiting harm, preserving evidence, and restoring service safely.",
+      content: `## What Is a Website Security Incident?
 
-For website owners, system administrators, and web developers, understanding how web security incidents unfold is essential. Demystifying the mechanics of web application compromise, learning how incident responders contain active breaches, and implementing proactive web server hardening controls transforms web security from a reactive panic into a structured, manageable operational discipline.
+A website security incident is an event that affects the confidentiality, integrity, or availability of a website or its supporting systems. It may involve a stolen administrator account, an exposed database, altered pages, or a vulnerable plugin. A site that still looks normal can still have a compromised account or hidden code, so appearance alone is not a reliable check. For example, a shop may receive a report of unexpected checkout scripts and temporarily route payments away while its team investigates. This guide explains how to contain the issue, preserve useful evidence, and restore service with fewer assumptions.
 
 ## 1. Common Attack Vectors: How Web Applications Are Compromised
 Web applications are complex software stacks comprising web server software (Nginx, Apache), database engines (MySQL, PostgreSQL), server-side programming runtimes (PHP, Node.js, Python), and Content Management Systems (WordPress, Drupal, custom frameworks) along with third-party plugins. Security vulnerabilities can emerge at any layer of this software stack.
@@ -1374,22 +1373,22 @@ Web applications are complex software stacks comprising web server software (Ngi
 The primary attack vectors responsible for web application compromises include:
 
 ### Vulnerable Content Management System (CMS) Plugins and Dependencies
-The majority of small and medium-sized website compromises stem from unpatched third-party plugins, themes, and software libraries. CMS platforms rely on extensive ecosystems of third-party add-ons developed by independent programmers. When developers publish code containing security flaws—such as unauthenticated arbitrary file uploads or remote code execution (RCE)—threat actors deploy automated internet scanners to locate vulnerable websites and execute malicious scripts across thousands of targets simultaneously.
+Outdated plugins, themes, and libraries are one common route into websites, but there is no single cause that explains most incidents everywhere. CMS platforms rely on extensive ecosystems of third-party add-ons developed by independent programmers. When developers publish code containing security flaws—such as unauthenticated arbitrary file uploads or remote code execution (RCE)—threat actors deploy automated internet scanners to locate vulnerable websites and execute malicious scripts across thousands of targets simultaneously.
 
 ### Injection Vulnerabilities (SQLi and Command Injection)
-SQL Injection (SQLi) occurs when an application fails to sanitize user inputs before passing them into database queries. An attacker enters malicious SQL commands into form fields or URL parameters, tricking the backend database into executing unauthorized queries. Successful SQLi allows attackers to bypass authentication forms, extract customer databases, alter records, or gain complete administrative access to the underlying server file system.
+SQL Injection (SQLi) occurs when an application fails to sanitize user inputs before passing them into database queries. An attacker enters malicious SQL commands into form fields or URL parameters, tricking the backend database into executing unauthorized queries. Depending on the query and database permissions, SQL injection may expose or alter data. It does not automatically grant operating-system access; impact depends on the application design and database account privileges.
 
 ### Broken Authentication and Exposed Credentials
-Attackers harvest administrative credentials using brute-force dictionary attacks against administrative login portals (e.g., \`/wp-login.php\` or \`/admin\`), credential stuffing using stolen password dumps, or interception of unencrypted HTTP administrative sessions. Once inside, the attacker possesses full administrative authority to modify files, create backdoor user accounts, and access databases.
+Attackers harvest administrative credentials using brute-force dictionary attacks against administrative login portals (e.g., \`/wp-login.php\` or \`/admin\`), credential stuffing using stolen password dumps, or interception of unencrypted HTTP administrative sessions. What an intruder can do depends on the account permissions and application controls. A reused password may provide limited access, while a compromised administrator account can create broader risk.
 
 ### Cross-Site Scripting (XSS) and Malicious Ad Injection
-In a Cross-Site Scripting (XSS) attack, the adversary injects malicious JavaScript code into a vulnerable web page. When real visitors view the page, their browsers execute the injected script automatically. Attackers use XSS to steal user session cookies, redirect visitors to malicious phishing portals, or deploy "Magecart" credit card skimming scripts on e-commerce checkout pages.
+In a Cross-Site Scripting (XSS) attack, the adversary injects malicious JavaScript code into a vulnerable web page. When real visitors view the page, their browsers execute the injected script automatically. Depending on the page and browser controls, untrusted script may alter what a visitor sees, act with the visitor’s access, or interfere with a checkout. HttpOnly cookie settings can block JavaScript from reading some cookies, but they do not make every XSS impact harmless.
 
 ## 2. What Attackers Do After Gaining Unauthorized Access
 Once a threat actor secures unauthorized access to a web server, they execute several post-exploitation tasks depending on their financial or technical objectives:
 
 ### Installing Persistent Web Shells and Backdoors
-To ensure long-term access—even if the website owner updates passwords or patches the original software flaw—the attacker uploads persistent **Web Shells**. A web shell is a malicious script (typically written in PHP, ASP, or Python) placed inside deep server directories. Web shells provide a web-based administrative interface that allows the attacker to execute arbitrary terminal commands, browse server files, edit databases, and upload additional malware at will.
+To ensure long-term access—even if the website owner updates passwords or patches the original software flaw—the attacker uploads persistent **Web Shells**. A web shell is a malicious script (typically written in PHP, ASP, or Python) placed inside deep server directories. Depending on server permissions and isolation, a web shell may let an attacker run commands or access files available to the web application. It does not automatically provide full control of the host.
 
 ### Search Engine Poisoning and SEO Spam
 In SEO spam campaigns, attackers inject thousands of spam pages, fraudulent pharmaceutical storefronts, or gambling links into the compromised website's file structure or database. Attackers configure server rules to display the spam content exclusively to web search engine crawlers (like Googlebot) while displaying normal content to human visitors. Over time, search engines penalize the compromised website, removing it from search index results.
@@ -1405,9 +1404,9 @@ When a website owner discovers indicators of compromise—such as security warni
 
 ### Phase 1: Immediate Containment
 The primary objective during initial discovery is preventing further unauthorized data access or malware distribution:
-* **Place Site in Maintenance Mode:** Temporarily take the site offline or restrict public access to prevent visitors from receiving malicious payloads or submitting sensitive data.
-* **Isolate Web Server Connections:** Change all database passwords, CMS administrator passwords, SSH keys, and FTP/SFTP access credentials instantly.
-* **Revoke Active User Sessions:** Clear active user session tables and invalidate administrative authentication tokens.
+* **Limit exposure:** If visitors may be at risk, use the hosting provider or incident lead to restrict affected functions, show a maintenance page, or route traffic to a known-safe service. Preserve logs and system state where possible.
+* **Protect accounts based on evidence:** From a trusted device, revoke sessions and rotate credentials or keys that may be exposed. Prioritize administrator, hosting, database, deployment, and payment integrations. Record relevant evidence first when practical.
+* **Coordinate with providers:** Contact the host, CDN, payment provider, or incident-response team through a known support channel. Ask them to preserve relevant logs and confirm the scope of any isolation.
 
 ### Phase 2: Forensic Investigation and Root Cause Analysis
 Before attempting file cleanup, incident responders analyze server logs to identify *how* the compromise occurred and *what* files were modified:
@@ -1417,14 +1416,14 @@ Before attempting file cleanup, incident responders analyze server logs to ident
 
 ### Phase 3: Remediation and Clean Restoration
 Attempting to clean infected files manually by editing code lines often leaves hidden backdoors behind. The safest remediation workflow involves:
-* **Clean Environment Rebuild:** Delete all core application files and third-party plugin directories entirely. Reinstall fresh, verified core software and plugin files directly from official repositories.
+* **Restore from trusted sources:** Rebuild the affected application from known-good code, configuration, and dependencies where possible. Preserve uploads and business data for review; do not delete directories until their role and evidence value are understood. Rotate deployment secrets that may have been exposed.
 * **Database Sanitization:** Search and remove malicious database records, injected script tags, and unauthorized administrative accounts.
 * **Remove Web Shells:** Thoroughly scan server storage for hidden web shell scripts, backdoor files, and unauthorized execution permissions in uploads directories.
 
 ### Phase 4: Post-Incident Hardening and Search Engine Recovery
 Once the site is verified clean, administrators execute security hardening controls before restoring public access:
 * **Patch All Dependencies:** Update all core software, CMS components, themes, and plugins to their latest secure versions.
-* **Configure Web Application Firewall (WAF):** Deploy a cloud WAF (such as Cloudflare or Sucuri) to inspect incoming web traffic and block exploit attempts automatically.
+* **Use a WAF as one layer:** A managed WAF can reduce some unwanted traffic, but it does not replace patching, secure application code, access controls, or monitoring. Test changes to avoid blocking legitimate users.
 * **Submit Search Engine Review Requests:** Request formal security reviews in Google Search Console and Bing Webmaster Tools to clear malware warnings and restore search engine indexing.
 
 ## Web Server Hardening Checklist
@@ -1433,12 +1432,25 @@ To protect your website against future security incidents:
 * **Restrict Uploads Directory Execution:** Disable PHP script execution inside uploads directories (e.g., via \`.htaccess\` or Nginx configuration) so uploaded files cannot execute code even if uploaded successfully.
 * **Enforce Strong Authentication:** Mandate complex passphrases and Multi-Factor Authentication (MFA) for all web application administrative accounts.
 * **Implement Offsite Immutable Backups:** Schedule automated daily backups of web server files and database dumps, storing backup archives in isolated, offsite cloud storage.
-* **Deploy Cloud WAF and Security Monitoring:** Proxy web traffic through a Cloud WAF and configure real-time file integrity monitoring to detect unauthorized file changes instantly.
+* **Deploy Cloud WAF and Security Monitoring:** Proxy web traffic through a Cloud WAF and configure file integrity monitoring to alert on selected changes; tune and test the monitoring so expected deployments are not confused with unauthorized edits.
 
 ## Conclusion
 A web security incident is a manageable operational challenge when approached with technical understanding and structured procedures. By understanding how attackers exploit CMS vulnerabilities, SQL injection, and broken authentication, website owners can transition from reactive panic to effective security operations.
 
-By implementing proactive web server hardening—anchored by continuous software updates, strong authentication, Web Application Firewalls, and offsite immutable backups—you establish a resilient web architecture capable of absorbing and surviving security threats.`
+By implementing proactive web server hardening—anchored by continuous software updates, strong authentication, Web Application Firewalls, and offsite immutable backups—you establish a resilient web architecture capable of absorbing and surviving security threats.
+
+## A Practical Example: A New Checkout Script
+
+A customer reports that a payment page loads an unfamiliar script. The site owner records the report, time, affected URL, and a screenshot, then contacts the hosting and payment providers. The team preserves recent access and deployment logs, limits checkout if the script could collect payment details, and checks the code repository and release records for changes. It reviews administrator sign-ins and plugin updates around the time the script first appeared. After rebuilding from trusted source, the team checks the live page from a clean browser and confirms that payment processing works before reopening checkout. If customer information may have been exposed, the organization follows its privacy and breach-notification process.
+
+Keep a short timeline that separates confirmed facts from assumptions. “The script was present at 14:10” is an observation if supported by a saved capture. “An attacker installed it through plugin X” is a hypothesis until logs or other evidence support it. Keep copies of relevant logs with timestamps, note who collected them, and use a trusted device for password changes. Hosting and CDN logs may have short retention periods, so request preservation early.
+
+## Further Reading
+* NIST SP 800-61 Rev. 3, Incident Response Recommendations: https://csrc.nist.gov/pubs/sp/800/61/r3/final
+* OWASP Top 10: https://owasp.org/projects/Top-Ten
+* CISA, Internet Exposure Reduction Guidance: https://www.cisa.gov/resources-tools/resources/exposure-reduction
+
+`
     },
     {
       id: 13,
@@ -4167,7 +4179,7 @@ However, software alone cannot secure an enterprise. True defensive capability d
   // Plain-text parser and renderer for custom Markdown-style format
   const renderFormattedContent = (content: string, category?: string) => {
     if (!content) return null;
-    if (category === 'Password Security' || category === 'Cybersecurity Basics' || category === 'Online Safety' || category === 'Phishing & Scams' || category === 'Malware & Viruses' || category === 'Network Security' || category === 'Privacy & Data Protection' || category === 'Security Tools') {
+    if (category === 'Password Security' || category === 'Cybersecurity Basics' || category === 'Online Safety' || category === 'Phishing & Scams' || category === 'Malware & Viruses' || category === 'Network Security' || category === 'Privacy & Data Protection' || category === 'Security Tools' || category === 'Cybersecurity Explained') {
       return renderPasswordFormattedContent(content, category);
     }
     const lines = content.split('\n');
