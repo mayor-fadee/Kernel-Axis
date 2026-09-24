@@ -2551,14 +2551,22 @@ A clear timeline helps responders connect alerts and choose the next safe action
     },
     {
       id: 19,
-      title: "Digital Forensics Explained: How Investigators Reconstruct a Cyberattack",
+      title: "Digital Forensics: Reconstructing a Cyberattack",
       category: "Digital Forensics",
       difficulty: "Intermediate",
-      date: "August 8, 2026",
-      readTime: "28 min read",
-      excerpt: "An in-depth guide on how digital forensic investigators collect, analyze, and correlate artifacts across disks, memory, networks, and cloud logs to reconstruct security incidents.",
-      content: `## 1. A Realistic Forensic Scenario
-It is 03:14 AM on a Thursday. In a quiet enterprise datacenter, an automated security monitoring sensor logs a single, unusual authentication event: a domain user account belonging to a senior finance manager authenticates to an internal file server via Remote Desktop Protocol from a workstation physically assigned to marketing. The login succeeds without triggering an immediate password lockout.
+      date: "September 24, 2026",
+      readTime: "30 min read",
+      excerpt: "A practical guide to collecting, preserving, and comparing evidence from computers, networks, and cloud services to understand an incident.",
+      content: `## What Is Digital Forensics?
+
+Digital forensics is the structured examination of electronic information to understand an event and support a clear, evidence-based report. Investigators may work with computers, phones, network records, and cloud logs. They preserve relevant data, check how it was collected, and compare evidence from more than one source. The aim is to explain what records support, what they do not support, and what remains uncertain.
+
+## Practical Example
+
+A business sees an employee account sign in from an unfamiliar device, followed by access to a shared folder. Investigators preserve sign-in and file-access logs, check the account’s normal use, and compare the timeline with endpoint records. They can report which account accessed the folder, but need more evidence before claiming who used it or whether files were copied.
+
+## 1. A Fictional Forensic Scenario
+This fictional example starts at 03:14 AM on a Thursday. In a quiet enterprise datacenter, an automated security monitoring sensor logs a single, unusual authentication event: a domain user account belonging to a senior finance manager authenticates to an internal file server via Remote Desktop Protocol from a workstation physically assigned to marketing. The login succeeds without triggering an immediate password lockout.
 
 Four minutes later, at 03:18 AM, a newly compressed archive file appears in a hidden system directory on that server. At 03:22 AM, an outbound encrypted TLS connection opens to a newly registered IP address hosted in an unranked cloud region, transfers approximately 380 megabytes of encrypted payload data, and silently disconnects. By 03:25 AM, the host falls quiet again.
 
@@ -2877,23 +2885,44 @@ Chain of custody is a chronological tracking log that records who collected, tra
 MACB stands for Modified, Accessed, Changed (MFT/metadata update), and Born (Created). These four timestamp values track different aspects of file interaction on an operating system.
 
 ### Can deleted files always be recovered during a forensic investigation?
-Not always. On traditional magnetic hard drives, deleted files can often be recovered from unallocated space until overwritten. However, on modern Solid-State Drives (SSDs) using the TRIM command, the operating system proactively clears unallocated flash memory blocks, making file recovery significantly harder and requiring reliance on system journals and RAM captures.
+Not always. On traditional magnetic hard drives, deleted files may sometimes be recovered from unallocated space, but recovery depends on the device, file system, encryption, TRIM, and later writes. However, on modern Solid-State Drives (SSDs) using the TRIM command, the operating system proactively clears unallocated flash memory blocks, making file recovery significantly harder and requiring reliance on system journals and RAM captures.
 
 ### How does cloud forensics differ from traditional endpoint forensics?
 Cloud forensics relies on API-driven snapshotting and centralized cloud audit logs (like AWS CloudTrail or GCP Audit Logs) rather than physical hardware access. In the cloud, identity (IAM roles, OAuth tokens, API keys) serves as the primary forensic perimeter.
 
 ### Does forensic evidence prove who physically performed a cyberattack?
-Technical forensic evidence proves what actions were executed on a system and which account or IP address performed them. Proving the exact physical identity of the human attacker (attribution) requires additional strategic intelligence, ISP records, and legal cooperation.`
+Technical forensic evidence proves what actions were executed on a system and which account or IP address performed them. Proving the exact physical identity of the human attacker (attribution) requires additional strategic intelligence, ISP records, and legal cooperation.
+
+## Practical Notes from Official Guidance
+
+NIST’s incident-response guide discusses files, operating systems, network traffic, and applications as forensic sources. Investigators decide which sources can answer the question, acquire them while limiting unnecessary changes, and verify copies where possible. The method depends on the system and incident; no single tool reveals every action. A written plan helps teams collect useful evidence without delaying urgent containment.
+
+A timeline is a comparison of records, not a perfect replay of an event. Clocks can differ, logs can be missing, and products may record events using different time zones or meanings. Investigators note those differences, compare independent sources, and avoid claiming certainty when records are incomplete. A good report says which conclusion is strongly supported and which is only possible.
+
+Forensic work supports incident response, but safety and service restoration still matter. Teams may need to isolate a device, protect accounts, and preserve logs at the same time. CISA recommends useful logging across servers, endpoints, network devices, and cloud services, and having a response team with clear roles. Small, tested procedures can make later investigations easier.
+
+## Official References
+
+* https://csrc.nist.gov/pubs/sp/800/86/final
+* https://www.cisa.gov/audiences/small-and-medium-businesses/secure-your-business/use-logging-on-business-systems`
     },
     {
       id: 20,
-      title: "Digital Evidence: How Investigators Preserve, Analyze, and Validate Evidence",
+      title: "Digital Evidence: Preserve, Check, and Explain It",
       category: "Digital Forensics",
       difficulty: "Intermediate",
-      date: "August 12, 2026",
-      readTime: "22 min read",
-      excerpt: "A comprehensive guide on how digital forensic investigators handle digital evidence—from identification and preservation through forensic imaging, cryptographic hashing, chain of custody, artifact correlation, timeline analysis, and defensible reporting.",
-      content: `## Introduction
+      date: "September 24, 2026",
+      readTime: "26 min read",
+      excerpt: "Learn what counts as digital evidence and how careful collection, hash checks, timelines, and clear notes support an investigation.",
+      content: `## What Is Digital Evidence?
+
+Digital evidence is information from a computer, phone, network, or online service that may help explain an incident. It can include files, logs, messages, memory data, and account records. Evidence needs context: a timestamp or account name alone may not explain who acted or why. Investigators document collection and analysis so another person can review the method and its limits.
+
+## Practical Example
+
+After a suspicious file is found on a shared computer, the response team records where it was found and who had access. A trained examiner makes an appropriate copy, records hashes, and searches a working copy. The team compares the file with endpoint and network logs before deciding whether it was opened or sent elsewhere.
+
+## Introduction
 In an enterprise incident response center or a court of law, the ultimate determination of what occurred during a security incident rarely rests on speculation. It depends entirely on whether the digital evidence can withstand technical, logical, and procedural scrutiny.
 
 Unlike physical evidence—such as a broken window, a latent fingerprint, or a physical tool mark—digital evidence consists of patterns of binary states stored on volatile silicon chips, magnetic media, optical disks, or remote cloud services. These binary states leave no physical tracks when viewed directly on a computer screen. Furthermore, every routine interaction with an operating system alters the underlying media. Merely powering on a laptop or opening a folder in a file manager writes temporary files, updates access timestamps, modifies registry hives, and overwrites unallocated storage space.
@@ -3197,7 +3226,20 @@ Whether investigating a corporate security incident, an insider threat, or a com
 
 **Preservation + Integrity + Documentation + Analysis + Corroboration + Careful Reasoning**
 
-By adhering to established forensic lifecycles, maintaining unbroken chains of custody, normalizing timelines, and seeking multi-source corroboration, digital forensic investigators transform fragile binary data into defensible technical facts that reveal the truth behind digital events.`
+By adhering to established forensic lifecycles, maintaining unbroken chains of custody, normalizing timelines, and seeking multi-source corroboration, digital forensic investigators transform fragile binary data into defensible technical facts that reveal the truth behind digital events.
+
+## Practical Notes from Official Guidance
+
+Preservation begins with a clear question and appropriate scope. A whole-device image may help in some cases, while a targeted collection of a mailbox, cloud audit trail, or selected files may be more suitable in others. The examiner records why a source was chosen, which tool and version were used, and any errors or missing data. Collection should follow organizational policy and applicable legal requirements.
+
+Hashes are useful checks, but they are often misunderstood. If the same algorithm produces the same value for two files, that supports the claim that the files match; it does not prove the data was true before collection, that a device was not altered earlier, or that an interpretation is correct. Keep the hash tied to the exact item and stage of collection, and explain the comparison in plain language.
+
+A careful report separates observation from interpretation. A log may show that an account downloaded a file at a certain time; it may not show who controlled the account or what happened to the file afterward. State supporting records, gaps, alternate explanations, and confidence. This makes the report more useful to technical teams, managers, and legal reviewers.
+
+## Official References
+
+* https://csrc.nist.gov/pubs/sp/800/86/final
+* https://www.swgde.org/documents/published-complete-listing/18-f-002-2-0/`
     },
     {
       id: 21,
@@ -4260,7 +4302,7 @@ However, software alone cannot secure an enterprise. True defensive capability d
   // Plain-text parser and renderer for custom Markdown-style format
   const renderFormattedContent = (content: string, category?: string) => {
     if (!content) return null;
-    if (category === 'Password Security' || category === 'Cybersecurity Basics' || category === 'Online Safety' || category === 'Phishing & Scams' || category === 'Scam Awareness' || category === 'Malware & Viruses' || category === 'Network Security' || category === 'Privacy & Data Protection' || category === 'Security Tools' || category === 'Cybersecurity Explained' || category === 'Device Security' || category === 'Digital Footprint' || category === 'Cybersecurity Threats') {
+    if (category === 'Password Security' || category === 'Cybersecurity Basics' || category === 'Online Safety' || category === 'Phishing & Scams' || category === 'Scam Awareness' || category === 'Malware & Viruses' || category === 'Network Security' || category === 'Privacy & Data Protection' || category === 'Security Tools' || category === 'Cybersecurity Explained' || category === 'Device Security' || category === 'Digital Footprint' || category === 'Cybersecurity Threats' || category === 'Digital Forensics') {
       return renderPasswordFormattedContent(content, category);
     }
     const lines = content.split('\n');
