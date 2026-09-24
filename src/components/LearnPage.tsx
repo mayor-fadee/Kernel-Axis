@@ -1705,41 +1705,36 @@ Your online activity can leave records with services you use, and the amount of 
       title: "How Online Scams Work: Common Tactics Used to Trick Internet Users",
       category: "Scam Awareness",
       difficulty: "Beginner",
-      date: "August 1, 2026",
-      readTime: "10 min read",
-      excerpt: "Learn how cybercriminals use psychological manipulation, deceptive links, fake customer support, and financial urgency to execute online scams—and how to protect yourself.",
-      content: `## Introduction
-As digital services become deeply integrated into daily life—from online banking and e-commerce to social networking and remote work—the internet offers unprecedented convenience. However, this digital connectivity also presents opportunities for deceptive individuals and criminal networks to exploit unsuspecting users. Online scams represent one of the most common security challenges facing everyday internet users today.
+      date: "September 24, 2026",
+      readTime: "12 min read",
+      excerpt: "Learn the warning signs of fake messages, support requests, investments, and urgent payment demands, with practical steps to check an offer and respond safely.",
+      content: `## What Is an Online Scam?
+An online scam is a dishonest message, offer, or transaction meant to get your money, personal information, or access to an account. It can arrive by text, email, phone, social media, a job site, or a marketplace. Scammers often pretend to be someone you know and give you a reason to act quickly. A familiar logo or caller ID is not proof that the message is genuine. Pause, verify the request through a contact method you find yourself, and ask someone you trust if you feel rushed.
 
-Unlike traditional software attacks that rely primarily on technical vulnerabilities or complex malicious code, online scams usually target human psychology. Understanding how deceptive tactics operate, recognizing early warning signs, and maintaining healthy digital skepticism are essential skills for navigating the modern web safely. This guide breaks down how common online scams work and outlines practical defensive steps to protect your personal information and financial assets.
+Scammers may use fake websites, pretend to represent a trusted organization, or offer a false opportunity. Some want a payment; others want account access or personal information. The request and the person behind it should be checked before you respond.
 
-## What Is an Online Scam?
-An online scam is a fraudulent scheme executed through digital communication channels—such as email, text messages, social media, web advertisements, or messaging apps—designed to trick individuals into handing over sensitive information, money, or account access.
+## Tactics Scammers Use to Create Pressure
+Scams can target anyone. A message may be designed to cause fear, excitement, or sympathy, making it harder to stop and check what is happening. Recognizing that pressure can help you take a moment before replying or paying.
 
-Scammers leverage a wide range of deceptive techniques, ranging from forged website interfaces and impersonated authority figures to fabricated financial opportunities. Regardless of the specific medium or pretext used, the underlying goal of an online scam is almost always financial gain, identity theft, or unauthorized access to private digital accounts.
-
-## Why People Fall for Scams
-A common misconception is that only naive or non-technical individuals fall for online scams. In reality, modern scams are designed using proven psychological principles that can manipulate people of all technical skill levels, ages, and backgrounds.
-
-### Psychological Triggers Exploited by Scammers
+### Common pressure tactics
 * **Fear and Intimidation:** Creating anxiety about account suspension, legal action, unpaid taxes, or security breaches to impair critical thinking.
 * **Urgency and Scarcity:** Demanding immediate action within minutes to prevent a negative outcome or claim a time-sensitive reward.
 * **Authority and Trust:** Impersonating recognized organizations, government agencies, bank representatives, or trusted brand names.
-* **Greed and Curiosity:** Offering unrealistically high financial returns, free high-value electronics, or exclusive secret opportunities.
+* **Attractive offers:** Promising unusually high returns, valuable prizes, or access to an opportunity that needs quick action.
 * **Empathy and Compassion:** Fabricating urgent personal crises or fake charitable causes to exploit helpful human nature.
 
-By triggering strong emotional responses, scammers bypass a victim's natural hesitation, encouraging them to act quickly before verifying the legitimacy of the request.
+Pressure can make it harder to think through a request. A useful response is to pause and verify the person or organization through a separate contact method before acting.
 
 ## Phishing and Fake Messages
-Phishing remains the foundational mechanism behind the vast majority of online scams. It involves sending deceptive electronic communications designed to look like authentic messages from trusted sources.
+Phishing is one common kind of online scam. It uses a message or website that pretends to come from a trusted source to trick someone into sharing information, sending money, or opening a harmful link.
 
 ### Email Phishing (Traditional Phishing)
 In a standard phishing attack, a user receives an email that appears to originate from a well-known service provider, streaming platform, or financial institution. The message typically alerts the user to an urgent issue—such as a failed payment, unauthorized login attempt, or account lock notice—and provides a convenient button or hyperlink to "verify your account."
 
-This link leads to a spoofed website that closely mirrors the legitimate organization's design. When the victim enters their username and password, the credentials are captured directly by the scammer.
+The link may lead to a fake website that copies the real service. If you enter your password there, the person who controls the page may capture it. Open the service’s official app or type its known address instead of using an unexpected link.
 
 ### SMS Phishing (Smishing)
-Smishing uses mobile text messages to deliver fraudulent links or prompts. Common smishing examples include fake delivery notifications (e.g., "Your package cannot be delivered until you update your address"), bank alert warnings, or unexpected survey rewards. Because mobile phone screens display truncated URLs and lack detailed security indicators, users are often more prone to tapping suspicious links in text messages.
+Smishing uses mobile text messages to deliver fraudulent links or prompts. Common smishing examples include fake delivery notifications (e.g., "Your package cannot be delivered until you update your address"), bank alert warnings, or unexpected survey rewards. A link can be harder to inspect on a small screen, but a message on a phone is not automatically more dangerous. If you did not expect the message, open the service’s official app or type its address yourself instead of following its link.
 
 ## Fake Customer Support Scams
 Customer support scams exploit users who are seeking technical assistance or resolving an issue with their computer, mobile device, or subscription service.
@@ -1749,7 +1744,7 @@ Customer support scams exploit users who are seeking technical assistance or res
 * **Pop-Up Browser Warnings:** Malicious scripts on compromised web pages display fake system error screens warning that the computer is infected with viruses, directing the user to call a toll-free hotline immediately.
 * **Remote Access Manipulation:** Once a victim calls the fake support number, the scammer instructs them to download remote desktop software. Once connected, the scammer may fake diagnostic logs, claim severe system damage, and demand hundreds of dollars for unnecessary technical support or software.
 
-Legitimate technology companies and service providers will never display telephone numbers in browser pop-up error screens or demand immediate remote desktop access to resolve unverified issues.
+Do not call a number shown in an unexpected pop-up or give remote access to someone who contacted you unexpectedly. Close the page and reach the company through its official app or website if you need support.
 
 ## Shopping and Marketplace Scams
 With the growth of online e-commerce platforms and peer-to-peer marketplaces, shopping scams have become increasingly prevalent.
@@ -1768,10 +1763,10 @@ Prize and giveaway scams exploit excitement and curiosity by convincing victims 
 ### The Upfront Fee Mechanism
 Victims receive notifications via email, social media direct messages, or messaging applications claiming they have won a major cash prize, expensive smartphone, or luxury vacation. However, to collect the reward, the victim is instructed to pay a small "processing fee," "customs duty," or "shipping charge" upfront.
 
-Once the fee is paid, the scammer requests additional fees under new pretexts until the victim realizes the prize does not exist and stops sending money. Genuine contests and legitimate prize draws never require winners to pay money or purchase gift cards to claim their winnings.
+After a fee is paid, the sender may ask for more money under another name. An unexpected request to pay taxes, fees, or buy gift cards before receiving a prize is a warning sign. Check the contest rules and contact the organizer using details you find independently.
 
 ## Investment and Financial Scams
-Investment scams target individuals seeking financial growth, offering guaranteed returns with little to no risk.
+Investment scams may promise high returns with little or no risk to persuade people to send money.
 
 ### Characteristics of Fraudulent Investment Schemes
 * **Guaranteed High Returns:** Promising unrealistic daily or weekly percentage yields that far exceed legitimate market opportunities.
@@ -1806,10 +1801,10 @@ Developing a habit of identifying key scam indicators provides a strong layer of
 
 ### Common Red Flags
 * **Unsolicited Contact:** Receiving unexpected emails, text messages, or phone calls regarding accounts you do not own or contests you did not enter.
-* **Suspicious Sender Addresses:** Email addresses where the domain name following the "@" symbol does not match the official organization's website domain.
+* **Sender details that do not match:** A lookalike email domain can be a warning sign. Address details can also be spoofed, so verify an unexpected request through the company’s official app, website, or phone number.
 * **Mismatched Hyperlinks:** Hovering over a link reveals a destination web address that differs from the text displayed on the screen.
 * **Irregular Payment Methods:** Requests to pay via gift cards, wire transfers, peer-to-peer payment apps, or cryptocurrency for official services or goods.
-* **Generic Greetings and Formatting Errors:** Messages using generic salutations like "Dear Customer," containing noticeable spelling mistakes, or featuring unusual grammatical structures.
+* **Odd wording or mistakes:** Poor spelling can be a clue, but many real messages are brief and many scam messages are polished. Do not use writing quality alone to decide whether a request is genuine.
 
 ## What to Do When You Encounter a Suspicious Scam
 Knowing how to respond when encountering a potential scam prevents accidental compromise and helps protect others.
@@ -1833,7 +1828,15 @@ Use this quick reference checklist to evaluate suspicious communications and mai
 * **Software Protection:** Maintained updated web browsers, operating systems, and email spam filters.
 
 ## Conclusion
-Online scams rely heavily on psychological manipulation, artificial urgency, and deceptive design rather than breaking through complex technical firewalls. By understanding the core tactics used in phishing, impersonation, fake support, and financial fraud, you can spot warning signs before taking risky action. Maintaining a healthy level of digital skepticism, verifying unexpected communications through independent channels, and slowing down when faced with urgent requests are your most effective defenses in staying safe online.`
+Online scams rely heavily on psychological manipulation, artificial urgency, and deceptive design rather than breaking through complex technical firewalls. By understanding the core tactics used in phishing, impersonation, fake support, and financial fraud, you can spot warning signs before taking risky action. Maintaining a healthy level of digital skepticism, verifying unexpected communications through independent channels, and slowing down when faced with urgent requests are your most effective defenses in staying safe online.
+
+## Official sources
+* [FTC: How to avoid a scam](https://consumer.ftc.gov/articles/how-avoid-scam)
+* [FTC: Report fraud](https://reportfraud.ftc.gov/)
+* [CFPB: Classic warning signs of fraud and scams](https://www.consumerfinance.gov/ask-cfpb/what-are-some-classic-warning-signs-of-possible-fraud-and-scams-en-2094/)
+
+These agencies provide U.S.-specific information and reporting options. If you live elsewhere, contact your local consumer-protection or cybercrime reporting service.
+`
     },
     {
       id: 16,
@@ -4153,7 +4156,7 @@ However, software alone cannot secure an enterprise. True defensive capability d
   // Plain-text parser and renderer for custom Markdown-style format
   const renderFormattedContent = (content: string, category?: string) => {
     if (!content) return null;
-    if (category === 'Password Security' || category === 'Cybersecurity Basics' || category === 'Online Safety' || category === 'Phishing & Scams' || category === 'Malware & Viruses' || category === 'Network Security' || category === 'Privacy & Data Protection' || category === 'Security Tools' || category === 'Cybersecurity Explained' || category === 'Device Security' || category === 'Digital Footprint') {
+    if (category === 'Password Security' || category === 'Cybersecurity Basics' || category === 'Online Safety' || category === 'Phishing & Scams' || category === 'Scam Awareness' || category === 'Malware & Viruses' || category === 'Network Security' || category === 'Privacy & Data Protection' || category === 'Security Tools' || category === 'Cybersecurity Explained' || category === 'Device Security' || category === 'Digital Footprint') {
       return renderPasswordFormattedContent(content, category);
     }
     const lines = content.split('\n');

@@ -3,17 +3,20 @@ import { ArticleData } from './cybersecurityBasicsArticles';
 export const scamAwarenessArticles: ArticleData[] = [
   {
     id: 68,
-    title: "The Psychology of Romance Scams: How Fake Online Relationships Steal Life Savings",
+    title: "Romance Scams: How to Spot Emotional and Money Requests",
     category: "Scam Awareness",
-    difficulty: "Intermediate",
-    date: "November 4, 2026",
-    readTime: "22 min read",
-    excerpt: "A deep dive into how organized romance scammers groom everyday people over months, build fake emotional bonds, stage unexpected financial emergencies, and trick victims into sending their life savings.",
-    content: `## The Hidden Epidemic of Heartbreak and Financial Ruin
+    difficulty: "Beginner",
+    date: "September 24, 2026",
+    readTime: "12 min read",
+    excerpt: "A clear guide to fake online relationships, common warning signs, what to do before sending money, and how to respond if you have already paid.",
+    content: `## What Is a Romance Scam?
+A romance scam is when someone pretends to form a relationship online to get money or personal information. They may contact you through a dating app, social media, or an unexpected message. After building trust, they invent a crisis or suggest an investment and ask you to send money. A real profile photo or long conversation does not prove who is behind the account. Take time to verify the person and talk with someone you trust before making a financial decision.
 
-Every year, police departments and fraud hotlines receive thousands of desperate calls from people who have lost their entire life savings. They did not lose this money because their computer got hacked or because their password was weak. They sent the money voluntarily to someone they believed was the love of their life. Romance scams are among the most destructive forms of fraud on the internet because they do not just take away money; they break a person's trust, self-esteem, and emotional well-being.
+## How a romance scam can unfold
 
-There is a common belief that only naive, lonely, or elderly people fall for romance scams. However, real-world data shows something very different. Victims include corporate managers, teachers, healthcare workers, college students, and retired grandparents. The criminal groups behind these scams are not amateur individuals sending random emails. They are organized syndicates that treat deception like a full-time job, following tested scripts that play directly on natural human kindness and the universal desire for companionship.
+In a romance scam, a person may send money because they believe they are helping someone they care about. The loss can be serious, and the emotional impact can make it hard to tell friends or family. The person being scammed is not foolish: the other person may have spent time building trust and creating a believable story.
+
+People of different ages and backgrounds can be targeted. A scammer may use a prepared story, stolen photos, or details learned from public profiles. A polished profile does not prove the person is real, and a request for money should be checked carefully even when the conversation feels sincere.
 
 Understanding how these fraudsters operate—from the very first innocent text message to the heart-wrenching moment they demand emergency money—is the best protection against falling into their trap.
 
@@ -25,7 +28,7 @@ Modern romance scammers do not just wait on traditional dating websites like Tin
 
 A very common opening starts with a polite wrong-number text on WhatsApp or SMS. The message might say something simple, such as asking if you are the organizer for a local meeting or asking if you are David from the dog training club. When you reply politely and tell them that they have the wrong number, the sender does not immediately disappear. Instead, they reply with surprising warmth, apologizing for bothering you and remarking on how kind and friendly you seem.
 
-From that small opening, the scammer initiates casual small talk. They ask where you are from, what the weather is like in your city, and what kind of work you do. Within a day or two, they will gently suggest moving the chat over to an encrypted messaging app like Telegram or WhatsApp. They do this deliberately so their account does not get banned by dating or social platforms that monitor for suspicious behavior, and to make the conversation feel like a private, special secret between just the two of you.
+From that small opening, the person may start casual conversation and ask about your work or where you live. They may suggest moving the chat to another app. That request alone does not prove a scam, but staying on the original platform can make it easier to use its reporting and safety tools. Be cautious if they press you to keep the relationship secret or stop talking with people you trust.
 
 ---
 
@@ -59,9 +62,9 @@ The scammer will insist that they have hundreds of thousands of dollars in their
 
 ---
 
-## A Real-World Example: Sarah's Devastating Experience
+## Fictional example: A request for customs money
 
-To understand how realistic this feels from the inside, consider the real experience of Sarah, a fifty-four-year-old nurse who lost her partner two years earlier. Sarah joined a well-known online community for people who enjoy photography. Within three weeks, she received a message from a man named Mark, who claimed to be a British civil contractor supervising the construction of a water treatment facility overseas.
+This fictional example shows how a request can build on an online relationship. Sarah, a nurse, joins a photography group and starts talking with someone who says he works overseas.
 
 Mark was polite, deeply respectful, and sent Sarah daily pictures of construction sites, sketches of water pumps, and short audio clips describing how much he admired her dedication to nursing. Over four months, Sarah and Mark talked for hours every evening. Mark spoke warmly about buying a home near Sarah's family and even looked at real estate listings online together with her.
 
@@ -103,22 +106,29 @@ If you suspect that someone you are speaking with online is not being truthful, 
 
 Start by running their profile pictures through a free reverse image search tool such as Google Images, TinEye, or Yandex. In many cases, you will find that the exact same photos appear on different social media accounts with completely different names, or belong to an actual professional model, doctor, or military officer whose identity was stolen.
 
-Make an absolute personal rule: never send money, share your banking passwords, buy gift cards, or invest in an unfamiliar platform for anyone you have only met on the internet. No matter how heartbreaking their story sounds, a genuine person who cares for you will never expect you to put your financial future at risk.
+Set a clear boundary: do not send money, gift cards, account codes, or cryptocurrency to someone you have not met and verified in person. If they suggest an investment, get independent advice and check it yourself. A caring person should respect your choice to slow down and verify.
 
-If you have already sent money, call your bank's fraud department right away. If the money was sent through a bank wire within the last day or two, there is a small chance your bank can request an emergency recall. Report the profile to the platform where you first met, and file an official complaint with your national cybercrime reporting center, such as the Internet Crime Complaint Center (IC3) or your local police.
+If you have already sent money, contact your bank or payment provider immediately and ask whether the payment can be stopped or recalled. The options depend on how you paid and how much time has passed. Report the account to the platform, keep messages and receipts, and contact your local fraud-reporting or law-enforcement service. In the United States, you can report to the FTC or FBI IC3.
 
 Most importantly, talk openly with a supportive friend, family member, or counselor. Romance scammers spend months studying human psychology to manipulate kind, trusting people. Experiencing this kind of betrayal is painful, but you are not alone, and speaking up is the first step toward reclaiming your peace of mind and your life.
+
+## Official sources
+* [FTC: What to know about romance scams](https://consumer.ftc.gov/articles/what-know-about-romance-scams)
+* [FBI IC3: Cryptocurrency investment schemes](https://www.ic3.gov/PSA/2023/psa230314)
 `
   },
   {
     id: 69,
-    title: "Job Offer and Work-From-Home Scams: Unmasking Fake Remote Positions and Task Fraud",
+    title: "Job Scams: Fake Offers, Remote Work, and Task Traps",
     category: "Scam Awareness",
     difficulty: "Beginner",
-    date: "November 11, 2026",
-    readTime: "20 min read",
-    excerpt: "Learn how modern employment scammers exploit job seekers using fake recruiter messages, text-only interviews, counterfeit equipment advance checks, and deceptive daily review portals.",
-    content: `## The Modern Reality of Remote Job Hunting
+    date: "September 24, 2026",
+    readTime: "12 min read",
+    excerpt: "Learn how fake recruiters, equipment checks, and task apps try to take your money or personal information, and how to verify a real opening.",
+    content: `## What Is a Job Scam?
+A job scam is a fake offer or hiring process designed to take your money or sensitive information. It may arrive as a job post, recruiter message, or promise of easy work from home. Some scammers send a fake check for equipment; others show pretend earnings in a task app and then ask you to deposit your own money. A polished website or company logo does not prove the offer is real. Check the opening through the employer’s official careers page before sharing documents or paying anything.
+
+## Why job seekers are targeted
 
 The widespread shift toward remote and flexible work has made finding a job more accessible than ever. People can now work for companies located on the other side of the country without ever leaving their living rooms. Unfortunately, this convenient new landscape has also made it much easier for cybercriminals to target job seekers. Looking for a new job is a naturally vulnerable moment. When you are searching for work, you are often dealing with financial stress, eager to find an opportunity quickly, and accustomed to sharing personal details—such as your home address, telephone number, and resume history—with complete strangers.
 
@@ -134,15 +144,15 @@ Most modern job scams begin with an unexpected message arriving in your email in
 
 The tone of the message is warm, highly encouraging, and flattering. The sender will usually say that their recruitment team came across your public profile online and was exceptionally impressed by your background. They describe an open position, typically a remote role like Data Entry Clerk, Virtual Administrative Assistant, Brand Support Coordinator, or Customer Operations Specialist.
 
-The offer sounds almost too good to pass up. The position offers high pay—often thirty-five to fifty-five dollars an hour—flexible working hours, complete health insurance, and full company equipment provided for free. For someone who has spent weeks sending out resumes into automated hiring portals without hearing a word back, receiving an enthusiastic message from an eager employer feels like an incredible stroke of good luck.
+The offer may promise unusually high pay, flexible hours, or free equipment. For someone who has been searching for work, an enthusiastic message can feel like a lucky break. Treat the details as claims to check: scammers can copy logos and use names of real employers.
 
-However, reputable corporate recruitment teams rarely reach out for professional positions through unprompted WhatsApp messages or random phone texts. When real recruiters contact potential candidates, they do so through official corporate email addresses ending with the company's verified domain name, and they provide clear references to verifiable job postings on their official career portal.
+An unexpected message does not by itself prove that a job is fake, and real hiring processes vary. Verify the job on the company’s official careers page and contact the company using details you find independently. A lookalike email address or a recruiter who will only speak through an unrelated messaging account is a reason to pause.
 
 ---
 
 ## The Red Flag of the Text-Only Interview
 
-Once you reply to the message expressing your interest, the scammer moves you into the interview phase. In a real company, hiring a new remote employee is a serious financial commitment. Real companies conduct multiple rounds of video calls or phone interviews so managers and future team members can talk with you, evaluate your skills, and see who you are.
+Once you reply to the message expressing your interest, the scammer moves you into the interview phase. Interview styles differ, but a hiring process that consists only of quick messages and an immediate offer deserves a closer check.
 
 In a job scam, the hiring process is completely rushed and conducted entirely through written text. The recruiter will ask you to join a chat channel on Telegram, Signal, or a simple online web chat room to meet with the hiring manager. The interview consists of the manager copying and pasting several generic questions into the chat box, such as asking how you manage your daily schedule, how you resolve disagreements, and whether you are comfortable working independently from home.
 
@@ -154,7 +164,7 @@ Within an hour, you receive a formal employment contract in your email. The PDF 
 
 ## Trap 1: The Fake Home Office Equipment Check
 
-The most widespread and financially dangerous employment scheme is the fake advance check for home office supplies. Once you sign and return the employment contract, your new manager informs you that because you are working remotely, company policy requires you to use standardized hardware and secure corporate software.
+One common job scam uses a fake check for home office equipment. After you accept the offer, the supposed manager says company policy requires you to buy equipment from a named supplier.
 
 The manager reassures you that the company covers all setup expenses: "Our accounting department is sending you an advance digital check for four thousand five hundred dollars. Simply deposit this check into your personal bank account using your mobile phone banking app. Once the funds show as available in your account, transfer the money to our approved hardware vendor who will ship your pre-configured laptop, monitors, and software bundle directly to your home."
 
@@ -162,9 +172,9 @@ You receive an email with an image of a check that appears to come from an authe
 
 Believing the money is safely in your hands, you follow your manager's instructions and transfer four thousand dollars to the approved equipment vendor using Zelle, Venmo, an international wire transfer, or cryptocurrency. In truth, that "vendor" is just the scammer operating under another name.
 
-A few days later, a financial disaster occurs. Federal banking rules require financial institutions to make deposited funds available to customers within one to two business days, long before the check has actually completed the full clearing process between banks. Several business days later, when the issuing bank finally investigates the check, they discover that it is a stolen or completely fabricated check.
+Money appearing in your available balance does not prove that a check is genuine or that the bank has finished processing it. The timing depends on the check, bank, and applicable rules. Do not send part of a check payment to a supposed equipment seller; contact your bank through its official number if you have deposited a suspicious check.
 
-The bank immediately reverses the deposit, taking the four thousand five hundred dollars back out of your account. Because you already sent four thousand dollars of your own real money to the fake vendor, your checking account balance goes deeply negative. The equipment never arrives, your manager's profile disappears, and your bank holds you legally responsible for repaying every single dollar of the overdrawn balance.
+When the bank later determines that the check is counterfeit, it can reverse the deposit. David may then be out the money he sent to the fake vendor and could also face bank fees. The equipment never arrives, and the recruiter stops responding. If this happens, contact the bank promptly and ask what steps to take.
 
 ---
 
@@ -184,9 +194,9 @@ If you deposit the money, the platform immediately hits you with another "VIP Ta
 
 ---
 
-## A Real-World Example: David's Job Search Disaster
+## Fictional example: A fake equipment check
 
-To see how convincing these schemes can be, look at the experience of David, a twenty-eight-year-old graphic designer who had been searching for a steady remote job for five months. David received an email from an individual claiming to be a senior recruiter at a well-known international marketing agency. The email domain looked almost identical to the genuine company, differing by only a single letter.
+This fictional example shows how a fake offer can look convincing. David, a graphic designer looking for remote work, receives an email from someone claiming to recruit for a marketing agency. The sender uses a web address that looks similar to the real company’s address.
 
 The recruiter told David that they were hiring a remote Content Production Assistant at thirty-eight dollars an hour. David completed an extensive written questionnaire and answered detailed questions about design workflows in a Microsoft Teams chat. The questions were thoughtful and directly relevant to his field.
 
@@ -196,15 +206,15 @@ Three days later, David's bank called to inform him that the check was counterfe
 
 ---
 
-## Unbreakable Rules for Safe Job Hunting
+## Practical steps for a safer job search
 
 Protecting yourself during a job search requires maintaining healthy skepticism and verifying every opportunity before taking action:
 
-Never accept a job offer that was based entirely on a text chat. A genuine company will never hire an employee without speaking to them over a live video call or in person. If a recruiter refuses to turn on their camera or insists that all communication must happen on Telegram or WhatsApp, walk away immediately.
+Be cautious if an offer follows only a short text chat, especially when it arrives quickly and no one can verify the role through the company. Hiring processes differ, so the interview format alone does not prove fraud. Check the vacancy and contact the employer through its official website or a phone number you find yourself.
 
-Legitimate employers never ask you to pay money to work. Genuine companies pay you for your work; you never pay them. If an employer asks you to buy your own software licenses, pay for your own background checks, send money to an equipment vendor, or deposit funds to unlock tasks, you are dealing with a scam. Real companies ship work computers directly from their IT department or buy equipment using their own corporate credit cards.
+Do not send money to a recruiter or an equipment vendor they name, and do not deposit a check then forward part of it elsewhere. These are common job-scam patterns. If a role involves a background check, training, or equipment costs, verify the details with the employer using an independently found contact. Never pay to unlock supposed task earnings.
 
-Never rely on money from a deposited check until weeks have passed. Just because your bank balance says funds are available does not mean the check has genuinely cleared. It can take up to ten business days or longer for a fraudulent check to be recognized and returned. Never agree to deposit a check from someone you have not met and then send a portion of that money elsewhere.
+A balance showing available funds does not prove a check is genuine or fully processed. Do not send any part of an unexpected check payment to another person. Contact your bank using its official number and ask how to handle the check.
 
 Always verify job openings on the company's official website. If a recruiter contacts you, open your browser, type the official company web address yourself, go to their Careers page, and search for the job requisition number. If the position is not listed there, call the company's main phone number and ask to speak with Human Resources to confirm that the recruiter is a real employee.
 
@@ -219,17 +229,24 @@ Contact your bank's fraud department without delay. If you deposited a fraudulen
 If you shared your Social Security number, banking details, or driver's license during the fake hiring process, contact the major credit bureaus immediately to put a security freeze on your credit files. This prevents criminals from opening credit cards, taking out loans, or committing identity fraud in your name.
 
 Finally, file formal complaints with your national consumer protection agency and cybercrime reporting portal, such as the Federal Trade Commission (FTC) or your local law enforcement agency. Keeping copies of all messages, emails, and transaction receipts will help investigators track down the networks behind these crimes.
+
+## Official sources
+* [FTC: Job scams](https://consumer.ftc.gov/articles/job-scams)
+* [FTC: How to spot and avoid task scams](https://consumer.ftc.gov/consumer-alerts/2025/08/how-spot-avoid-task-scams)
 `
   },
   {
     id: 70,
-    title: "Bank Impersonation and Urgency Fraud: Anatomy of the Fake Fraud Department Call",
+    title: "Bank Impersonation Scams: When a Caller Says Your Money Is at Risk",
     category: "Scam Awareness",
     difficulty: "Beginner",
-    date: "November 18, 2026",
-    readTime: "24 min read",
-    excerpt: "Understand how scammers spoof real bank phone numbers, send panic-inducing text messages, and use calm professional voices to trick you into transferring your own savings into a 'safe account'.",
-    content: `## The Shock of an Urgent Bank Alert
+    date: "September 24, 2026",
+    readTime: "12 min read",
+    excerpt: "See how scammers pretend to be bank staff, pressure people to move money, and ask for one-time codes—and how to check a claim safely.",
+    content: `## What Is a Bank Impersonation Scam?
+In a bank impersonation scam, someone contacts you while pretending to work for your bank or its fraud team. They may say a payment is at risk and urge you to move money, share a one-time code, or install a tool. Caller ID and familiar details can be faked or obtained elsewhere. Stop the conversation and contact your bank using the number on your card or its official app. A real bank will not need you to transfer money to a stranger’s “safe account.”
+
+## How an urgent bank scam begins
 
 Imagine sitting at your kitchen table having breakfast when your phone chimes with a text message. The sender looks like your regular bank, and the message states: "SECURITY ALERT: Did you attempt a debit card charge of $1,250.00 at a retail store across the country? Reply YES or NO immediately."
 
@@ -285,9 +302,9 @@ If you read the text message carefully, it clearly says: "Security Warning: Use 
 
 ---
 
-## A Real-World Example: Elena's Stressful Friday Afternoon
+## Fictional example: A caller asks for a transfer
 
-To understand how easily this can happen to anyone, consider the experience of Elena, a forty-six-year-old middle school teacher. On a busy Friday afternoon while finishing her grading, Elena received a phone call displaying the verified customer support number of her credit union.
+This fictional example shows why an urgent call deserves an independent check. Elena, a teacher, receives a call that appears to come from her credit union’s published number. Caller ID can be spoofed, so the displayed number alone cannot confirm who is calling.
 
 The caller introduced himself as an investigator from the fraud team. He informed Elena that an individual in another state was currently standing inside a branch attempting to withdraw fourteen thousand dollars using a forged copy of her driver's license. When Elena gasped in disbelief, the caller spoke in a reassuring tone, telling her not to panic because they were going to freeze the unauthorized transaction together.
 
@@ -301,15 +318,15 @@ Elena tapped confirm. The caller politely thanked her for her cooperation, promi
 
 ## Simple, Powerful Rules to Keep Your Bank Account Safe
 
-You do not need to be a technology expert to protect yourself from phone fraud. You only need to follow a few simple, unbreakable habits:
+You do not need technical skills to respond to a suspicious call. A few simple habits can help you slow the conversation down and check the caller independently:
 
 Never trust incoming caller ID. No matter what name or number flashes on your phone screen, always remember that phone numbers can be faked in seconds. If a caller wants to talk about fraud, unauthorized charges, or moving money, treat the call as unverified.
 
 Hang up and call back yourself. If someone calls you claiming to be from your bank's fraud department, do not argue, do not verify your information, and do not stay on the line. Simply say: "Thank you for letting me know. I will hang up and call the bank back directly." Then end the call immediately.
 
-Wait a full minute or use a different phone. In some telephone networks, if an incoming caller does not hang up their line, the call can stay open even if you press end. Wait at least sixty seconds before dialing, or use another household phone. Find the real customer service phone number printed on the back of your physical plastic debit or credit card, and dial that number yourself.
+After hanging up, contact the bank using its official app or the number printed on your card. If you are unsure whether the call has ended, use a different phone or another trusted contact method.
 
-Remember that banks never ask you to move money to protect it. Real banks have the ability to lock cards, block unauthorized charges, and freeze compromised accounts on their own computer systems. They will never ask you to transfer your money to a "safe account," a "holding vault," or an "escrow locker." If anyone asks you to move money to keep it safe, they are a scammer.
+A bank will not ask you to transfer your money to a stranger’s “safe account” to protect it. If a caller tells you to move money, hang up and contact the bank using its official app or the number on your card. Do not share a one-time verification code with the caller. If the bank needs to block a card or review a transaction, its staff can explain that through a contact channel you verify yourself.
 
 Keep one-time security codes completely private. Never read a one-time text message code, security passcode, or login token to anyone over the phone. Real bank representatives will never ask you to tell them an incoming security code. Those codes are meant only for you to enter directly into an official website or app that you opened yourself.
 
@@ -323,18 +340,25 @@ Contact your real bank's emergency fraud line right away. Every minute matters. 
 
 Change your online banking username, password, and security questions from a secure computer or phone. Make sure to log out of all active sessions across all devices.
 
-File a police report with your local law enforcement department and keep a copy of the official incident report. Banks and fraud investigators often require an official police report when reviewing claims to reimburse stolen funds.
+Report the incident to local law enforcement or your country’s official fraud-reporting service. Keep copies of messages and transaction details. Your bank can tell you which documents it needs to review the payment.
+
+## Official sources
+* [FTC: How to handle unexpected calls that claim your money is at risk](https://consumer.ftc.gov/consumer-alerts/2026/01/how-handle-unexpected-calls-claim-your-money-risk)
+* [CFPB: Help with a scam or fraud](https://www.consumerfinance.gov/ask-cfpb/who-do-i-contact-for-help-with-a-scam-or-fraud-en-1777/)
 `
   },
   {
     id: 71,
-    title: "Investment and Cryptocurrency Schemes: The Mechanics Behind Fake Trading Desks and Ponzi Apps",
+    title: "Investment and Crypto Scams: Fake Profits and Withdrawal Fees",
     category: "Scam Awareness",
     difficulty: "Intermediate",
-    date: "November 25, 2026",
-    readTime: "24 min read",
-    excerpt: "Discover how counterfeit trading platforms show fake profit dashboards, allow small early withdrawals to earn trust, and trap life savings behind endless bogus tax release fees.",
-    content: `## The Modern Allure of Quick Financial Freedom
+    date: "September 24, 2026",
+    readTime: "12 min read",
+    excerpt: "A practical guide to fake investment platforms, made-up account growth, pressure to deposit more, and steps to take after a suspected fraud.",
+    content: `## What Is an Investment Scam?
+An investment scam is an offer that uses false claims to get you to send money into a fake or misleading opportunity. The person may promise unusually high returns, show a convincing app balance, or claim there is little risk. In crypto confidence scams, a new online contact may build trust before recommending a platform they control. A displayed profit is not proof that your money is invested or withdrawable. Verify the firm independently and do not risk money you cannot afford to lose.
+
+## How investment scams attract people
 
 Financial stress is a heavy burden in today's world. With rising living costs, expensive housing, and widespread uncertainty about whether traditional retirement pensions will be enough, millions of people find themselves searching for ways to grow their savings faster. At the same time, stories in the news about cryptocurrency booms, tech startups, and young investors making fortunes have created a widespread belief that regular people can achieve life-changing wealth if they can just find the right opportunity early.
 
@@ -368,7 +392,7 @@ In reality, the entire platform is a complete software illusion. While the chart
 
 ## The Confidence Trick: The Test Withdrawal
 
-The most brilliant and dangerous part of an investment scam is how it eliminates your doubts early on. The scammer does not ask you for your life savings right away. Instead, they encourage you to start with a very small deposit, telling you: "You do not need to risk much. Just deposit two hundred or three hundred dollars to see how our automated signals perform."
+Some investment scams try to lower a person’s doubts before asking for a larger payment. The scammer does not ask you for your life savings right away. Instead, they encourage you to start with a very small deposit, telling you: "You do not need to risk much. Just deposit two hundred or three hundred dollars to see how our automated signals perform."
 
 You make the small deposit. Over the next few days, you log in and watch your balance grow steadily from three hundred dollars to five hundred, seven hundred, and then nine hundred dollars. The scammer messages you with excitement, congratulating you on the successful trades.
 
@@ -392,9 +416,9 @@ Desperate to reach their huge balance, many victims pay the fee, often borrowing
 
 ---
 
-## A Real-World Example: Marcus and the Fake Crypto Desk
+## Fictional example: A fake investment dashboard
 
-To understand the emotional reality of this scheme, consider the story of Marcus, a forty-eight-year-old small business owner. Marcus saw a video on social media showing a well-known financial host explaining an automated trading platform. Intrigued, Marcus filled out a short contact form. Within thirty minutes, he received a phone call from a friendly man who introduced himself as a senior account manager from a London investment group.
+This fictional example shows how a fake trading site can display made-up profits. Marcus, a small business owner, sees a social media video promoting an automated trading platform and fills in a contact form. Someone claiming to be an account manager then calls him.
 
 The manager helped Marcus set up an account with an initial deposit of five hundred dollars. Over the following week, Marcus logged in daily and saw his balance climb to eight hundred and fifty dollars. To prove the platform was legitimate, the manager helped Marcus withdraw three hundred dollars directly back into his business account.
 
@@ -408,7 +432,7 @@ Customer support told Marcus that his account had been selected for a standard t
 
 Safeguarding your hard-earned money from investment scams requires maintaining healthy skepticism whenever high financial returns are mentioned:
 
-Remember that guaranteed high returns do not exist in real investing. In legitimate finance, higher potential returns always come with higher potential risk. If any website, app, or person promises guaranteed profits, high daily returns, or claims there is zero risk of losing money, it is an absolute certainty that you are dealing with an illegal scam.
+No investment can promise unusually high returns with no risk. Such claims are a serious warning sign, but verify the firm and offer through your country’s financial regulator or another trusted official source before sending money. Registration does not guarantee that an investment will make money; if you cannot verify who is offering it, stop and seek independent advice.
 
 Never rely on unlicensed trading apps or unknown websites. Before putting your money into any investment platform, verify whether the company is officially registered and licensed with your country's financial regulatory authority, such as the Securities and Exchange Commission (SEC) or FINRA in the United States, the Financial Conduct Authority (FCA) in the United Kingdom, or the equivalent agency in your home nation. If the platform is not on the official government register, do not send them a single cent.
 
@@ -424,20 +448,28 @@ If you realize that an investment platform you are using is fraudulent, take imm
 
 Stop sending money immediately. No matter what the account manager or customer support tells you, do not pay another cent. Paying additional "fees" or "taxes" will never unlock your money; it will only increase your total financial loss.
 
-Beware of recovery scammers who will contact you next. Soon after realizing you have been scammed, you may be contacted by people claiming to be ethical hackers, recovery lawyers, or private investigators who claim they can retrieve your stolen money for an upfront fee. These are almost always the very same scammers operating under a different name, trying to rob you a second time.
+Be careful of people who contact you unexpectedly and promise to recover your money for an upfront fee. Some are recovery scams. Do not give them account passwords, verification codes, or access to your device. Ask your bank, payment provider, or law-enforcement agency what legitimate recovery steps are available.
 
 Gather all your records and report the crime. Take screenshots of your account balance, transaction histories, wallet addresses, chat messages, and bank transfer receipts. File an official complaint with your local police and submit an incident report to your national securities regulator and cybercrime reporting center.
+
+## Official sources
+* [FTC: What to know about cryptocurrency and scams](https://consumer.ftc.gov/articles/what-know-about-cryptocurrency-scams)
+* [FTC: Investment scams](https://consumer.ftc.gov/articles/investment-scams)
+* [FBI IC3: 2026 cryptocurrency investment scam alert](https://www.ic3.gov/PSA/2026/PSA260615)
 `
   },
   {
     id: 72,
-    title: "Online Marketplace and Overpayment Scams: Protecting Yourself on Facebook, eBay, and Craigslist",
+    title: "Online Marketplace Scams: Fake Payments and Overpayment Checks",
     category: "Scam Awareness",
     difficulty: "Beginner",
-    date: "December 2, 2026",
-    readTime: "20 min read",
-    excerpt: "Learn how fraudulent buyers and sellers operate on local marketplaces using fake payment confirmation emails, counterfeit overpayment checks, and phantom courier pickups.",
-    content: `## The Modern Neighborhood Yard Sale
+    date: "September 24, 2026",
+    readTime: "12 min read",
+    excerpt: "Learn how fake payment notices, overpayment checks, and suspicious shipping requests target buyers and sellers on online marketplaces.",
+    content: `## What Is an Online Marketplace Scam?
+An online marketplace scam is a dishonest buying or selling offer made through a listing site or payment app. A fake buyer may send a forged payment notice, overpay with a bad check, or ask you to pay a made-up release fee. A fake seller may ask you to leave the marketplace’s checkout and send money another way. Check payment inside the official app or website, follow its rules, and pause when someone asks you to move money outside the deal.
+
+## Why marketplace scams work
 
 Buying and selling items locally on platforms like Facebook Marketplace, Craigslist, OfferUp, and eBay has become a normal part of daily life. Whether you are clearing out unused furniture before moving into a new home, upgrading to a new smartphone, or looking for a good deal on a bicycle, local online marketplaces make it easy to connect with people living right in your community.
 
@@ -449,7 +481,7 @@ By understanding how fraudulent buyers manipulate digital payments, why overpaym
 
 ## Trap 1: The Fake Digital Payment Confirmation
 
-One of the most common scams targeting sellers on local marketplaces begins within minutes of listing an item for sale. You post an advertisement for an item, such as a dining table for three hundred dollars. Shortly after posting, an interested buyer sends a friendly message saying they love the item and want to buy it immediately without even asking to negotiate the price.
+A marketplace scam may begin soon after you list an item for sale. You post an advertisement for an item, such as a dining table for three hundred dollars. Shortly after posting, an interested buyer sends a friendly message saying they love the item and want to buy it immediately without even asking to negotiate the price.
 
 The buyer explains that they are currently at work, out of town, or unable to pick up the item themselves. They say that their brother, spouse, or a private moving service will come to your house to collect the item later in the day. The buyer offers to pay you immediately through a peer-to-peer payment service like Zelle, Venmo, or PayPal so you will hold the item for them.
 
@@ -471,13 +503,13 @@ When you contact the buyer to point out the mistake, they respond with an apolog
 
 You deposit the cashier's check at your bank. The following day, your bank balance shows that the funds are available. Believing that everything is legitimate and that the money is safely in your hands, you wire nineteen hundred dollars of your own money to the moving company.
 
-Several business days later, your bank's back office discovers that the cashier's check was completely counterfeit. The bank immediately cancels the deposit and removes the entire three thousand two hundred dollars from your account. The nineteen hundred dollars you wired to the movers—who were just the scammer operating under another name—is gone forever, and you are left with a negative bank balance.
+Several business days later, your bank's back office discovers that the cashier's check was completely counterfeit. The bank may later reverse a counterfeit deposit. The seller can lose the money already sent to the supposed mover and may face fees. Do not forward any overpayment; ask your bank how to handle the check.
 
 ---
 
 ## Trap 3: The Fake Vehicle History Report Phishing Scam
 
-If you list a used car, truck, or motorcycle for sale on an online classifieds site, you will almost certainly encounter this specific scheme. Shortly after publishing your vehicle listing, a potential buyer messages you asking several sensible questions about the car's condition, mileage, and maintenance history.
+If you list a used car, truck, or motorcycle online, be alert for buyers who insist that you purchase a vehicle history report from a site they choose. Shortly after publishing your vehicle listing, a potential buyer messages you asking several sensible questions about the car's condition, mileage, and maintenance history.
 
 After a brief exchange, the buyer says: "I am very interested in buying your car this weekend, but I have had bad experiences with sellers hiding accident damage in the past. I need to see an updated vehicle history report before I drive out to see it. Could you please get a report from this specific website and send it to me?" They provide a link to an unfamiliar website that looks like a vehicle records checking service.
 
@@ -495,13 +527,13 @@ The buyer tells you: "I will arrange for a private courier like FedEx, DHL, or U
 
 Shortly afterward, you receive an email claiming to be from the courier company. The email states that to schedule the pickup and release your cash payment, you must first pay a fifty or one-hundred-dollar "courier insurance fee" or "handling deposit" using gift cards or an instant money transfer. The email promises that this fee will be fully refunded in cash by the delivery driver when they arrive.
 
-No delivery driver ever comes, and real delivery companies like FedEx and UPS do not offer services where their drivers deliver envelopes of cash to purchase second-hand marketplace items from private homes. The entire scenario is fabricated to steal the upfront fee.
+Do not pay an unexpected fee through a link or account supplied by the buyer. If a delivery company is involved, find its official website or phone number independently and check whether the service and charge are real. Keep the transaction and payment on the marketplace when its rules support that option.
 
 ---
 
-## A Real-World Example: Rachel Selling Her Living Room Furniture
+## Fictional example: A fake payment email
 
-To see how smooth and convincing these transactions appear, consider the experience of Rachel, a thirty-four-year-old mother who was selling her dining room table and six chairs on Facebook Marketplace for four hundred and fifty dollars.
+This fictional example shows why a payment email is not proof that money arrived. Rachel lists a dining table on a marketplace, and a buyer says they have paid through a payment app.
 
 Within two hours of posting her listing, Rachel received a polite message from a woman named Amanda, whose profile showed photos of her family and children. Amanda explained that she had just moved into the neighborhood and loved the set. She offered to pay the full price immediately through Zelle and said her husband would pick up the furniture on Saturday morning with a rented truck.
 
@@ -513,17 +545,17 @@ Feeling terrible that Amanda's family might be without grocery money, Rachel ope
 
 ---
 
-## Foolproof Rules for Safe Buying and Selling
+## Practical steps for safer marketplace deals
 
 You can easily protect yourself from marketplace scams by following a few clear rules every time you buy or sell:
 
 Meet in person in a safe, public place. Whenever possible, conduct marketplace transactions face-to-face in a well-lit, public location. Many local police departments and municipal buildings have established dedicated "Safe Exchange Zones" in their parking lots, complete with twenty-four-hour video surveillance. If a local buyer refuses to meet in person or insists on sending an unknown third party, treat the offer with caution.
 
-Insist on cash for in-person local transactions. Cash is still the safest and most reliable payment method for local, second-hand sales. When selling an item locally, clearly state in your advertisement: "Local pickup only, cash only." This single sentence will immediately discourage ninety percent of online scammers from contacting you.
+Use the marketplace’s recommended payment and handoff process when one is available. If you arrange a local exchange, choose a public place and consider bringing another person. No payment method is risk-free: check the payment in the official app, be alert to counterfeit cash or checks, and do not hand over an item based only on a screenshot or email.
 
 Never trust an email receipt showing money was sent. If a buyer claims they sent you money through Zelle, Venmo, PayPal, or Cash App, never rely on an email or screenshot to confirm the payment. Open your official banking app or payment app directly on your phone and check your actual balance. If the funds are not sitting inside your real account balance, the payment was not made.
 
-Never send money back to a buyer. There is never a legitimate reason why you should have to pay money or upgrade your account to receive a payment for an item you are selling. If a buyer claims they overpaid you, sent an accidental deposit, or paid a business upgrade fee, cancel the transaction immediately.
+Do not send a separate payment because a buyer says they overpaid or need an account upgrade. Check the transaction in your payment provider’s official app and ask the provider how to handle an unexpected payment or refund. Do not follow a refund link or instructions in the buyer’s message.
 
 Never accept an overpayment check. If a buyer sends you a check that is written for more than the agreed selling price, do not deposit it. A legitimate buyer will never send you extra money and ask you to forward the remainder to a shipping agent or mover.
 
@@ -535,9 +567,13 @@ If you realize that you have fallen victim to a marketplace scam, take these pra
 
 If you sent money using a digital payment app like Zelle or Venmo, contact your bank's fraud department right away. While peer-to-peer transfers are generally considered immediate and difficult to reverse, reporting the recipient's phone number or account details allows the bank to freeze the recipient's profile and investigate the fraudulent account.
 
-Report the scammer's profile directly on the platform where you interacted, such as Facebook Marketplace, eBay, or Craigslist. Submitting a detailed fraud report helps the platform ban the scammer's account and prevents them from targeting other local sellers.
+Report the scammer's profile directly on the platform where you interacted, such as Facebook Marketplace, eBay, or Craigslist. A report gives the platform a chance to review the account and may help protect other users.
 
 If you shared your credit card information on a fake vehicle history website or shipping portal, contact your card issuer immediately to cancel the compromised card and request a replacement. Monitor your monthly statements closely for any recurring subscription charges or unauthorized transactions.
+
+## Official sources
+* [FTC: Buying from an online marketplace](https://consumer.ftc.gov/articles/buying-online-marketplace)
+* [FTC: Selling stuff online? Here’s how to avoid a scam](https://consumer.ftc.gov/consumer-alerts/2022/07/selling-stuff-online-heres-how-avoid-scam)
 `
   }
 ];
