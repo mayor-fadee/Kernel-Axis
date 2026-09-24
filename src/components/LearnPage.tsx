@@ -2102,16 +2102,12 @@ If you see a certificate error warning on a public Wi-Fi network or an unfamilia
       excerpt: "Threat intelligence is information about threats that has been checked and interpreted so people can make security decisions. It can describe threat groups, tools, indica",
       content: `## What Is This?
 
-* Threat intelligence is information about threats that has been checked and interpreted so people can make security decisions.
-* It can describe threat groups, tools, indicators, and observed behavior.
-* A single IP address or file hash is only a clue: it may be old, shared, or harmless in a different setting.
-* Good analysis explains what is known, how certain it is, and what action is useful.
+Threat intelligence is information about threats that has been checked and interpreted so people can make security decisions. It can describe threat groups, tools, indicators, and observed behavior. A single IP address or file hash is only a clue: it may be old, shared, or harmless in a different setting. Good analysis explains what is known, how certain it is, and what action is useful.
 
 ## Practical Example
 
-* A security team receives a report about a suspicious login address.
-* Before blocking it across the company, an analyst checks when it was seen, which systems contacted it, and whether the report is current.
-* The team then chooses a proportionate response and records why.
+A security team receives a report about a suspicious login address. Before blocking it across the company, an analyst checks when it was seen, which systems contacted it, and whether the report is current. The team then chooses a proportionate response and records why.
+
 ## What Is Cyber Threat Intelligence?
 * At its simplest level, Cyber Threat Intelligence is evidence-based knowledge about cyber threats.
 * It includes context, mechanisms, indicators, implications, and action-oriented advice about existing or emerging hazards to digital assets.
@@ -2321,6 +2317,14 @@ If you see a certificate error warning on a public Wi-Fi network or an unfamilia
 * **Context Gaps:** Threat intelligence gathered from one industry (e.g., financial banking) may be completely irrelevant to another industry (e.g., municipal water management).
 * **Cost & Complexity:** High-quality threat intelligence feeds and skilled CTI analysts require significant financial investment and continuous training.
 
+## Research Notes and Practical Lessons
+
+Threat intelligence becomes useful when it answers a decision question. A raw IP address, file hash, or domain is an indicator that can support an investigation, but it may be outdated, shared by unrelated services, or seen in a different context. CISA’s information-sharing guidance uses STIX to describe indicators and related context, and TAXII to exchange that information between systems. A receiving team should keep the source, timestamp, confidence, and intended use with each indicator.
+
+A small security team does not need a large paid feed to practice good analysis. It can follow relevant CISA advisories, record which systems and software are in use, and compare an alert with local logs before blocking anything. If an indicator is old or weakly sourced, a broad block may interrupt legitimate service; if it is supported by current evidence, it can help narrow a search. Review intelligence after an incident and retire rules that no longer fit.
+
+MITRE ATT&CK can help translate reports into defensive questions. If a report describes credential theft, a team can ask whether its identity logs capture unusual sign-ins, whether MFA is enabled for remote access, and whether alerts are reviewed. ATT&CK tactics describe the adversary’s goal and techniques describe how an action is performed, but the framework does not identify an actor by itself. Analysts should state what they observed separately from what they infer and communicate uncertainty plainly.
+
 ## Key Takeaways
 * **CTI Transforms Defense:** Cyber Threat Intelligence converts raw data into actionable knowledge, allowing defenders to anticipate and block attacks proactively.
 * **Understand the Spectrum:** Raw security data is noisy, information provides structure, but intelligence provides context and recommended action.
@@ -2362,6 +2366,9 @@ Threat intelligence is useful when it changes a real decision, such as what to m
 
 ## Official Sources
 
+* https://www.cisa.gov/resources-tools/resources/ais-submission-guidance
+* https://attack.mitre.org/resources/
+
 * MITRE ATT&CK: https://attack.mitre.org/resources/
 * CISA: https://www.cisa.gov/resources-tools/resources/ais-submission-guidance`
     },
@@ -2375,16 +2382,12 @@ Threat intelligence is useful when it changes a real decision, such as what to m
       excerpt: "A cyberattack may involve several steps, from getting an initial foothold to using an account, moving between systems, or disrupting work. Not every incident follows the ",
       content: `## What Is This?
 
-* A cyberattack may involve several steps, from getting an initial foothold to using an account, moving between systems, or disrupting work.
-* Not every incident follows the same path, and defenders may discover it at any stage.
-* MITRE ATT&CK gives teams a shared way to describe observed tactics and techniques.
-* It is a reference for investigation, not a checklist that proves an attacker followed every step.
+A cyberattack may involve several steps, from getting an initial foothold to using an account, moving between systems, or disrupting work. Not every incident follows the same path, and defenders may discover it at any stage. MITRE ATT&CK gives teams a shared way to describe observed tactics and techniques. It is a reference for investigation, not a checklist that proves an attacker followed every step.
 
 ## Practical Example
 
-* An employee reports an unexpected sign-in approval.
-* The help desk confirms the request was not theirs, resets the account through a trusted process, revokes active sessions, and checks sign-in and mailbox records for changes.
-* Those checks can show whether the event ended at the account or reached other systems.
+An employee reports an unexpected sign-in approval. The help desk confirms the request was not theirs, resets the account through a trusted process, revokes active sessions, and checks sign-in and mailbox records for changes. Those checks can show whether the event ended at the account or reached other systems.
+
 ## 1. What Distinguishes a Modern Enterprise Intrusion?
 * To defend modern digital infrastructure, security teams must recognize the key architectural differences that separate sophisticated enterprise intrusions from automated opportunistic internet noise.
 
@@ -2526,11 +2529,22 @@ Threat intelligence is useful when it changes a real decision, such as what to m
 * When defenders deploy comprehensive telemetry correlation, enforce strict identity controls, and segment critical assets, they deprive threat actors of the speed and stealth needed to succeed.
 * Disruption at any single link in the attack chain protects the organization, ensuring that initial unauthorized access is contained and neutralized before it can result in operational impact.
 
+## Research Notes and Practical Lessons
+
+Attack lifecycle diagrams are models that help people discuss an incident; real events do not always follow a neat sequence. An attacker may use stolen credentials to enter, move between cloud and local systems, or return after defenders close one route. MITRE ATT&CK organizes observed behavior by goals and techniques, while CISA response guidance focuses on practical steps such as containment, investigation, and recovery. Use a model to ask better questions, not to assume that every stage occurred.
+
+A timeline is built from several records rather than one alert. Sign-in logs can show when an account was used, endpoint records can show what ran, and network or cloud audit logs can show what the account accessed next. Differences in time zones, missing records, and normal administrative work can confuse the picture, so note gaps and check with system owners. Preserve the original logs and write down when evidence was collected to support later review.
+
+Containment should match the evidence and the possible impact. A confirmed stolen account may need its sessions revoked and credentials reset, while a compromised server may need isolation and forensic review before it is rebuilt. Responders should check for additional access paths and protect backups before restoring affected services. Practice the process with the people who will make decisions, including IT, security, communications, and business owners, so each group knows its role during a real outage.
+
 ## Key Takeaway
 
 A clear timeline helps responders connect alerts and choose the next safe action. Preserve useful logs, contain confirmed access, and restore systems only after checking that the cause has been addressed. Use an incident plan and involve qualified responders when the impact is unclear.
 
 ## Official Sources
+
+* https://attack.mitre.org/tactics/
+* https://www.cisa.gov/stopransomware/ransomware-guide
 
 * MITRE ATT&CK: https://attack.mitre.org/tactics/
 * CISA: https://www.cisa.gov/stopransomware/ransomware-guide`

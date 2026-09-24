@@ -11,18 +11,12 @@ export const cybersecurityThreatsArticles: ArticleData[] = [
     excerpt: "Learn how ransomware can encrypt files, threaten stolen data, and disrupt work, plus practical steps for prevention, containment, and recovery.",
     content: `## What Is This Threat?
 
-* Ransomware is malicious software that can encrypt files and make systems unavailable.
-* Attackers may demand money for a decryption tool, and some also steal data and threaten to publish it.
-* An infection can disrupt a small business, school, clinic, or large company.
-* Backups, strong sign-in protection, and a practiced response plan reduce the damage.
+Ransomware is malicious software that can encrypt files and make systems unavailable. Attackers may demand money for a decryption tool, and some also steal data and threaten to publish it. An infection can disrupt a small business, school, clinic, or large company. Backups, strong sign-in protection, and a practiced response plan reduce the damage.
 
 ## Practical Example
 
 A small design firm finds that shared project files will no longer open. Staff stop using affected computers, contact their IT lead by phone, and check clean backups before restoring work. The firm also reviews account activity because restoring files alone would not remove an attacker’s access.
 
-* A small design firm finds that shared project files will no longer open.
-* Staff stop using affected computers, contact their IT lead by phone, and check clean backups before restoring work.
-* The firm also reviews account activity because restoring files alone would not remove an attacker’s access.
 ## The Underground Economy: The Rise of Initial Access Brokers
 
 * A common misconception is that a single hacker sits at a keyboard, finds a vulnerability in a company, breaks in, steals the files, encrypts the computers, and negotiates the ransom all by themselves.
@@ -84,13 +78,13 @@ A small design firm finds that shared project files will no longer open. Staff s
 
 * The intrusion did not require a complex military-grade digital weapon.
 * Attackers affiliated with a ransomware syndicate named DarkSide gained access to the company's internal corporate network using a single compromised password for an older virtual private network (VPN) account.
-* The account belonged to a former employee, did not have multi-factor authentication enabled, and had been purchased from an underground credentials database.
+* Incident responders testified that the legacy VPN profile did not require a one-time passcode. Public testimony identifies an employee username and password, but does not establish that the account belonged to a former employee or that attackers bought the password from criminals.
 
 * Once inside, the attackers moved through the business computer systems, stealing sensitive corporate data and deploying encryption across internal billing and administrative workstations.
 * Although the industrial control computers that physically pump fuel through the pipes were on a separate operational network and had not been directly infected, the company could not accurately track fuel transfers or bill customers without its corporate servers.
 
-* Out of an abundance of caution, the pipeline operators shut down the physical pipeline entirely for six days.
-* The shutdown triggered widespread panic across major cities, with thousands of gasoline stations running completely dry, airline flights being rescheduled due to fuel shortages, and emergency fuel waivers being issued by federal agencies.
+* Colonial halted pipeline operations while it responded to the ransomware incident on its business network.
+* The disruption affected fuel supplies on the East Coast and led to emergency measures. The incident showed how a problem in business IT can affect operations even when industrial control networks are discussed separately.
 * The company ultimately paid a ransom of approximately seventy-five Bitcoins, worth nearly four point four million dollars at the time, simply to obtain a decryption utility and expedite network recovery.
 
 ---
@@ -143,13 +137,22 @@ A small design firm finds that shared project files will no longer open. Staff s
 * Finally, network segmentation creates digital firewalls between different departments and systems.
 * If an accountant's workstation becomes infected with ransomware, strict segmentation prevents that infection from spreading across into hospital patient monitoring computers, manufacturing assembly lines, or enterprise database storage.
 
+## Research Notes and Practical Lessons
+
+CISA describes ransomware as file-encrypting malware, but an incident can include more than encryption. Some operators steal data and threaten to publish it; in other cases, data theft is used for extortion without file encryption. That is why a clean backup is important but does not answer every question after an intrusion. Responders also need to find out what information left the network and whether attacker access remains.
+
+CISA’s response guidance starts with containment: isolate affected systems in a coordinated way, identify which accounts and devices were involved, and preserve useful logs. Teams should check for earlier access or malware before rebuilding, since encryption may be only the visible final stage. Restoration should use clean systems and backups that have been tested, with priority given to services needed for safety and daily operations. An incident plan helps staff know who can authorize shutdowns, restoration, and notifications.
+
+The Colonial Pipeline case is a useful lesson about account security and operational dependency. Testimony from incident responders described access through a legacy VPN profile using an employee username and password; that profile did not require a one-time passcode. Public testimony does not establish that the account belonged to a former employee or that the attackers bought its password from criminals, so those details should not be presented as fact. The company halted pipeline operations while responding to the ransomware on its business network, showing how an IT incident can affect operations even when control systems are discussed separately.
+
 ## Key Takeaway
 
 Prepare before an incident: limit access, keep useful logs, and know who is responsible for response. Treat alerts as clues to investigate, document what the evidence shows, and use trusted guidance to choose the next step.
 
-## Official Source
+## Official Sources
 
-* https://www.cisa.gov/stopransomware/ransomware-guide`
+* https://www.cisa.gov/stopransomware/ransomware-guide
+* https://www.congress.gov/117/chrg/CHRG-117hhrg45085/CHRG-117hhrg45085.pdf`
   },
   {
     id: 74,
@@ -161,18 +164,12 @@ Prepare before an incident: limit access, keep useful logs, and know who is resp
     excerpt: "See how a supplier, service provider, or software component can expose customers, and learn practical ways to limit third-party access and risk.",
     content: `## What Is This Threat?
 
-* A supply chain attack uses a supplier, service provider, or software component to reach another organization.
-* The supplier may have legitimate access or distribute a tainted update.
-* This can affect many customers at once, even when each customer’s own systems are well managed.
-* Careful access limits, supplier review, and software checks lower the risk.
+A supply-chain attack reaches an organization through a supplier, service provider, or software component it depends on. The supplier may have legitimate access, handle sensitive data, or distribute a compromised update. One weak link can expose several customers, even when they manage their own systems carefully. Limiting access and tracking suppliers helps reduce the risk.
 
 ## Practical Example
 
 A clinic uses a remote support provider to maintain its appointment system. If that provider’s account is stolen, an intruder may try to use the same access. The clinic can reduce the damage by requiring multifactor sign-in, restricting the account to the support system, and reviewing access logs.
 
-* A clinic uses a remote support provider to maintain its appointment system.
-* If that provider’s account is stolen, an intruder may try to use the same access.
-* The clinic can reduce the damage by requiring multifactor sign-in, restricting the account to the support system, and reviewing access logs.
 ## Understanding the Trusted Ecosystem
 
 * Modern businesses do not build every tool, software program, and service they use in-house.
@@ -275,12 +272,21 @@ A clinic uses a remote support provider to maintain its appointment system. If t
 * For software, use trusted update channels, keep an inventory of important components, and check vendor notices for security fixes. A software bill of materials can help identify included components, but it does not prove that software is safe.
 * If a supplier reports a compromise, confirm which account, product, or data was involved. Preserve relevant logs, rotate exposed credentials, and coordinate changes with the provider so response does not interrupt needed services.
 
+## Research Notes and Practical Lessons
+
+Supply-chain risk is broader than a compromised software update. A supplier may hold remote access, process customer records, host a business service, or provide a component used by many products. CISA’s customer guidance recommends that organizations understand what software they acquire and how it is produced, distributed, and maintained. A supplier list is most useful when it also records the business owner, access granted, data handled, and the service’s importance to operations.
+
+Software inventories can make a response more precise. A software bill of materials (SBOM) records components in a product and can help teams check whether a vulnerable component is present, but it is not a security certificate and cannot prove that the product is free of malicious code. Customers still need trusted update channels, a process for reviewing vendor notices, and a safe way to pause or roll back a release. Keep records of product versions so an incident team can identify affected systems without guessing.
+
+A practical supplier review should match the access to the work. A technician who supports one scheduling application rarely needs broad administrator access to every company system. Use individual accounts, multifactor authentication, time-limited access where possible, and logs that show when the supplier connected. Agree in advance how the supplier will report an incident, who will coordinate containment, and how service can be restored if the supplier becomes unavailable.
+
 ## Key Takeaway
 
 Prepare before an incident: limit access, keep useful logs, and know who is responsible for response. Treat alerts as clues to investigate, document what the evidence shows, and use trusted guidance to choose the next step.
 
-## Official Source
+## Official Sources
 
+* https://www.cisa.gov/sites/default/files/2023-12/ESF_SECURING_THE_SOFTWARE_SUPPLY_CHAIN_CUSTOMER.pdf
 * https://www.cisa.gov/resources-tools/resources/cybersecurity-scenarios`
   },
   {
@@ -293,18 +299,12 @@ Prepare before an incident: limit access, keep useful logs, and know who is resp
     excerpt: "Understand what the term APT means, how defenders investigate long-running intrusions, and why observed evidence matters more than assumptions about an attacker.",
     content: `## What Is This Threat?
 
-* An advanced persistent threat, or APT, is a label often used for a capable threat group that pursues a goal over time.
-* The group may seek information, access, or disruption, and may try to remain unnoticed.
-* The term does not mean every incident is highly advanced or that one actor stays inside every victim for years.
-* Defenders learn from observed behavior and protect important accounts and systems.
+An advanced persistent threat, or APT, is a term used for a capable threat group that pursues a goal over time. The group may seek information, access, or disruption, and may try to remain unnoticed. The label does not prove who is behind an incident or mean every intrusion lasts for years. Defenders should focus on evidence, protect important accounts, and check observed activity carefully.
 
 ## Practical Example
 
 A research team notices an old remote-access account signing in at an unusual time. That single sign-in does not prove an APT, but the team checks the account owner, device, and related logins, then disables access if it is no longer needed. It shares relevant evidence with its incident responders.
 
-* A research team notices an old remote-access account signing in at an unusual time.
-* That single sign-in does not prove an APT, but the team checks the account owner, device, and related logins, then disables access if it is no longer needed.
-* It shares relevant evidence with its incident responders.
 ## Anatomy of the Acronym: Advanced, Persistent, and Threat
 
 * To understand how these elite groups operate, it is helpful to look closely at the three words that define them.
@@ -400,13 +400,22 @@ A research team notices an old remote-access account signing in at an unusual ti
 * Keep an incident plan with named contacts, containment steps, backup priorities, and a way to communicate if email is affected. Use a current government advisory for actor-specific indicators and mitigations, then validate the advice against your own systems.
 * MITRE ATT&CK can help describe observed behavior and map it to possible detections. It cannot identify an actor by itself, and missing ATT&CK techniques do not prove that a system is clear.
 
+## Research Notes and Practical Lessons
+
+The term APT is commonly used for a capable group that conducts a sustained operation, often for espionage, but it should not be treated as a precise diagnosis. A long-running intrusion can involve valid accounts, exposed services, or tools already present on a system, so defenders may not find a distinctive malware file. CISA advisories describe particular observed activity and list evidence and mitigations for that case. Use those details to guide checks; do not assume every organization faces the same actor or methods.
+
+MITRE ATT&CK gives defenders a shared vocabulary for describing observed behavior: tactics explain an adversary’s goal, while techniques describe how the goal was pursued. This can help a team connect a suspicious login, a new account, and unusual remote administration into a timeline. ATT&CK is built from reported real-world behavior, but it is not a complete checklist and a single matching technique does not identify a group. Document the source and confidence behind any attribution.
+
+For a small organization, useful steps are often basic and measurable. Protect remote access and administrator accounts with multifactor authentication, remove accounts that are no longer needed, patch internet-facing systems, and retain logs long enough to investigate. If an alert appears, compare it with the device owner, approved maintenance, and nearby sign-in events before calling it malicious. When evidence suggests a targeted intrusion, follow an incident plan and seek qualified help rather than relying on an actor label alone.
+
 ## Key Takeaway
 
 Prepare before an incident: limit access, keep useful logs, and know who is responsible for response. Treat alerts as clues to investigate, document what the evidence shows, and use trusted guidance to choose the next step.
 
-## Official Source
+## Official Sources
 
-* https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-239a`
+* https://www.cisa.gov/news-events/cybersecurity-advisories/aa25-239a
+* https://attack.mitre.org/resources/`
   },
   {
     id: 76,
@@ -418,18 +427,12 @@ Prepare before an incident: limit access, keep useful logs, and know who is resp
     excerpt: "Learn how distributed denial-of-service attacks overload online services, how they differ from ordinary traffic spikes, and how response teams prepare.",
     content: `## What Is This Threat?
 
-* A distributed denial-of-service attack, or DDoS, sends traffic or requests from many devices toward a service to make it slow or unavailable.
-* Some of those devices may be compromised and controlled as a botnet.
-* A traffic spike alone does not prove an attack; a popular event or configuration fault can look similar.
-* Hosting providers and network teams can help filter malicious traffic and keep essential services available.
+A distributed denial-of-service attack, or DDoS, sends traffic or requests from many devices toward a service to make it slow or unavailable. Some of those devices may be compromised and controlled as a botnet. A traffic spike alone does not prove an attack; a popular event or configuration fault can look similar. Hosting providers and network teams can help filter malicious traffic and keep essential services available.
 
 ## Practical Example
 
 A ticketing website becomes slow just before a concert sale. Its team checks whether requests are coming from many sources, asks its hosting provider to apply its DDoS protections, and posts service updates through a separate status page. The team keeps logs to review the event after traffic returns to normal.
 
-* A ticketing website becomes slow just before a concert sale.
-* Its team checks whether requests are coming from many sources, asks its hosting provider to apply its DDoS protections, and posts service updates through a separate status page.
-* The team keeps logs to review the event after traffic returns to normal.
 ## What Is a Botnet and How Are They Born?
 
 * A single computer, no matter how fast its internet connection is, cannot generate enough traffic to knock a major corporate website or cloud service offline.
@@ -529,12 +532,21 @@ A ticketing website becomes slow just before a concert sale. Its team checks whe
 * Advanced artificial intelligence algorithms analyze the traffic, effortlessly separating malicious bot queries from legitimate human website visitors.
 * The malicious junk packets are instantly discarded onto the floor, while clean, legitimate traffic is passed through safely to the destination website without human users noticing even a millisecond of delay.
 
+## Research Notes and Practical Lessons
+
+A denial-of-service event is about availability: users cannot reach a service, or it responds too slowly to be useful. In a distributed attack, traffic comes from many systems, which can make a single source block ineffective. Some attacks also use reflection and amplification: an attacker sends small requests with a forged source address, and exposed servers send larger replies to the victim. CISA recommends that network and service operators reduce exposed services, filter spoofed traffic, and coordinate mitigation with upstream providers.
+
+The first response question is where the service is failing. A team can compare application health, network traffic, DNS behavior, and provider status to distinguish an attack from a software fault or a genuine surge in visitors. If upstream links are saturated, filtering only at the web server may not restore access; the hosting company or internet provider may need to divert or filter traffic. Keep a separate status page and communication channel so customers can get updates while the main service is unavailable.
+
+Preparation works best when responsibilities are agreed before the event. Record provider emergency contacts, the people authorized to request filtering changes, critical services that should remain available, and any risks of blocking legitimate users. Practice a short outage exercise and review the logs afterward. Do not retaliate against suspected sources: addresses may belong to compromised devices or reflectors, and counterattacks can harm unrelated people and make the incident harder to resolve.
+
 ## Key Takeaway
 
 Prepare before an incident: limit access, keep useful logs, and know who is responsible for response. Treat alerts as clues to investigate, document what the evidence shows, and use trusted guidance to choose the next step.
 
-## Official Source
+## Official Sources
 
+* https://www.cisa.gov/ncas/alerts/ta14-017a
 * https://www.cisa.gov/cybersecurity-toolkit-and-resources-protect-elections`
   },
   {
@@ -547,18 +559,12 @@ Prepare before an incident: limit access, keep useful logs, and know who is resp
     excerpt: "Learn how mistakes, misuse, or stolen staff accounts can put information at risk, and how fair access controls and reporting reduce that risk.",
     content: `## What Is This Threat?
 
-* An insider threat is a risk involving someone who has, or had, authorized access to an organization’s systems or information.
-* The person may act deliberately, make a mistake, or have an account taken over by someone else.
-* Most unusual behavior has an ordinary explanation, so a single alert should not be treated as proof of wrongdoing.
-* Clear access rules, respectful reporting, and fair investigations help reduce risk.
+An insider threat is a risk involving someone who has, or had, authorized access to an organization’s systems or information. The person may act deliberately, make a mistake, or have an account taken over by someone else. Most unusual behavior has an ordinary explanation, so a single alert should not be treated as proof of wrongdoing. Clear access rules, respectful reporting, and fair investigations help reduce risk.
 
 ## Practical Example
 
 A departing employee still has access to a shared customer folder after their last day. A routine access review catches the account, and the organization removes it, checks recent activity, and confirms that the next owner can still do their job. No assumption about intent is needed to fix the access gap.
 
-* A departing employee still has access to a shared customer folder after their last day.
-* A routine access review catches the account, and the organization removes it, checks recent activity, and confirms that the next owner can still do their job.
-* No assumption about intent is needed to fix the access gap.
 ## The Three Faces of the Insider Threat
 
 * Security professionals recognize that not all insider incidents stem from the same motivations or mindsets.
@@ -650,12 +656,21 @@ A departing employee still has access to a shared customer folder after their la
 * When an employee accidentally clicks a malicious link in an email or realizes they sent a sensitive spreadsheet to the wrong recipient, they must feel completely safe reporting their mistake to IT immediately without fear of instant termination.
 * In cybersecurity, early discovery is the difference between a five-minute incident and a catastrophic corporate crisis.
 
+## Research Notes and Practical Lessons
+
+An insider-risk program should account for both deliberate acts and ordinary mistakes, and it should also consider a staff account taken over by an outsider. CISA’s guidance recommends focusing on important assets, using a coordinated team, and providing a way for people to report concerns. This matters because an unusual download, late login, or access request can have a normal work reason. A single signal should lead to a careful check, not an automatic accusation.
+
+Access controls reduce the possible harm without requiring managers to predict who might cause a problem. Give each person only the access their current role needs, review sensitive permissions, and remove access promptly when duties change or employment ends. Keep records of file access and administrative changes under a clear retention policy. If an alert occurs, compare it with the person’s role and approved work, and preserve evidence before making changes that could erase useful logs.
+
+A fair response protects employees as well as systems. CISA notes that insider-threat work can raise privacy, legal, and labor-relations concerns, so organizations should define who may review records, why they may do so, and how information is kept confidential. Include HR, legal, security, and leadership where appropriate, and use established workplace policies. Train staff on safe reporting and account security; a supportive reporting culture can surface mistakes early, before they become larger incidents.
+
 ## Key Takeaway
 
 Prepare before an incident: limit access, keep useful logs, and know who is responsible for response. Treat alerts as clues to investigate, document what the evidence shows, and use trusted guidance to choose the next step.
 
-## Official Source
+## Official Sources
 
+* https://www.cisa.gov/sites/default/files/2022-11/Insider%20Threat%20Mitigation%20Guide_Final_508.pdf
 * https://www.cisa.gov/topics/physical-security/insider-threat-mitigation/resources-and-tools`
   }
 ];
